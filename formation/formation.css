@@ -13,6 +13,9 @@ body{
   padding: 10px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
+#msgform{
+  display: none;
+}
 .container{
   max-width: 700px;
   width: 100%;
@@ -160,5 +163,29 @@ form .user-details .input-box{
   @media(max-width: 459px){
   .container .content .category{
     flex-direction: column;
+  }
+}
+
+
+@media(max-width: 459px){
+  #msgform img{
+    width: 100%;
+  }
+
+  #msgform h2{
+    font-size: 20px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  #msgform button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    background: orangered;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
   }
 }

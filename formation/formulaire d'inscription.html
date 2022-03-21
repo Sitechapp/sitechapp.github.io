@@ -12,7 +12,16 @@
     
 <div class="container register">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" >
+                  <!--Message formulaore de la formation-->
+                  <div id="msgform">
+                    <h1>Formation gratuit</h1>
+                    <h2>Vous avez inscrit avec succès</h2>
+                    <img src="https://i.ytimg.com/vi/I5Tp25471_s/maxresdefault.jpg" alt="Formation blogger">
+                    <button onclick="history.back()">Retourner a l'accueil</button>
+                  </div>
+
+                  <!--Formulaire d'inscription-->
                         <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <h3 class="register-heading" id="message">Formation Blogger</h3><hr><br>
                             <div class="row register-form">
@@ -81,7 +90,8 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => document.getElementById('message').innerHTML ='Merci pour votre inscription')
+                .then(response => document.getElementById('home').style.display = "none")
+                .then(response => document.getElementById('msgform').style.display  = "block")
                 .then(response => document.getElementById('name').value = '')
                 .then(response => document.getElementById('email').value = '')
                 .then(response => document.getElementById('phone').value = '')

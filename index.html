@@ -73,12 +73,15 @@
     <!--le home de mon application-->
     <main id="home">
         <section class="home-header">
-          
+          <center>
+            <h1>Formation Modification template par défaut Blogger </h1>
+            <button><a href="formation/formulaire d'inscription.html">Je veux suivre la formation</a></button>
+          </center>
         </section>
         <section id="noti">
           <div id="subheader">
             <div>
-              <p>formation en cours</p>
+              <p>formation en cours : <sapn>Blog blogger</sapn></p>
               <p>Inscription en cours : <spam style="color:blue;">non disponible</spam><i class="fa fa-chevron-right"></i></p>
             </div>
             <img src="images/logo.png" alt="" />
@@ -176,5 +179,19 @@
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+      <script>
+        
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz9X5FHrJMi1FGcDyoijkK1mpJal42V5WQkiZznPIxidXFBbPp_dRb2T0csJOq6fEUh/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              alert(ruban);
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+      </script>
 </body>
 </html>
