@@ -1,3 +1,10 @@
+function deux(){
+  document.getElementById('un').style.display ='none';
+  document.getElementById('deux').style.display = 'block';
+}
+
+
+
 
 
 function searchFunction() {
