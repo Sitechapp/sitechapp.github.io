@@ -254,7 +254,7 @@ img{
 /* la partie produit slider de mon application */
 @media (max-width: 850px){
     .detail p b{
-        font-size: 7vw;
+        font-size: 6vw;
         color: orangered;
         margin: 0px;
         padding: 0px;
@@ -283,10 +283,12 @@ img{
     }
     .slideProduit{
         width: 100%;
+        height: 170px;
         /*background: red;*/
         margin:auto;
         display: flex;
-        overflow: auto;
+        overflow: hidden;
+        overflow-x: auto;
         border: 1px solid red;
     }
     .slideProduit::-webkit-scrollbar{
@@ -325,27 +327,36 @@ img{
         left: 0;
         transition: 0.5s;
         display: flex;
+        align-items: center;
  
 
     }
-    picture{
-        max-width: 40%;
-        height: 100%;
+   picture{
+        max-width: 150px;
+        height: 135px;
         padding: 2px;
+        border: 1px solid lime;
         /*background: green;*/
-        display: flex;
         overflow: hidden;
         margin-bottom: 2px;
     }
     picture img{
-        width: 100%;
-        height: auto;
+        max-width: 100%;
+        height: 100%;
     }
-    .detail,
+    .detail{
+        width: 60%;
+        /*background: red;*/
+        margin: auto;
+        padding: 5px;
+        display: block;
+        font-size: 20px;
+        color: #444;
+    }
     .button{
         width: 90%;
         /*background: red;*/
-        margin: auto;
+        margin: 2px;
         padding: 5px;
         display: block;
         font-size: 20px;
@@ -356,13 +367,13 @@ img{
         text-decoration: none;
         padding: 6px 14px;
         font-size: 15px;
-        margin: 5px 0 0 20px;
+        margin: 5px 0 0 2px;
         display: inline-block;
         background: #6773ff;
         color: white;
     }
     p.star{
-        margin: 5px auto;
+        margin: 0px auto;
         width: 65%;
         font-size: 25px;
         color: #808080;
@@ -409,7 +420,7 @@ img{
         color: orangered;
     }
 
-    footer .faHome:hover{
+    footer li:hover{
         position: relative;
         bottom: 10px;
         box-shadow: 0px -4px 9px -2px rgba(0,0,0,0.75);
