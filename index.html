@@ -4,194 +4,242 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link  href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/public/style.css">
     <link rel="stylesheet" href="index.css">
+    <!-- Compiled and minified CSS -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+
+  
+            
 </head>
-<body id="body" onload="loadbody();">
-    <!--page d'entree de l'application qui contien les video-->
-    <section id="splash" class="filterDiv splash">
-        <section>
-            <figure id="video_player">
-                <video controls poster="images/hack.jpg">
-                    <source src="nambia1.mp4" type="video/mp4">
-                    <source src="nambia1.webm" type="video/webm">
-                </video>
-                <section class="bar">
-                    <div id="myBtnContainer">
-                        <button class="btn active" onclick="filterSelection('all')"> <i class="fa fa-video"></i></button>
-                        <button class="btn" onclick="filterSelection('code')"><i class="fa fa-code" aria-hidden="true"></i></button>
-                        <button class="btn" onclick="filterSelection('bureautique')"> <i class="fa fa-laptop" aria-hidden="true"></i></button>
-                        <button class="btn" onclick="filterSelection('android')"> <i class="fa fa-mobile" aria-hidden="true"></i></button>
-                        <button class="btn" onclick="filterSelection('blog')"> <i class="fa fa-blog"></i></button>
-                        <button class="btn" onclick="filterSelection('blog')"> <i class="fab fa-google"></i></button>
-                      </div>
-                </section>
-                    <figcaption>
-                        <div class="filterDiv cars">
-                            <div class="item cars">
-                                <div class="img">
-                                    <a href="https://res.cloudinary.com/ftechplus/video/upload/v1624329075/html%20et%20css/Formation_1_E.1-1_uzayfn.mp4"><img src="images/hack.jpg" alt="Nambia Timelapse 1"></a>
-                                </div>
-                                <div class="desc">
-                                    <a href="#" class="h1">a</a>
-                                    <P>Creer un compte gmail sur votre android très facile</P>
-                                </div>
-                            </div>
-                        </div>
-     
-                        <div class="filterDiv animals">
-                            <div class="item">
-                                <div class="img">
-                                    <a href="https://res.cloudinary.com/ftechplus/video/upload/v1624329075/html%20et%20css/Formation_1_E.1-1_uzayfn.mp4"><img src="images/hack.jpg" alt="Nambia Timelapse 1"></a>
-                                </div>
-                                <div class="desc">
-                                   <a href="#" class="h1">b</a>
-                                    <P>Creer un compte gmail sur votre android très facile</P>
-                                </div>
-                            </div>
-                        </div>
-     
-                         <div class="filterDiv colors">
-                            <div class="item">
-                                <div class="img">
-                                    <a href="https://res.cloudinary.com/ftechplus/video/upload/v1624329075/html%20et%20css/Formation_1_E.1-1_uzayfn.mp4"><img src="images/hack.jpg" alt="Nambia Timelapse 1"></a>
-                                </div>
-                                <div class="desc">
-                                   <a href="#" class="h1">cl</a>
-                                    <P>Creer un compte gmail sur votre android très facile</P>
-                                </div>
-                            </div>
-                         </div>
-                     </figcaption>
-            </figure>
-        </section>
+<body>
+    <header>
+        <div onclick="openMenu()" class="openMenu"><span id="rm"></span><span>Rm</span></div>
+        <h1 id="username">hello</h1>
+        <div class="image" onclick="profile()"><img id="proimg" class="circle" src="/public/assets/noimage.png"  alt="noimage" /></div>
+    </header>
+
+    <!--menu de l'application-->
+    <nav id="nav">
+      <div class="navHeader">
+        <a href="#" class="logo">Sitech Plus</a>
+        <div class="closeMenu" onclick="closeMenu()">x</div>
+      </div>
+      <div class="menu">
+          <div class="profile"></div>
+        <ul id="nav-mobile" class="right">
+          <li id="loginli" onclick="loginm()"><i class="bx bx-home-alt icon"></i><a class="modal-trigger" href="#modal2">Login</a></li>
+          <li  id="signupli" onclick="signupm()"><i class="bx bx-home-alt icon"></i><a class="modal-trigger" href="#modal1">Signup</a></li>
+          <li  id="logoutli"><i class="bx bx-home-alt icon"></i><a onclick="logout()">Logout</a></li>
+          <button onclick="edit()" id="edit">eddit</button>
+        </ul>
+      </div>
+    </nav>
+
+
+  <main>
+    <!--Div slider de l'application top-->
+    <section id="slide">
+      <section class="slideProduit">
+        <div class="product">
+          <picture>
+            <img src="/images/blogmobile.png" alt="">
+          </picture>
+          <div class="detail">
+            <p style="margin: 0px;">
+              <b>Product Two</b><br>
+              <small>New arrival</small>
+            </p>
+            <input type="number" id="price" value="200">
+
+            <div class="button">
+              <a href="#" onclick="achat()">Add-cart</a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="product">
+          <picture>
+            <img src="/images/commen_creer _blog.png" alt="">
+          </picture>
+          <div class="detail">
+            <p>
+              <b>Product Three</b><br>
+              <small>New arrival</small>
+            </p>
+            <samp>$45.00</samp>
+            <div class="button">
+              <a href="#">Add-cart</a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="product">
+          <picture>
+            <img src="/images/blogmobile.png" alt="">
+          </picture>
+          <div class="detail">
+            <p>
+              <b>Product Four</b><br>
+              <small>New arrival</small>
+            </p>
+            <samp>$45.00</samp>
+
+            <div class="button">
+              <p class="star">
+              <a href="#">Add-cart</a>
+            </div>
+          </div>
+        </div>
+    </section>
     </section>
 
-    <!--le home de mon application-->
-    <main id="home">
-        <section class="home-header">
-          <center>
-            <h1>Formation Modification template par défaut Blogger </h1>
-            <button><a href="/formation/formulaire/formulaire d'inscription.html">Je veux suivre cette formation</a></button>
-          </center>
-        </section>
-        <section id="noti">
-          <div id="subheader">
-            <div>
-              <p>formation en cours : <sapn>Blog blogger</sapn></p>
-              <p>Inscription en cours : <spam style="color:blue;">Pas encore disponible</spam><i class="fa fa-chevron-right"></i></p>
-            </div>
-            <img src="images/logo.png" alt="" />
+    <section id="home">
+      <div class="card" >
+       <div>
+          <h1>Formation Gratuit</h1>
+          <div>
+            <ul>
+              <li ><span id="rm"></span><span>Rm</span></li>
+            </ul>
           </div>
-        </section>
-
-        <section id="produitLivre">
-          <div class="title">
-            <div class="espace"></div>
-            <h1>Document en pdf sur android</h1>
-            <div class="espace"></div>
-          </div>
-          <div class="produit">
-            <div class="produit-item">
-              <a href="pages/creer_blog.html">
-                <div class="livre">
-                  <img src="/images/commen_creer _blog.png" alt="Comment creer un blog">
-                </div>
-                <div class="des">
-                  <p><span>Rm</span> <span id="prix">100</span></p>
-                </div>
-              </a>
-            </div>
-           
-          <div class="produit-item">
-            <a href="pages/monetiser-un-lien.html">
-              <div class="livre">
-                <img src="images/monetizer_lien.png" alt="Monetiser un lien">
-              </div>
-              <div class="des">
-                <p><span>Rm</span> <span id="prix">200</span></p>
-              </div>
-            </a>
-          </div>
-
-            <div class="produit-item">
-              <a href="pages/programation-premier.html">
-                <div class="livre">
-                  <img src="images/programmation.png" alt="programmation web">
-                </div>
-                <div class="des">
-                  <p><span>Rm</span> <span id="prix">400</span></p>
-                </div>
-              </a>
+          <div class="timer">
+            <p id="demo">Formation Disponible</p>
+            <ul id="timer">
+              <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
+              <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
+              <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
+              <li><span id="second"></span><b>:</b><span class="t" >Sc</span><div id="div1" class="fa"></div></li>
+            </ul>
+            <h3>Comment creer Un blog gratuit</h3>
+            <p>
+              Apprendre a creer un blog, a partie de votre android,
+              pour suivre la formation integrer dans notre groupe
+            </p>
+            <div class="btn">
+              <button>Integrer dans le groupe</button> 
+              <button>Plan de la formation</button>
             </div>
           </div>
-        </section>
+       </div>
+      </div>
+    </section>
+    
+    <!--Div slider de profile top-->
+    <section id="profile">
+      <div class="userDetails"></div>
+    </section>
 
-        <section class="document">
-
-        </section>
-
-        <section style="display: none;">
-          <div class="card">
-            <div><img src="images/formation-methode.png" alt="Denim Jeans"></div>
-            <h1>cours html et css</h1>
-            <p>Apprendre la programmation web en utilisant votre android</p>
-            <a href="cours/pages/salle.html"><button>Suivez le cours</button></a>
-          </div>
-          <div class="card">
-            <div><img src="images/video-icon.png" alt="Denim Jeans"></div>
-            <h1>Bureautique</h1>
-            <p>Devenir le mettre de votre android en regardant nos videos</p>
-            <a href="bureautique.html"><button>Regarder nos videos</button></a>
-          </div>
-        </section>
-        <section>
-          <div class="card">
-            <div><img src="images/article.jpg" alt="Denim Jeans"></div>
-            <h1>Article recent</h1>
-            <p>Tous nos articles sur votre smartphone son disponible ici</p>
-            <a href="Articles/articles.html"><button>Nos articles</button></a>
-          </div>
-          <div class="card">
-            <div><img src="images/livre.png" alt="Denim Jeans"></div>
-            <h1>Ebook Shop</h1>
-            <p>Télécharger des documents informatique préparer pour vous</p>
-            <a href="/boutique/boutique.html"><button>Télécharger</button></a>
-          </div>
-        </section>
-
-        <section style="display: block; background-color: black; height: 100%;">
-          <p style="text-align: center; font-size: 2.5vw; color: white; display: block; height: auto; padding: 10px;">
-            Je sais que vous avez besoin un peu d'aide,Apprendre encore plus sur votre android
-            decouvrir ce que vous allez apprendre dans la formation et comment vous inscrire.
-          </p>
-          <center><a href="/formation/salleDeFormation/formationBlogger.html" class="apercu" onclick="apercu()">Cliquer pour voire</a></center>
-        </section>
-      </main><!--page d'accueil de mon application-->
-    <script src="index.js"></script>
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-
-      <!-- TODO: Add SDKs for Firebase products that you want to use -->
-      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
-
-      <script>
-        
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz9X5FHrJMi1FGcDyoijkK1mpJal42V5WQkiZznPIxidXFBbPp_dRb2T0csJOq6fEUh/exec'
-            const form = document.forms['google-sheet']
+    <!--Formulaire espace-->
+    <section class="form">
+          <!--Signup Modal -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Signup</h4>
+          <form autocomplete="off" onsubmit="signup(event)">
+            <input type="email" id="signupEmail" placeholder="email" />
+            <input type="password" id="signupPassword" placeholder="password" />
+            <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
+          </form>
+          <!--<button class="btn" onclick="loginWithGoogle()">Login with google</button>-->
           
-            form.addEventListener('submit', e => {
-              alert(ruban);
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-                .catch(error => console.error('Error!', error.message))
-            })
-      </script>
+        
+        </div>
+      </div>
+         
+    <!--login Modal -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4>Login</h4>
+          <form autocomplete="off" onsubmit="login(event)">
+            <input type="email" id="loginEmail" placeholder="email" />
+            <input type="password" id="loginPassword" placeholder="password" />
+            <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
+          </form>
+          <!--<button class="btn" onclick="loginWithGoogle()">Login with google</button>-->
+          
+        
+        </div>
+      </div>
+        <!--edit profile -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <h4>Edit your details</h4>
+          <div class="file-field input-field">
+            <div class="btn #fbc02d yellow darken-2">
+              <span>File</span>
+              <input type="file" accept="image/*" onchange="uploadImage(event)" />
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+          <form autocomplete="off" id="editProfile" onsubmit="updateUserProfile(event)">
+            <input type="email" name="profileEmail" placeholder="email" />
+            <input type="text" name="name" placeholder="name" />
+            <input type="text" name="phoneno" placeholder="phoneno" />
+            <input type="text" name="specialty" placeholder="speciality" />
+            <input type="text" id="b" name="prorfolioUrl" placeholder="protfolio url" />
+            <input type="text" name="experience" placeholder="experience" />
+
+            <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
+          </form>
+      
+          
+        
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li onclick="openMenu()" id="footerMenu"><i class="fa fa-bars"></i></li>
+      <li><i class="fa fa-user"></i></li>
+      <li class="faHome"><i class="fa fa-home"></i></li>
+      <li><i class="fa fa-trash"></i></li>
+      <li><i class="fa fa-whatsapp"></i></li>
+    </ul>
+    
+    
+    
+    
+  </footer>
+        
+
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+</script>  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCTgqtMVnMcOqcQ7pDqoUA-F_kR-KlSqfg",
+    authDomain: "paimente-bb7cc.firebaseapp.com",
+    databaseURL: "https://paimente-bb7cc-default-rtdb.firebaseio.com",
+    projectId: "paimente-bb7cc",
+    storageBucket: "paimente-bb7cc.appspot.com",
+    messagingSenderId: "772305114013",
+    appId: "1:772305114013:web:73485cfdbb0d2eb3d91574",
+    measurementId: "G-BXF8NJ7L8Q"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="/public/scripts/auth.js"></script>
+<script src="/public/scripts/firestore-db.js" ></script>
+<script src="/public/scripts/script.js"></script>
+
+
 </body>
 </html>

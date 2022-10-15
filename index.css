@@ -5,6 +5,51 @@ body{
 *{
     box-sizing: border-box;
 }
+
+body{
+    background: white;
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+
+
+.btn{
+    padding: 8px;
+    margin: 5px auto;
+    background: orangered;
+    border: none;
+}
+
+button{
+    cursor: pointer;
+}
+/* formulaire*/
+#modal1, #modal2, #modal3{
+    display: none;
+}
+.modal{
+    width: 300px;
+    margin:10px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+}
+
+.modal input{
+    width: 95%;
+    padding: 7px;
+    margin: 10px auto;
+    border: none;
+}
+input:focus{
+    outline: none;
+    border: none;
+}
+img{
+    width: 100%;
+}
 @media (min-width: 851px) {
     #body{
         display: none;
@@ -14,348 +59,314 @@ body{
     main{
         height: 100%;
     }
-}
-/*la partie video accueil de l'application*/
-@media (max-width: 850px){
-    /* Splash */
-#splash {
-	position: absolute;
-	background-image: url('images/Minimalist-Desk-Flyer-Background-Image.jpg');
-    background-size: cover;
-	height: 100vh;
-	width: 100%;
-    margin-top: 0px;
-    padding: 0px;
-	display: flex;
-	
-	transition: width 1s;
-    }
-    #splash{
-        display: none;
-    }
-    #video_player{
-        width: 100%;
-        border: 1px solid yellow;
-        margin: 0px;
-    }
-    #video_player img{
-        width: 100%;
-    }
-    video{
-        width: 100%;
-    }
-    .bar{
-        width: 100%;
-        height: auto;
-        background: blue;
-        margin-top: 0px;
-        padding: 5px;
-    }
-    .search-bar{
-        width: 100%;
-        margin: auto;
-        padding: 2px;
-    }
-    .search-bar input{
-        padding: 5px;
-        width: 100%;
-    }
-    .filterDiv{
-        display: none;
-    }
-    .bar i{
-        font-size: 20px;
-        color: black;
-        color: blue;
-    }
-    /* Style the buttons */
-.btn {
-    border: none;
-    outline: none;
-    padding: 4px 8px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-  }
-  .btn:hover {
-    background-color: #ddd;
-    color: white;
-  }
-  .btn i:active {
-    color: white;
-  }
-  .btn.active {
-    background-color: rgb(255, 6, 6);
-    color: white;
-  }
-    .show {
-        display: block;
-      }
-    .item a{
-        width: max-content;
-    }
-    figcaption .item{
+
+    header{
         display: flex;
-        background: white;
-        margin: 5px 0px 5px 0px;
-    }
-    .item .img{
-        width: 30%;
-        height: 100%;
-        margin: 5px 7px 0px 7px;
-        box-shadow: 0px 0px 5px 0px black;
-        
-    }
-    .item .img:hover{
-        border: 1px solid red;
-    }
-    .item .desc{
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
         width: 100%;
-        margin: 0px;
+        background-color: orangered;
+        position: fixed;
+        top: 0%;
+        margin-bottom: 50px;
+        color: white;
     }
-    .item .desc h1{
-       font-size: 4vw;
-       margin: 2px;
-
+    header .openMenu{
+        color: orangered;
+        font-size: 5vw;
+        font-family: impact;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: max-content;
+        padding: 1px 5px 1px 5px;
+        margin: auto 2px auto 5px;
+        background-color: white;
+        border: 1px solid white;
+        cursor: pointer;
     }
-    .item .desc p{
 
-        margin: 1px;
-        text-align: left;
-
+    header .image{
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
     }
+
+    header .userDetails{
+        color: white;
+        font-size: 20px;
+    }
+
+
+}
+/*la menu de l'application*/
+@media (max-width: 850px){
+    /* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+    nav{
+        display: none;
+        background: white;
+        height: 100%;
+        border: 1px solid red;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        z-index: 1;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    }
+   .closeMenu{
+    background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        border: 1px solid red;
+        padding: 5px;
+        float: right;
+        left: 183px;
+        cursor: pointer;
+    }
+
+    .navHeader{
+        background-image: url('/images/slide2.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 150px;
+        width: 100%;
+    }
+
+    .menu ul{
+        padding: 5px;
+    }
+    .menu ul li{
+        list-style: none;
+        font-size: 5vw;
+    }
+
 }
 
 
 /* la partie d'accueill de l'application*/
 @media (max-width: 850px){
-    #home{
-        margin-top: 0px;
-        margin-bottom: 5px;
-    }
-    .home-header{
-        background-image: url('images/back.jpg');
-        background-size: cover;
-        font-weight: bold;
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .home-header h1{
-        background-color: white;
-        padding: 10px;
-    }
-    .home-header button a{
-        text-decoration: none;
-        color: white;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-    .home-header center{
-        margin: 0px 10px 10px 10px;
-    }
-    .home-header button{
-        width: 100%;
-        background-color: #ff3300cb;
-        border: none;
-        padding: 10px;
-        font-size: 16px;
-    }
-  
-    .date-time{
-        background: rgba(255, 255, 255, 0.432);
-        padding: 1px;
-        width: 100%;
-        text-align: center;
-    }
+   main{
+    border: 2px solid black;
+    height: auto;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 51px;
+    background: rgb(233, 228, 228);
+    overflow-y: auto;
+   }
+   #home{
+    margin: 5px auto;
+   }
+   .home .hHeader{
+    background: ornage;
+    width: 100%;
+    height: 100%;
+   }
 
-    .date-time h2{
-        font-size: 6vw;
-        color: blue;
-        margin-bottom: 1px;
-    }
-    .home-header img{
-        width: 100%;
-    }
-    .bar-conect{
-        padding: 10px;
-        padding-top: 1px;
-        display: flex;
-        margin:1px auto;
-        width: 100%;
-    }
+   #home .card{
+    background: rgb(2, 2, 44);
+    width: 100%;
+    padding: 10px;
+    color: white;
+   }
+   #home .card h1{
+    color: white;
+    font-size: 9vw;
+    text-align: center;
+    margin: 1px auto;
+    border: none;
+   }
+   #home .timer{
+    background-color: orangered;
+    padding: 10px;
+   }
+   .timer #demo{
+    font-size: 7vw;
+    text-align: center;
+    margin: 2px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 5px 2px 8px black;
+   }
+   #home .timer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 2px;
+   }
+   #home .timer ul li{
+    background: white;
+    color: black;
+    list-style: none;
+    margin: 2px 5px 2px 5px;
+    padding: 5px;
+    font-size: 6vw;
+    font-family: Fantasy;
+   }
+   .timer b{
+    margin: 1px 5px 1px 5px;
+   }
+   .timer .t{
+    font-size: 3vw;
+   }
 
-    .bar-conect a{
-        background: white;
-        padding: 5px;
-        text-decoration: none;
-        margin: 1px 5px 0px 5px;
-        font-size: 5vw;
-    }
-    section{
-        display: flex;
-        width: 100%;
-      }
-      .apercu{
-        border: 1px solid blue;
-        padding: 5px;
-        color: #FFF;
-        font-size: 3vw;
-        margin: 5px;
-      }
-      #noti{
-        width: 100%;
-        height: 70px;
-        background-color: orange;
-      }
-      #subheader {
-        background: orange;
-        color: #fff;
-        box-shadow: 3px 3px 10px #888888;
-        font-size: 14px;
-        padding: 10px;
-        width: 90%;
-        margin: 0 auto 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      
-      #subheader p {
-        margin: 4px;
-      }
-      
-      #subheader img {
-        width: 40px;
-      }
-      .card {
-        box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.75);
-        width: 100%;
-        min-width: 140px;
-        margin: 5px;
-        text-align: center;
-        font-family: 'Times New Roman', Times, serif;
-        border-radius: 10px;
-        border: 1px solid blue;
-      }
-      .card h1{
-        font-size: 5vw;
-        margin: 2px;
-      }
-      .card p{
-        font-size: 2.5vw;
-        margin: 1px;
-        color: black;
-        font-style: normal;
-        line-height: normal;
-      }
-      .card div{
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        height: 50px;
-        margin-bottom: 2px;
-      }
-      .card div img{
-        width: 50px;
-        height: 50px;
-        border: 1px solid orange;
-        border-radius: 50%;
-        margin-top: 4px;
-        background: white;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      }
-      
-      .card button {
-        font-size: 3.6vw;
-        border: none;
-        border-radius: 5px;
-        outline: 0;
-        padding: 3px;
-        color: white;
-        background-color: blue;
-        text-align: center;
-        cursor: pointer;
-        width: 80%;
-        margin: 4px;
-      }
-      
-      .card button:hover {
-        background: orange;
-        opacity: 0.7;
-      }
+   .timer h3{
+    font-size: 6vw;
+    text-align: center;
+    margin: 2px;
+   }
+   .timer p{
+    font-size: 4.5vw;
+    text-align: center;
+    margin: 2px;
+   }
+   .timer .btn{
+    margin: 2px auto;
+    width: max-content;
+   }
+   .timer .btn button{
+    padding: 3vw;
+   }
+
 }
 
-/* la partie produit de mon application */
+
+
+/* la partie profile*/
+@media (max-width:850px){
+    #profile{
+        display: none;
+    }
+}
+/* la partie produit slider de mon application */
 @media (max-width: 850px){
-    #produitLivre{
-        display: block;
-    }
-    #produitLivre .title{
-        width: 100%;
-        display: flex;
-        border: 1px solid blue;
-        padding: 2px;
-        align-items: center;
-        justify-content: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    .espace{
-        background-color: blue;
-        height: 50px;
-        width: 10%;
-    }
-
-    .title h1{
-        text-align: center;
-        width: 100%;
-        font-size: 5vw;
-        font-weight: bold;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        color: rgb(1, 1, 78);
-    }
-
-    .produit{
-        width: 100%;
-        display: flex;
-    }
-    .livre{
-        overflow: hidden;
-        width: 100%;
+    .detail p b{
+        font-size: 7vw;
+        color: orangered;
         margin: 0px;
-    }
-    .produit a{
-        margin: 2px 2px 2px 2px;
         padding: 0px;
     }
-    .livre img{
-
-        width: 100%;
+    .detail p small{
+        font-size: 5vw;
+        color: orange;
         margin: 0px;
+        margin-bottom: 1px;
+        padding: 0px;
     }
-    .produit-item{
+    .detail samp{
+        font-size: 5vw;
+        color: red;
+        margin: 0px;
+        margin-bottom: 1px;
+        padding: 0px;
+    }
+    .detail input{
+        padding: 5px;
+        background: none;
+        border: none;
+        width: max-content;
+        outline: none;
+        font-size: 5vw;
+    }
+    .slideProduit{
         width: 100%;
+        /*background: red;*/
+        margin:auto;
+        display: flex;
+        overflow: auto;
+        border: 1px solid red;
+    }
+    .slideProduit::-webkit-scrollbar{
+        display: block;
+        background: orangered; 
+        border-radius: 1px;
+        width: 20px;
+        background-color: white;
+    }
+
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+ 
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 1px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 1px;
+  }
+  
+    .slideProduit .product{
+        min-width: 100%;
         height: 100%;
-        overflow: hidden;
-        margin: 1px 5px 2px 5px;
-    }
-    a .des{
-        background-color: blue;
-        color: white;
-        margin: 0px;
-    }
-    a .des h3{
-        font-size: 4.5vw;
-        text-align: center;
-        margin: 0px;
-    }
-    a .des p{
-        font-size: 4.5vw;
-        text-align: center;
-        margin: 0px;
-    }
+        background: whitesmoke;
+        margin:  5px 20px  0 0;
+        border-radius: 20px;
+        position: relative;
+        left: 0;
+        transition: 0.5s;
+        display: flex;
+ 
 
+    }
+    picture{
+        max-width: 40%;
+        height: 100%;
+        padding: 2px;
+        /*background: green;*/
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 2px;
+    }
+    picture img{
+        width: 100%;
+        height: auto;
+    }
+    .detail,
+    .button{
+        width: 90%;
+        /*background: red;*/
+        margin: auto;
+        padding: 5px;
+        display: block;
+        font-size: 20px;
+        color: #444;
+    }
+    small{color: #555;}
+    a{
+        text-decoration: none;
+        padding: 6px 14px;
+        font-size: 15px;
+        margin: 5px 0 0 20px;
+        display: inline-block;
+        background: #6773ff;
+        color: white;
+    }
+    p.star{
+        margin: 5px auto;
+        width: 65%;
+        font-size: 25px;
+        color: #808080;
+    }
 }
 
 /* le pied de mon site web*/
@@ -363,37 +374,44 @@ body{
     footer{
         width: 100%;
         height: 50px;
-        background: rgb(173, 165, 165);
+        background: black;
         position: fixed;
-        
-        z-index: 1;
-        bottom: 0;
-        left: 0;
+        bottom: 0%;
     }
 
-    footer .share-btn-container{
+    footer ul{
         display: flex;
-        height: 100%;
-        justify-content: center;
+        margin: 2px;
+        padding: 2px;
+        justify-content: space-between;
+    }
+    footer ul li{
+        width: 50px;
+        list-style: none;
+        display: flex;
         align-items: center;
-        padding: 0px 5px 0px 8px;
-    }
-
-    footer .share-btn-container a{
-        background: white;
-        width: max-content;
-        margin: 1px 5px 0px 0px;
+        justify-content: center;
         padding: 5px;
-        border-radius: 5px;
-    }
-    footer a:active{
-        background: orange;
+        background-color: white;
+        margin: auto 5px auto 5px;
+        font-size: 8vw;
     }
     footer i{
-        font-size: 35px;
+        color: black;
+        font-size: 80px;
     }
 
-    footer .space{
-        width: 100%;
+    #footerMenu{
+        cursor: pointer;
+    }
+
+    footer .fa-home{
+        color: orangered;
+    }
+
+    footer .faHome:hover{
+        position: relative;
+        bottom: 10px;
+        box-shadow: 0px -4px 9px -2px rgba(0,0,0,0.75);
     }
 }
