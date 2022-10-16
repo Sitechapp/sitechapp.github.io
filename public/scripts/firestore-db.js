@@ -31,6 +31,7 @@ async function getuserInfo(userID){
        <h3>${userInfo.phone}</h3>
        `
        username.innerHTML = `<h3>${userInfo.name}</h3>`
+       document.getElementById('modal1').style.display ='none';
    }    
     }else{
         userDetails.innerHTML = `
@@ -40,6 +41,12 @@ async function getuserInfo(userID){
         <h1>Connectez-vous</h1>
         `
         
+    }
+
+    if(username = "user"){
+      document.getElementById('edit').style.display = "block";
+    } else{
+      document.getElementById('edit').style.display = "block";
     }
 
 
@@ -70,6 +77,8 @@ async function getuserInfoRealtime(userID){
                     
                         document.getElementById('username').innerHTML = `${userInfo.name}`
                         document.getElementById('rm').innerHTML = `${userInfo.portfolioUrl}`
+                        document.getElementById('modal2').style.display ="none";
+                        document.getElementById('modal1').style.display ="none";
                         
                         editProfile["name"].value = userInfo.name
                         editProfile["profileEmail"].value = userInfo.email

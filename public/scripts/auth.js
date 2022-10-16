@@ -29,10 +29,14 @@ async function login(e){
     e.preventDefault()
     const email  = document.querySelector('#loginEmail')
     const password  = document.querySelector('#loginPassword')
+    const log = document.getElementById("logoutli").style.display = "block"
+    
     
     try{
       const result = await firebase.auth().signInWithEmailAndPassword(email.value, password.value)
       M.toast({html:`welcome ${result.user.email}`,classes:"green"})
+      var modal2 = document.getElementById('modal2').style.display = "none"
+      document.getElementById('h').innerHTML ='erreur'
      console.log(result)  
     }catch(err){
         console.log(err)
@@ -40,14 +44,17 @@ async function login(e){
     }
     email.value = ""
     password.value = ""
+    document.getElementById('h').innerHTML ='erreur'
     M.Modal.getInstance(myModel[1]).close()
+    var modal2 = document.getElementById('modal2').style.display = "none"
+    
 }
 
 
 function logout(){
     firebase.auth().signOut()
     
-    document.querySelector('#proimg').src= "/base/assets/noimage.png"
+    document.querySelector('#proimg').src= "./assets/noimage.png"
 }
 
 const unsubscribe  = firebase.auth().onAuthStateChanged((user) => {
@@ -57,7 +64,7 @@ const unsubscribe  = firebase.auth().onAuthStateChanged((user) => {
       document.getElementById("loginli").style.display = "none"
       document.getElementById("signupli").style.display = "none"
       document.getElementById("logoutli").style.display = "block"
-      document.getElementById("edit").style.display = "block"
+      document.getElementById('edit').style.display = "none";
       getuserInfoRealtime(user.uid)
       if(user.uid=='TSS0ckznnpM2UkjxHIxp2Y8ivFc2'){
         allUserDetails()
@@ -71,7 +78,6 @@ const unsubscribe  = firebase.auth().onAuthStateChanged((user) => {
       document.getElementById("logoutli").style.display = "none"
       document.getElementById("loginli").style.display = "block"
       document.getElementById("signupli").style.display = "block"
-      document.getElementById("edit").style.display = "none "
       // M.toast({html: "signout success",classes:"green"})
     }
   });
@@ -94,9 +100,3 @@ async function loginWithGoogle(){
     
   
 }
-
-
-
-
-
-

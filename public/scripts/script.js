@@ -1,11 +1,21 @@
 function signupm(){
+  var nav = document.getElementById("nav");
+  nav.style.width = "0px";
+  if(nav.style.width === "250px"){
     document.getElementById("modal2").style.display = 'none';
     document.getElementById("modal1").style.display = 'block';
+    nav.style.left = "-10px";
+  }
 }
 
 function loginm(){
-    document.getElementById("modal2").style.display = 'block';
-    document.getElementById("modal1").style.display = 'none';
+  var nav = document.getElementById("nav");
+  document.getElementById("modal2").style.display = 'block';
+  document.getElementById("modal1").style.display = 'none';
+  nav.style.width = "0px";
+  if(nav.style.width === "250px"){
+    nav.style.left = "-10px";
+  }
 }
 
 function edit(){
@@ -99,7 +109,7 @@ function achat(){
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("october 15, 2022 15:37:25").getTime();
+var countDownDate = new Date("october 16, 2022 19:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -118,12 +128,12 @@ var x = setInterval(function() {
     
   // Output the result in an element with id="demo"
   var d =document.getElementById("day");
-  var h =document.getElementById("heure");
+  var he =document.getElementById("heure");
   var m =document.getElementById("minutes");
   var s =document.getElementById("second");
   
     d.innerHTML = days;
-    h.innerHTML = hours;
+    he.innerHTML = hours;
     m.innerHTML = minutes;
     s.innerHTML = seconds;
   // If the count down is over, write some text 

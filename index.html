@@ -27,6 +27,11 @@
         <a href="#" class="logo">Sitech Plus</a>
         <div class="closeMenu" onclick="closeMenu()">x</div>
       </div>
+       
+    <!--Div slider de profile top-->
+    <section id="profile">
+      <div class="userDetails"></div>
+    </section>
       <div class="menu">
           <div class="profile"></div>
         <ul id="nav-mobile" class="right">
@@ -40,71 +45,51 @@
 
 
   <main>
-    <!--Div slider de l'application top-->
-    <section id="slide">
-      <section class="slideProduit">
-        <div class="product">
-          <picture>
-            <img src="/images/crack mot de pass.png" alt="">
-          </picture>
-          <div class="detail">
-            <p style="margin: 0px;">
-              <b>Product Two</b><br>
-              <small>New arrival</small>
-            </p>
-            <input type="number" id="price" value="200">
-
-            <div class="button">
-              <a href="#" onclick="achat()">Add-cart</a>
-            </div>
-          </div>
-          
-        </div>
-        <div class="product">
-          <picture>
-            <img src="/images/commen_creer _blog.png" alt="">
-          </picture>
-          <div class="detail">
-            <p style="margin: 0px;">
-              <b>Product Three</b><br>
-              <small>New arrival</small>
-            </p>
-            <input type="number" id="price" value="200" style="margin: 0px;">
-            <div class="button">
-              <a href="#">Add-cart</a>
-            </div>
-          </div>
-          
-        </div>
-        <div class="product">
-          <picture>
-            <img src="/images/programmation.png" alt="">
-          </picture>
-          <div class="detail">
-            <p style="margin: 0px;">
-              <b>Product Four</b><br>
-              <small>New arrival</small>
-            </p>
-            <input type="number" id="price" value="200">
-
-            <div class="button">
-              <p class="star">
-              <a href="#">Add-cart</a>
-            </div>
-          </div>
-        </div>
-    </section>
-    </section>
+    
 
     <section id="home">
+      <!--Div slider de l'application top-->
+    <section id="slide">
+      <section class="slideProduit">
+        <div class="slideCard">
+          <div class="image">
+            <img style="display: none;" src="https://drive.google.com/thumbnail?id=1dsTVc9pYliHonX2bJ07XGCm84-9pjXno" alt="">
+          </div>
+          <div class="text">
+            <h1>Formation html et css</h1>
+            <p>Formation html et css sur android</p>
+            <p><span>100</span><span>Rm</span></p>
+            <button disabled>Je veux ceci!</button>
+          </div>
+        </div>
+
+        <div class="slideCard">
+          <div class="image">
+            <img style="display: none;" src="https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt="">
+          </div>
+          <div class="text">
+            <h1>Informatique Bureautique</h1>
+            <p>Apprendre l'infomatique Bureautique</p>
+            <p><span>100</span><span>Rm</span></p>
+            <button disabled>Je veux ceci!</button>
+          </div>
+        </div>
+        
+        <div class="slideCard">
+          <div class="image">
+            <img style="display: none;" src="https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt="">
+          </div>
+          <div class="text">
+            <h1>Creation Blog Blogger</h1>
+            <p>Comment creer un blog gratuit a partie de blogger</p>
+            <p><span>100</span><span>Rm</span></p>
+            <button disabled>Je veux ceci!</button>
+          </div>
+        </div>
+    </section>
+    </section>
       <div class="card" >
        <div>
-          <h1>Formation Gratuit</h1>
-          <div>
-            <ul>
-              <li ><span id="rm"></span><span>Rm</span></li>
-            </ul>
-          </div>
           <div class="timer">
             <p id="demo">Formation Disponible</p>
             <ul id="timer">
@@ -119,18 +104,14 @@
               pour suivre la formation integrer dans notre groupe
             </p>
             <div class="btn">
-              <button>Integrer dans le groupe</button> 
-              <button>Plan de la formation</button>
+              <button onclick="groupeW"><i class="fa fa-whatsapp"></i>Groupe Formation</button> 
+              <button onclick="plan"><i class="fa fa-file"></i>Plan formation</button>
             </div>
           </div>
        </div>
       </div>
     </section>
-    
-    <!--Div slider de profile top-->
-    <section id="profile">
-      <div class="userDetails"></div>
-    </section>
+   
 
     <!--Formulaire espace-->
     <section class="form">
