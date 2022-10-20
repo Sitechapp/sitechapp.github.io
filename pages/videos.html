@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/videos.css">
+</head>
+<body>
+  <header>
+   <ul class="listHeader">
+    <li onclick="openMenu()" id="openMenu"> <i class="fa fa-bars"></i></li>
+   </ul>
+   <div class="userDetails"></div>
+   <div class="image">
+    <img id="proimg" class="circle" src="/images/logo.png"  alt="noimage">
+ </div>
+   
+    
+  </header>
+  <menu id="nav">
+    <div class="closeMenu" onclick="closeMenu()">x</div>
+  </menu>
+  <main>
+    <div class="container">
+
+      <div class="main-video-container">
+         <video src="https://m.youtube.com/watch?v=4YMGz3GMPH8"  loop controls class="main-video"></video>
+         <h3 class="main-vid-title">house flood animation</h3>
+      </div>
+   
+      <div class="video-list-container">
+   
+         <div class="list active">
+            <video src="https://m.youtube.com/watch?v=4YMGz3GMPH8" class="list-video"></video>
+            <h3 class="list-title">Creer un blog avec blogger</h3>
+         </div>
+   
+         <div class="list">
+            <video src="https://www.youtube.com/watch?v=ic-l6ab3oHQ" class="list-video"></video>
+            <h3 class="list-title">Comment chanjer le template de votre blog ?</h3>
+         </div>
+   
+         <div class="list">
+            <video src="https://www.youtube.com/watch?v=BG46-2H1Fgs" class="list-video"></video>
+            <h3 class="list-title">Cracquer movavie screen recorder</h3>
+         </div>
+
+         <div class="list">
+          <video src="https://www.youtube.com/watch?v=ic-l6ab3oHQ" class="list-video"></video>
+          <h3 class="list-title">Comment chanjer le template de votre blog ?</h3>
+       </div>
+ 
+       <div class="list">
+          <video src="https://www.youtube.com/watch?v=BG46-2H1Fgs" class="list-video"></video>
+          <h3 class="list-title">Cracquer movavie screen recorder</h3>
+       </div>
+   
+      </div>
+   
+   </div>
+  </main>
+  <footer>
+    <ul class="listFooter">
+      <li onclick="menu()"> <i class="fa fa-youtube"></i></li>
+      <li><i class="fa fa-facebook"></i></li>
+      <li class="faHome"><i class="fa fa-home"></i></li>
+      <li onclick="lgout()"><i class="fa fa-twitter"></i></a></li>
+      <li><i class="fa fa-whatsapp"></i></li>
+     </ul>
+  </footer>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCTgqtMVnMcOqcQ7pDqoUA-F_kR-KlSqfg",
+    authDomain: "paimente-bb7cc.firebaseapp.com",
+    databaseURL: "https://paimente-bb7cc-default-rtdb.firebaseio.com",
+    projectId: "paimente-bb7cc",
+    storageBucket: "paimente-bb7cc.appspot.com",
+    messagingSenderId: "772305114013",
+    appId: "1:772305114013:web:73485cfdbb0d2eb3d91574",
+    measurementId: "G-BXF8NJ7L8Q"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+  <script src="/js/js.js"></script>
+</body>
+</html>

@@ -1,202 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link  href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/public/style.css">
-    <link rel="stylesheet" href="index.css">
-    <!-- Compiled and minified CSS -->
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
-
-  
-            
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <header>
-        <div onclick="openMenu()" class="openMenu"><span id="rm"></span><span>Rm</span></div>
-        <h1 id="username">hello</h1>
-        <div class="image" onclick="profile()"><img id="proimg" class="circle" src="/public/assets/noimage.png"  alt="noimage" /></div>
-    </header>
-
-    <!--menu de l'application-->
-    <nav id="nav">
-      <div class="navHeader">
-        <a href="#" class="logo">Sitech Plus</a>
-        <div class="closeMenu" onclick="closeMenu()">x</div>
-      </div>
-       
-    <!--Div slider de profile top-->
-    <section id="profile">
-      <div class="userDetails"></div>
-    </section>
-      <div class="menu">
-          <div class="profile"></div>
-        <ul id="nav-mobile" class="right">
-          <li id="loginli" onclick="loginm()"><i class="bx bx-home-alt icon"></i><a class="modal-trigger" href="#modal2">Login</a></li>
-          <li  id="signupli" onclick="signupm()"><i class="bx bx-home-alt icon"></i><a class="modal-trigger" href="#modal1">Signup</a></li>
-          <li  id="logoutli"><i class="bx bx-home-alt icon"></i><a onclick="logout()">Logout</a></li>
-          <button onclick="edit()" id="edit">eddit</button>
-        </ul>
-      </div>
-    </nav>
-
-
-  <main>
-    
-
-    <section id="home">
-      <!--Div slider de l'application top-->
-    <section id="slide">
-      <section class="slideProduit">
-        <div class="slideCard">
-          <div class="image">
-            <img style="display: none;" src="https://drive.google.com/thumbnail?id=1dsTVc9pYliHonX2bJ07XGCm84-9pjXno" alt="">
-          </div>
-          <div class="text">
-            <h1>Formation html et css</h1>
-            <p>Formation html et css sur android</p>
-            <p><span>100</span><span>Rm</span></p>
-            <button disabled>Je veux ceci!</button>
-          </div>
-        </div>
-
-        <div class="slideCard">
-          <div class="image">
-            <img style="display: none;" src="https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt="">
-          </div>
-          <div class="text">
-            <h1>Informatique Bureautique</h1>
-            <p>Apprendre l'infomatique Bureautique</p>
-            <p><span>100</span><span>Rm</span></p>
-            <button disabled>Je veux ceci!</button>
-          </div>
-        </div>
-        
-        <div class="slideCard">
-          <div class="image">
-            <img style="display: none;" src="https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt="">
-          </div>
-          <div class="text">
-            <h1>Creation Blog Blogger</h1>
-            <p>Comment creer un blog gratuit a partie de blogger</p>
-            <p><span>100</span><span>Rm</span></p>
-            <button disabled>Je veux ceci!</button>
-          </div>
-        </div>
-    </section>
-    </section>
-      <div class="card" >
-       <div>
-          <div class="timer">
-            <p id="demo">Formation Disponible</p>
-            <ul id="timer">
-              <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
-              <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
-              <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
-              <li><span id="second"></span><b>:</b><span class="t" >Sc</span><div id="div1" class="fa"></div></li>
-            </ul>
-            <h3>Comment creer Un blog gratuit</h3>
-            <p>
-              Apprendre a creer un blog, a partie de votre android,
-              pour suivre la formation integrer dans notre groupe
-            </p>
-            <div class="btn">
-              <button onclick="groupeW"><i class="fa fa-whatsapp"></i>Groupe Formation</button> 
-              <button onclick="plan"><i class="fa fa-file"></i>Plan formation</button>
-            </div>
-          </div>
-       </div>
-      </div>
-    </section>
+  <header>
+   <ul class="listHeader">
+    <li onclick="openMenu()" id="openMenu"> <i class="fa fa-bars"></i></li>
+   </ul>
+   <div class="userDetails"></div>
+   <div class="image">
+    <img id="proimg" class="circle" src="/images/logo.png"  alt="noimage">
+ </div>
    
+    
+  </header>
+  <menu id="nav">
+    <div class="closeMenu" onclick="closeMenu()">x</div>
+  </menu>
+  <main>
 
-    <!--Formulaire espace-->
-    <section class="form">
-          <!--Signup Modal -->
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <h4>Signup</h4>
-          <form autocomplete="off" onsubmit="signup(event)">
-            <input type="email" id="signupEmail" placeholder="email" />
-            <input type="password" id="signupPassword" placeholder="password" />
-            <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
-          </form>
-          <!--<button class="btn" onclick="loginWithGoogle()">Login with google</button>-->
-          
-        
-        </div>
+
+     <div>
+      <video width="100%"  id="myvideo">
+        <source src="KOMAN KREYE YON BADGE SOU POWERPOINT.mp4" type="video/mp4">
+        <source src="KOMAN KREYE YON BADGE SOU POWERPOINT.mp4" type="video/ogg">
+      </video>
+      <div class="myvideo">
+        <ul id="timer">
+          <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
+          <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
+          <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
+          <li><span id="second"></span><b>:</b><span class="t" >Sc</span><div id="div1" class="fa"></div></li>
+        </ul>
+        <button onclick="playVid();" id="a"><i class="fa fa-play"></i></button>
+        <button onclick="pauseVid();" id="b"><i class="fa fa-pause"></i></button>
+        <button onclick="openFullscreen();" id="c"><i class="fa fa-arrows-alt"></i></button>
       </div>
-         
-    <!--login Modal -->
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <h4>Login</h4>
-          <form autocomplete="off" onsubmit="login(event)">
-            <input type="email" id="loginEmail" placeholder="email" />
-            <input type="password" id="loginPassword" placeholder="password" />
-            <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
-          </form>
-          <!--<button class="btn" onclick="loginWithGoogle()">Login with google</button>-->
-          
-        
-        </div>
-      </div>
-        <!--edit profile -->
-      <div id="modal3" class="modal">
-        <div class="modal-content">
-          <h4>Edit your details</h4>
-          <div class="file-field input-field">
-            <div class="btn #fbc02d yellow darken-2">
-              <span>File</span>
-              <input type="file" accept="image/*" onchange="uploadImage(event)" />
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
-            </div>
+     </div>
+
+     <div class="slideDocs">
+        <div class="livre">
+          <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+          <div class="text">
+            <h1>Touche de combinaison</h1>
+            <p class="cite">
+              Les touches de conbinaison 
+              pour bien utiliser votre ordinateur 
+              et travailler plus rapide
+          </p>
+          <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
+          <button>Je veux Ceci !</button>
           </div>
-          <form autocomplete="off" id="editProfile" onsubmit="updateUserProfile(event)">
-            <input type="email" name="profileEmail" placeholder="email" />
-            <input type="text" name="name" placeholder="name" />
-            <input type="text" name="phoneno" placeholder="phoneno" />
-            <input type="text" name="specialty" placeholder="speciality" />
-            <input type="text" id="b" name="prorfolioUrl" placeholder="protfolio url" />
-            <input type="text" name="experience" placeholder="experience" />
-
-            <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
-          </form>
-      
-          
-        
         </div>
-      </div>
-    </section>
+
+        <div class="livre">
+          <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+          <div>
+            <h1>Touche de combinaison</h1>
+            <p class="cite">
+                Les touches de conbinaison 
+                pour bien utiliser votre ordinateur 
+                et travailler plus rapide
+            </p>
+          <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
+          <button>Je veux Ceci !</button>
+          </div>
+        </div>
+
+        <div class="livre">
+          <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+          <div>
+            <h1>Touche de combinaison</h1>
+          <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
+          <button>Je veux Ceci !</button>
+          </div>
+        </div>
+     </div>
+
+     <div class="infos">
+        <div class="infos-details">
+          <div class="text">
+            <h3>Bienvenue dans ma comunautée</h3>
+            <p>
+              Suivez des formations pa whatsapp tous les jours
+            </p>
+          </div>
+          <div class="images"><img src="/images/logo.png" alt=""></div>
+         
+        </div>
+     </div>
   </main>
-
   <footer>
-    <ul>
-      <li onclick="openMenu()" id="footerMenu"><i class="fa fa-bars"></i></li>
-      <li><i class="fa fa-user"></i></li>
+    <ul class="listFooter">
+      <li onclick="video()"> <i class="fa fa-youtube"></i></li>
+      <li><i class="fa fa-facebook"></i></li>
       <li class="faHome"><i class="fa fa-home"></i></li>
-      <li><i class="fa fa-trash"></i></li>
+      <li onclick="lgout()"><i class="fa fa-twitter"></i></a></li>
       <li><i class="fa fa-whatsapp"></i></li>
-    </ul>
-    
-    
-    
-    
+     </ul>
   </footer>
-        
-
-<script>
-      document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems);
-  });
-</script>  
-<!-- The core Firebase JS SDK is always required and must be listed first -->
+  <div style="display: none;">
+    <a href="pages/videos.html" id="videos"></a>
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
@@ -217,10 +129,6 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
-<script src="/public/scripts/auth.js"></script>
-<script src="/public/scripts/firestore-db.js" ></script>
-<script src="/public/scripts/script.js"></script>
-
-
+  <script src="/js/js.js"></script>
 </body>
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formation.css">
+    <script src="formulaire.js"></script>
+
+
+</head>
+<body>
+    
+<div class="container register">
+            <div class="row">
+                <div class="col-md-12" >
+                  <!--Message formulaore de la formation-->
+                  <div id="msgform">
+                    <h1>Formation gratuit</h1>
+                    <h2>Vous avez inscrit avec succès</h2>
+                    <img src="https://i.ytimg.com/vi/I5Tp25471_s/maxresdefault.jpg" alt="Formation blogger">
+                    <button onclick="history.back()">Retourner a l'accueil</button>
+                  </div>
+
+                  <!--Formulaire d'inscription-->
+                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading" id="message">Formation Blogger</h3><hr><br>
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <form method="post" autocomplete="off" name="google-sheet">
+                                      <div class="user-details">
+                                        <div class="input-box">
+                                          <span class="details">Nom Complet</span>
+                                          <input type="text" name="Nom" id="name" placeholder="Votre Nom complet" required>
+                                        </div>
+                                        <div class="input-box">
+                                          <span class="details">Votre mail</span>
+                                          <input type="text" name="Email" id="email" placeholder="Votre Email" required>
+                                        </div>
+                                        <div class="input-box">
+                                          <span class="details">Votre Numéro</span>
+                                          <input type="number" name="Phone" id="phone" placeholder="Exp : +18094513048" required>
+                                        </div>
+
+                                        <div class="gender-details">
+                                          <p>
+                                            <label for="sexe">Sexe <strong>:</strong></label><br>
+                                            <select name="Sexe" id="sexe">
+                                              <option value="Homme">Homme</option>
+                                              <option value="Femme">Femme</option>
+                                              <option value="Rien a dire">Rien a dire</option>
+                                            </select>
+                                          </p>
+
+                                          <p>
+                                            <label for="Reference">Bogger <strong>:</strong></label><br>
+                                            <select name="Blogger" id="blogger">
+                                              <option value="Oui">Oui</option>
+                                              <option value="Nom">Nom</option>
+                                              <option value="Rien a dire">Je souhaite devenir</option>
+                                            </select>
+                                          </p>
+
+                                          <p>
+                                            <label for="Reference">Refer <strong>:</strong></label><br>
+                                            <select name="Reference" id="sexe">
+                                              <option value="Whatsapp">Whatsapp</option>
+                                              <option value="Blogger">Blogger</option>
+                                              <option value="Facebook">Facebook</option>
+                                              <option value="Twitter">Twitter</option>
+                                            </select>
+                                          </p>
+                                          </div>
+                                        </div>
+                                       
+                                        <div class="form-group button" >
+                                            <input type="submit" name="submit" value="Login" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+          </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbzhavZ0FFiiOFJRCQgftVFeNZrcBBo1YkJv5VEhD3Os-CXAg03My7ekbekdJQg-oCDE/exec'
+          const form = document.forms['google-sheet']
+
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => document.getElementById('home').style.display = "none")
+              .then(response => document.getElementById('msgform').style.display  = "block")
+              .then(response => document.getElementById('name').value = '')
+              .then(response => document.getElementById('email').value = '')
+              .then(response => document.getElementById('phone').value = '')
+              .catch(error => console.error('Error!', error.message))
+          });
+
+        </script>
+</body>
+</html>

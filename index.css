@@ -26,30 +26,7 @@ a{
 button{
     cursor: pointer;
 }
-/* formulaire*/
-#modal1, #modal2, #modal3{
-    display: none;
-}
-.modal{
-    width: 300px;
-    margin:10px auto;
-    padding: 10px;
-    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
-}
 
-.modal input{
-    width: 95%;
-    padding: 7px;
-    margin: 10px auto;
-    border: none;
-}
-input:focus{
-    outline: none;
-    border: none;
-}
-img{
-    width: 100%;
-}
 @media (min-width: 851px) {
     #body{
         display: none;
@@ -284,6 +261,7 @@ img{
         height: 170px;
         /*background: red;*/
         margin:auto;
+        margin-bottom: 10px;
         display: flex;
         overflow: hidden;
         overflow-x: auto;
@@ -321,6 +299,8 @@ img{
   .slideCard{
     max-width: 100%;
     min-width: fit-content;
+    min-height: 160px;
+    height: 100%;
     margin: 5px;
     padding: 6px;
     display: flex;
@@ -365,6 +345,72 @@ img{
   }
     
     
+}
+#modal3,#modal2,#modal1,#edit{
+    display: none;
+}
+/* signup form*/
+@media (max-width: 800px){
+    /* formulaire*/
+#signupF{
+    display: flex;
+    height:85vh;
+    justify-content: center;
+    align-items: center;
+}
+#modal1,#modal3,#modal2{
+    height: max-content;
+}
+.modal{
+    width: 90%;
+    margin:10px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+}
+
+.modal input{
+    width: 95%;
+    padding: 7px;
+    margin: 10px auto;
+    border: none;
+}
+input:focus{
+    outline: none;
+    border: none;
+}
+img{
+    width: 100%;
+}
+}
+
+/*profile de l'application*/
+@media (max-width: 800px){
+    #profile{
+        background: gray;
+        display: flex;
+        align-items: center;
+        align-items: center;
+    }
+    #profile .image{
+        border-radius: 20px;
+        width: 50%;
+        margin: auto;
+    }
+    #profile .image img{
+        border-radius: 50%;
+    }
+    #profile ul{
+        padding: 2px;
+        background-color: white;
+        margin:-5px 5px;
+    }
+    #profile ul li{
+        list-style: none;
+        font-size: 6vw;
+        margin: 1px 2px 2px 2px;
+        padding: 3px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
 }
 
 /* le pied de mon site web*/

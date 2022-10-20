@@ -1,0 +1,247 @@
+body{
+    background-color: white;
+    margin: 0px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    padding: 2px;
+    margin: 2px;
+}
+ul li{
+    margin: 2px;
+    padding: 2px;
+    outline: none;
+}
+img{
+    width: 100%;
+}
+button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 800px){
+    header{
+        height: 50px;
+        min-width: 100%;
+        background: orangered;
+        position: fixed;
+        top: 0;
+        display: flex;
+    }
+    .listHeader{
+        align-items: center;
+        display: flex;
+        align-items: center;
+    }
+    .listHeader li i{
+        font-size: 40px;
+    }
+
+    header i{
+        font-size: 18px;
+        color: white;
+    }
+
+    header .image{
+        height: 50px;
+        width: 50px;
+        background: blue;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 25px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*la menu de l'application*/
+@media (max-width: 850px){
+    /* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+    menu{
+        display: none;
+        background: white;
+        height: 100%;
+        border: 1px solid red;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        z-index: 1;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    }
+   .closeMenu{
+    background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 15px;
+        width: 15px;
+        border: 1px solid red;
+        padding: 5px;
+        float: right;
+        left: 183px;
+        cursor: pointer;
+    }
+
+    #openMenu{
+        cursor: pointer;
+    }
+
+    .menu{
+        background-image: url('/images/slide2.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 150px;
+        width: 100%;
+    }
+
+    .menu ul{
+        padding: 5px;
+    }
+    .menu ul li{
+        list-style: none;
+        font-size: 5vw;
+    }
+
+}
+
+
+main{
+    width: 99%;
+    margin: 50px 0px 50px 0px;
+    border:1px solid lime;
+}
+
+
+
+
+@media (max-width: 800px){
+    .card{
+        display: none;
+    }
+   .timer{
+    background-color: orangered;
+    padding: 10px;
+    overflow: hidden;
+    overflow-wrap: break-word
+   }
+   .timer #demo{
+    font-size: 7vw;
+    text-align: center;
+    margin: 2px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 5px 2px 8px black;
+   }
+   .timer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 2px;
+   }
+   .timer ul li{
+    background: white;
+    color: black;
+    list-style: none;
+    margin: 2px 5px 2px 5px;
+    padding: 5px;
+    font-size: 6vw;
+    font-family: Fantasy;
+   }
+   .timer b{
+    margin: 1px 5px 1px 5px;
+   }
+   .timer .t{
+    font-size: 3vw;
+   }
+
+   .timer h3{
+    font-size: 6vw;
+    text-align: center;
+    margin: 2px;
+   }
+   .timer p{
+    font-size: 4.5vw;
+    text-align: center;
+    margin: 2px;
+   }
+   .timer .btn{
+    margin: 2px auto;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+   }
+   .timer .btn button{
+    padding: 2vw;
+    width: 100%;
+    margin: 4px;
+   }
+
+   .timer .btn button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   }
+   .timer .btn button .fa-whatsapp{
+    color: green;
+    font-size: 7vw;
+    margin-right: 5px;
+   }
+
+   .timer .btn button .fa-file{
+    color: orangered;
+    font-size: 7vw;
+    margin-right: 5px;
+   }
+
+}
+
+@media (max-width: 800px){
+    footer{
+        height: 50px;
+        width: 100%;
+        background: rgb(0, 0, 0);
+        position: fixed;
+        bottom: 0;
+    }
+    .listFooter{
+        height: 100%;
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        margin-bottom: 3px;
+    }
+    footer li{
+        background-color: white;
+        padding: 3px 5px 3px 5px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    footer .faHome{
+        border-radius: 25px;
+        position: relative;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 10px 1px;
+    }
+    .listFooter li i{
+        font-size: 35px;
+    }
+
+
+
+}
