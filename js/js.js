@@ -101,6 +101,13 @@ function chargebattery() {
   chargebattery();
   setInterval(chargebattery, 5000);
 
+  function reload(){
+    setTimeout(() => {
+      document.location.reload();
+    }, 3000);
+  }
+
+ 
 
 
 
