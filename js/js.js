@@ -102,9 +102,39 @@ function chargebattery() {
   setInterval(chargebattery, 5000);
 
   function reload(){
+    var progress = document.getElementById('myProgress');
+    var i = 0;
+    progress.style.display = 'block';
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 0;
+    var id = setInterval(frame, 0);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        
+        i = 0;
+        setTimeout(() => {
+          document.location.reload(true);
+          progress.style.display = 'none';
+        }, 2000);
+      }else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+        
+      }
+    }
+  }
+
     setTimeout(() => {
-      document.location.reload();
+      document.location.reload(true);
     }, 3000);
+  }
+
+  function back(){
+    history.go(-1);
   }
 
  
