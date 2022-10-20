@@ -24,86 +24,118 @@
     <div class="closeMenu" onclick="closeMenu()">x</div>
   </menu>
   <main>
+
+    <section id="home">
+      <!--Les document recent de l'application em slide-->
+    <div class="slideDocs">
+       <div class="livre">
+         <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+         <div class="text">
+           <h1>Touche de combinaison</h1>
+           <p class="cite">
+             Les touches de conbinaison pour windows
+         </p>
+         <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
+         <button>Je veux Ceci !</button>
+         </div>
+       </div>
+
+       <div class="livre">
+         <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+         <div>
+           <h1>Touche de combinaison</h1>
+           <p class="cite">
+             Les touches de conbinaison pour windows
+           </p>
+         <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
+         <button>Je veux Ceci !</button>
+         </div>
+       </div>
+     
+       <div class="livre">
+         <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+         <div>
+           <h1>Touche de combinaison</h1>
+         <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
+         <button>Je veux Ceci !</button>
+         </div>
+       </div>
+    </div>
+
+    <!--La partie de la bienvenue de la'application-->
+    <div class="infos">
+     <div class="timer">
+       <h4 id="demo">Formation en cours</h4>
+       <ul id="timer">
+         <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
+         <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
+         <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
+         <li><span id="second"></span><b>:</b><span class="t" >Sc</span><div id="div1" class="fa"></div></li>
+         <button onclick="formation()">Suivez...</button>
+       </ul>
+      </div>
+       <div class="infos-details">
+         <div class="text">
+           <h3>Bienvenue dans ma comunautée</h3>
+           <p>
+             Suivez des formations pa whatsapp tous les jours
+           </p>
+         </div>
+         <div class="images"><img src="/images/logo.png" alt=""></div>
+        
+       </div>
+    </div>
+
+   </section>
+
+
+    <section id="video">
+          <!--Video formation de la l'application-->
      <div>
-      <video width="100%"  id="myvideo" style="display: none;">
-        <source src="KOMAN KREYE YON BADGE SOU POWERPOINT.mp4" type="video/mp4">
-        <source src="KOMAN KREYE YON BADGE SOU POWERPOINT.mp4" type="video/ogg">
+      <video width="100%"  id="myvideo" poster="images/slide2.jpg">
+        <source src="video/formationBlogger.MP4" type="video/mp4">
+        <source src="video/formationBlogger.MP4" type="video/ogg">
       </video>
       <div class="myvideo">
-        <ul id="timer">
-          <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
-          <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
-          <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
-          <li><span id="second"></span><b>:</b><span class="t" >Sc</span><div id="div1" class="fa"></div></li>
-        </ul>
         <button onclick="playVid();" id="a"><i class="fa fa-play"></i></button>
         <button onclick="pauseVid();" id="b"><i class="fa fa-pause"></i></button>
         <button onclick="openFullscreen();" id="c"><i class="fa fa-arrows-alt"></i></button>
       </div>
+
+      <h1>Formation gratuit pour debutant</h1>
+      <h2>Comment creer un blog sur blogger</h2>
+      <p>
+        Nous verons dans cette formation comment creer un blog
+        a partie de votre android, il n'y aura pas de langage
+        porgrammation dans cette formation:
+      </p>
+      <h3>Module 1 de la fromation</h3><hr>
+      <ul>
+        <li>Definiton blog</li>
+        <li>Quel platforme choisit</li>
+        <li>Qu'avons nou besoin pour commencer</li>
+      </ul>
+
+      <ul>
+       <li>Comment creer un compte gmail</li>
+       <li>Creer votre premier blog</li>
+       <li>Ecrire et publier votre premier article</li>
+      </ul>
      </div>
-
-     <div class="slideDocs">
-        <div class="livre">
-          <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
-          <div class="text">
-            <h1>Touche de combinaison</h1>
-            <p class="cite">
-              Les touches de conbinaison 
-              pour bien utiliser votre ordinateur 
-              et travailler plus rapide
-          </p>
-          <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
-          <button>Je veux Ceci !</button>
-          </div>
-        </div>
-
-        <div class="livre">
-          <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
-          <div>
-            <h1>Touche de combinaison</h1>
-            <p class="cite">
-                Les touches de conbinaison 
-                pour bien utiliser votre ordinateur 
-                et travailler plus rapide
-            </p>
-          <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
-          <button>Je veux Ceci !</button>
-          </div>
-        </div>
-
-        <div class="livre">
-          <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
-          <div>
-            <h1>Touche de combinaison</h1>
-          <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
-          <button>Je veux Ceci !</button>
-          </div>
-        </div>
-     </div>
-
-     <div class="infos">
-        <div class="infos-details">
-          <div class="text">
-            <h3>Bienvenue dans ma comunautée</h3>
-            <p>
-              Suivez des formations pa whatsapp tous les jours
-            </p>
-          </div>
-          <div class="images"><img src="/images/logo.png" alt=""></div>
-         
-        </div>
-     </div>
-
+    </section>
+     <!--Nofictaion pour rafraishir l'application-->
      <div id="myProgress">
       <h1><cite>Rafraichir...</cite></h1>
       <div id="myBar">10%</div>
     </div>
   </main>
+
+  <!--Pied de page de mon application-->
   <footer>
     <ul class="listFooter">
       <li onclick="video()"> <i class="fa fa-youtube"></i></li>
       <li><i class="fa fa-facebook"></i></li>
-      <li class="faHome"><i class="fa fa-home"></i></li>
+      <li class="faHome" onclick="home()"><i class="fa fa-home"></i></li>
       <li onclick="reload()"><i class="fa fa-refresh"></i></a></li>
       <li><i class="fa fa-whatsapp"></i></li>
      </ul>
@@ -116,6 +148,8 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-messaging.js"></script>
 
 <script>
   // Your web app's Firebase configuration

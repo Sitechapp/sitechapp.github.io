@@ -24,7 +24,6 @@ function closeMenu(){
 }
 
 
-
 //  pour la page video de  l'application
 let videoList = document.querySelectorAll('.video-list-container .list');
 
@@ -127,10 +126,6 @@ function chargebattery() {
       }
     }
   }
-
-    setTimeout(() => {
-      document.location.reload(true);
-    }, 3000);
   }
 
   function back(){
@@ -174,4 +169,17 @@ function pauseVid() {
   videob.style.display = "none";
   videoc.style.display = "block";
 
+}
+
+
+var hom = document.getElementById('home');
+var videos = document.getElementById('video');
+function home (){
+    hom.style.display = 'block';
+    videos.style.display = 'none';
+}
+
+function formation(){
+    hom.style.display = 'none';
+    videos.style.display = 'block';
 }
