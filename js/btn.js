@@ -125,7 +125,7 @@ function telecharger(){
         var nm = document.getElementById("name").value;
         var msg = document.getElementById("msg").value;
        
-        var url = "https://wa.me/1809513048?text="
+        var url = "https://wa.me/18094513048?text="
         + "Nom: " + nm + "%0a"
         + "Message: " + msg + "%0a"
 
