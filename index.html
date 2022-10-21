@@ -125,12 +125,15 @@
        <li>Ecrire et publier votre premier article</li>
       </ul>
      </div>
+     <a id="telecharger" href="https://drive.google.com/uc?export=download&id=1_BGrvcv9KUfcQ5DI4qSoVfxaEHQ-hAdu"></a>
+     <button onclick="telecharger()">Telecharger</button>
+     
     </section>
 
     <!--tous les popoup de la page ici-->
      <!--Nofictaion pour rafraishir l'application-->
      <div id="myProgress">
-      <h1><cite>Rafraichir...</cite></h1>
+      <h1><cite>Attendez...</cite></h1>
       <div id="myBar">10%</div>
     </div>
    
@@ -141,12 +144,34 @@
         <h3>Contactez-nous</h3>
      </div>
       <div  class="whainput inp">
-        <i class="fa fa-phone"></i>
-        <input type="number" name="value[]" value="" id="number" class="default" ></div>
+        <i class="fa fa-user"></i>
+        <input type="text" name="value[]" value="" id="name" class="default" ></div>
       <div class="whainput">
         <textarea name="" id="msg"></textarea>
       </div>
       <button onclick="send_handle()">Envoyer votre message</button>
+    </div>
+
+
+
+
+    <div id="formulaire">
+      <form autocomplete="off" method="post" name="google-sheet">
+        <div class="container">
+          <h1>Document</h1>
+          <p>Remplire le formulaire pour télécharger</p>
+          <hr>
+      
+          <label for="email"><b>Votre Nom</b></label>
+          <input type="text" placeholder="Enter Email" name="Nom" id="nom" required>
+      
+          <label for="psw"><b>Votre Email</b></label>
+          <input type="email" placeholder="Entrer votre email" name="Email" id="email" required>
+          <hr>
+          <input type="text" name="Reference" value="module1" style="display: none;">
+          <button type="submit" class="registerbtn">Télécharger</button>
+        </div>
+      </form>
     </div>
   </main>
 

@@ -166,12 +166,7 @@ function playVid() {
 }
 
 
-    function send_handle(){
-        var number = document.getElementById("number").value;
-        var msg = document.getElementById("msg").value;
-        location.href = "https://wa.me/18094513048?text=" + number + " " +":"+" \n"+  msg  + "_blank" }
-
-
+   
 function pauseVid() {
   elem.pause();
   videoa.style.display = "block";
@@ -180,6 +175,21 @@ function pauseVid() {
 
 }
 
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw1zvGP8B33Q2dWFqN9l8ljFgipbwu2H3utyK3iFNGNslUkRNstDll_oH30-3wZ1_dx/exec'
+const form = document.forms['google-sheet']
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+alert('ruban');
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => document.getElementById('formulaire').style.display = "none")
+    .then(response => window.location = document.getElementById('telecharger'))
+    .then(response => document.getElementById('name').value = '')
+    .then(response => document.getElementById('email').value = '')
+    .then(response => document.getElementById('phone').value = '')
+    .catch(error => console.error('Error!', error.message))
+});
 
 
 

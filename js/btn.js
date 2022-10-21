@@ -1,6 +1,8 @@
 var hom = document.getElementById('home');
 var videos = document.getElementById('video');
 var what = document.getElementById("whatsapp");
+var t = document.getElementById("telecharger");
+var formulaire = document.getElementById("formulaire");
 
 //boutton home
 function home(){
@@ -67,6 +69,41 @@ function formation(){
   }
   }
 
+    //boutton telecharger formation par module
+function telecharger(){
+    var progress = document.getElementById('myProgress');
+    var i = 0;
+    progress.style.display = 'block';
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 0;
+    var id = setInterval(frame, 0);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        
+        i = 0;
+        setTimeout(() => {
+          //document.location.reload(true);
+          progress.style.display = 'none';
+          hom.style.display = 'none';
+            videos.style.display = 'block';
+            what.style.display = 'none';
+            formulaire.style.display= 'block';
+            //window.location = t;
+            t.innerHTML =`<h1>Vous avez télécharger le document</h1>`
+        }, 2000);
+      }else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+        
+      }
+    }
+  }
+  }
+
   //boutton open whatsapp
     function whatspp(){
     what.style.height = "auto";
@@ -82,5 +119,20 @@ function formation(){
             what.style.left = "-10px";
         }
     }
+
+
+    function send_handle(){
+        var nm = document.getElementById("name").value;
+        var msg = document.getElementById("msg").value;
+       
+        var url = "https://wa.me/1809513048?text="
+        + "Nom: " + nm + "%0a"
+        + "Message: " + msg + "%0a"
+
+    window.open(url, '_blank').focus();
+    }
+
+    
+
 
 
