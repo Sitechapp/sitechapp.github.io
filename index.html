@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -93,8 +94,8 @@
           <!--Video formation de la l'application-->
      <div>
       <video width="100%"  id="myvideo" poster="images/slide2.jpg">
-        <source src="video/formationBlogger.MP4" type="video/mp4">
-        <source src="video/formationBlogger.MP4" type="video/ogg">
+        <source src="https://drive.google.com/uc?id=1XDD6ETWygUxzBaKWXi-J3avgljCOVwSl" type="video/mp4">
+        <source src="https://drive.google.com/uc?id=1XDD6ETWygUxzBaKWXi-J3avgljCOVwSl" type="video/ogg">
       </video>
       <div class="myvideo">
         <button onclick="playVid();" id="a"><i class="fa fa-play"></i></button>
@@ -111,22 +112,41 @@
       </p>
       <h3>Module 1 de la fromation</h3><hr>
       <ul>
+        <strong>Module #1</strong>
         <li>Definiton blog</li>
         <li>Quel platforme choisit</li>
         <li>Qu'avons nou besoin pour commencer</li>
       </ul>
 
       <ul>
+        <strong>Module #2</strong>
        <li>Comment creer un compte gmail</li>
        <li>Creer votre premier blog</li>
        <li>Ecrire et publier votre premier article</li>
       </ul>
      </div>
     </section>
+
+    <!--tous les popoup de la page ici-->
      <!--Nofictaion pour rafraishir l'application-->
      <div id="myProgress">
       <h1><cite>Rafraichir...</cite></h1>
       <div id="myBar">10%</div>
+    </div>
+   
+
+    <div id="whatsapp">
+      <div class="btn-close">
+        <div id="closeWhatsapp" onclick="btnWhat()">x</div>
+        <h3>Contactez-nous</h3>
+     </div>
+      <div  class="whainput inp">
+        <i class="fa fa-phone"></i>
+        <input type="number" name="value[]" value="" id="number" class="default" ></div>
+      <div class="whainput">
+        <textarea name="" id="msg"></textarea>
+      </div>
+      <button onclick="send_handle()">Envoyer votre message</button>
     </div>
   </main>
 
@@ -137,7 +157,7 @@
       <li><i class="fa fa-facebook"></i></li>
       <li class="faHome" onclick="home()"><i class="fa fa-home"></i></li>
       <li onclick="reload()"><i class="fa fa-refresh"></i></a></li>
-      <li><i class="fa fa-whatsapp"></i></li>
+      <li onclick="whatspp()"><i class="fa fa-whatsapp"></i></li>
      </ul>
   </footer>
   <div style="display: none;">
@@ -167,5 +187,6 @@
   firebase.initializeApp(firebaseConfig);
 </script>
   <script src="/js/js.js"></script>
+  <script src="/js/btn.js"></script>
 </body>
 </html>

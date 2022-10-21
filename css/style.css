@@ -133,7 +133,7 @@ button:hover{
 
 main{
     width: 99%;
-    margin: 50px 0px 50px 0px;
+    margin: 35px 0px 50px 0px;
     border:1px solid lime;
 }
 
@@ -257,6 +257,79 @@ main{
         font-size: 10px;
         border-radius: 28px;
       }
+}
+
+
+@media (max-width: 800px){
+    #whatsapp{
+        background-color: gray;
+        max-width: 200px;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        margin-right: 5px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        z-index: 1;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    }
+    #closeWhatsapp{
+        background: white;
+        color: blue;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    #closeWhatsapp:hover{
+        color: red;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-close{
+        display: flex;
+        color: white;
+        background-color: blue;
+        align-items: center;
+    }
+    .whainput{
+        display: flex;
+        margin: 5px;
+        overflow: hidden;
+        background-color: white;
+        border: 1px solid red;
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+    }
+    .whainput i{
+        background-color: white;
+        padding: 5px;
+        font-size: 7vw;
+    }
+    .whainput input{
+        padding: 5px;
+        margin: 5px;
+        border: none;
+    }
+    .whainput input:focus, #msg:focus{
+        outline: none;
+    }
+    .whainput #msg{
+        height: 100px;
+        
+    }
+    .whainput textarea{
+        max-width: 100%;
+        max-height: 70px;
+        padding: 5px;
+        resize: none;
+        border: none;
+    }
+
 }
 
 @media (max-width: 800px){

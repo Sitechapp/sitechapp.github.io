@@ -43,7 +43,7 @@ videoList.forEach(vid =>{
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("october 30, 2022 19:37:25").getTime();
+var countDownDate = new Date("october 21, 2022 19:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -128,6 +128,8 @@ function chargebattery() {
   }
   }
 
+  
+
   function back(){
     history.go(-1);
   }
@@ -163,6 +165,13 @@ function playVid() {
   
 }
 
+
+    function send_handle(){
+        var number = document.getElementById("number").value;
+        var msg = document.getElementById("msg").value;
+        location.href = "https://wa.me/18094513048?text=" + number + " " +":"+" \n"+  msg  + "_blank" }
+
+
 function pauseVid() {
   elem.pause();
   videoa.style.display = "block";
@@ -172,14 +181,5 @@ function pauseVid() {
 }
 
 
-var hom = document.getElementById('home');
-var videos = document.getElementById('video');
-function home (){
-    hom.style.display = 'block';
-    videos.style.display = 'none';
-}
 
-function formation(){
-    hom.style.display = 'none';
-    videos.style.display = 'block';
-}
+

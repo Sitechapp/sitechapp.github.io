@@ -96,15 +96,25 @@
 
 @media (max-width: 800px){
 
+    .myvideo{
+        box-shadow: 0px -2px 7px 1px black;
+    }
+
     #video{
-        min-height: 84.5vh;
-        margin-top: 5px;
+        min-height: 84.9vh;
+        margin-top: 6px;
         display: none;
     }
 
+    #video hr{
+        margin:1px 5px 10px 1px;
+        width: 220px;
+        text-align: left;
+    }
+
     #video h1{
-        margin: 5px;
-        font-size: 7vw;
+        margin: 1px;
+        font-size: 5.4vw;
         text-transform: uppercase;
         color: blue;
         text-align: center;
@@ -112,34 +122,36 @@
 
     #video h2{
         margin: 5px;
-        font-size: 6vw;
+        font-size: 5.2vw;
         color: #ff4800;
         text-align: center;
     }
 
     #video p{
         margin:10px auto;
-        font-size: 5vw;
+        font-size: 4vw;
         color: black;
         text-align: justify;
     }
     #video h3{
         margin:10px auto;
-        font-size: 6vw;
+        font-size: 5vw;
         color: #ff4800;
         text-align: left;
     }
 
     #video ul{
         padding: 2px;
-        margin: 2px;
+        margin: 2px 1px 8px 1px;
+        box-shadow: 0px 0px 5px 1px black;
     }
     #video ul li{
-        font-size: 5vw;
+        font-size: 4vw;
         padding: 2px;
         margin: 2px;
         text-align: left;
         line-height: 15px;
+        color: black;
     }
 
     #video {
