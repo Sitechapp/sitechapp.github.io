@@ -23,6 +23,15 @@ function closeMenu(){
     
 }
 
+function main(){
+  var nav = document.getElementById("nav");
+  nav.style.width = "0px";
+  if(nav.style.width === "0px"){
+      nav.style.left = "-10px";
+  }
+  
+}
+
 
 //  pour la page video de  l'application
 let videoList = document.querySelectorAll('.video-list-container .list');
@@ -43,7 +52,7 @@ videoList.forEach(vid =>{
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("october 21, 2022 19:37:25").getTime();
+var countDownDate = new Date("october 26, 2022 19:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

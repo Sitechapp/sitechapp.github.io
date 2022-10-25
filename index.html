@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -23,30 +24,43 @@
   </header>
   <menu id="nav">
     <div class="closeMenu" onclick="closeMenu()">x</div>
+    <div class="navHeader">
+
+    </div>
+
+    <ul>
+      <li><span class="material-icons">
+        rss_feed
+        </span><a href="/Articles/creer-blog1.html">Création Blog</a></li><hr>
+      <li><i class="material-icons">code</i><a href="">porgrammation web</a></li><hr>
+      <li><span class="material-icons">add_to_drive</span><a href="">Suites Google Drive</a></li><hr>
+      <li><span class="material-icons">smart_display</span><a href="">Video informatique</a></li><hr>
+      <li><span class="material-icons">newspaper</span><a href="">Articles Android</a></li>
+    </ul>
   </menu>
-  <main>
+  <main onclick="main()">
 
     <section id="home">
       <!--Les document recent de l'application em slide-->
     <div class="slideDocs">
        <div class="livre">
-         <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+         <div class="image"><img src="https://drive.google.com/uc?id=1Z41XhE8ZI7f6bBSMDFHYOLM5S5y1DHjA" alt=""></div>
          <div class="text">
-           <h1>Touche de combinaison</h1>
+           <h1>Creer un blog sur Android</h1>
            <p class="cite">
-             Les touches de conbinaison pour windows
+             Comment creer un blog sur android, Module #1
          </p>
-         <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
+         <p><span>Prix</span> <span>Free</span> <b> Rm</b></p>
          <button>Je veux Ceci !</button>
          </div>
        </div>
 
        <div class="livre">
-         <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+         <div class="image"><img src="https://drive.google.com/uc?id=1fa_aZGbFrFnRWJSYwP0Qmtz0VS1kTPPJ" alt=""></div>
          <div>
-           <h1>Touche de combinaison</h1>
+           <h1>porgrammation web</h1>
            <p class="cite">
-             Les touches de conbinaison pour windows
+             Apprendre le html et css sur android Module #1
            </p>
          <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
          <button>Je veux Ceci !</button>
@@ -54,9 +68,12 @@
        </div>
      
        <div class="livre">
-         <div class="image"><img src="	https://drive.google.com/uc?id=1Akc6ukmM0Xt-Z1EXzS9ZkV0n5F5HVME4" alt=""></div>
+         <div class="image"><img src="https://drive.google.com/uc?id=1SB-4yrBxHY5YgfWG4aMo16Xi01I45ZZu" alt=""></div>
          <div>
            <h1>Touche de combinaison</h1>
+          <p class="cite">
+            Les touches de combinaison de votre clavier
+          </p>
          <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
          <button>Je veux Ceci !</button>
          </div>
@@ -87,6 +104,60 @@
        </div>
     </div>
 
+   </section>
+
+   <section>
+    <div class="classe">
+      <div class="deb d">
+        <div class="icon">
+          <span class="material-icons">android</span>
+          <h1>Debutant</h1>
+        </div>
+        <h2>Initiation Android</h2>
+        <p>
+          Apprendre a bien utiliser votre android
+        </p>
+        <button>commencer</button>
+      </div>
+
+      <div class="ele d">
+        <div class="icon">
+          <span class="material-icons">add_to_drive</span>
+          <h1>Elementaire</h1>
+        </div>
+        <h2>Suites google drive</h2>
+        <p>
+          Utiliser les suites bureautique de Drive
+        </p>
+        <button>commencer</button>
+      </div>
+    </div>
+
+    <div class="classe">
+      <div class="int d">
+        <div class="icon">
+          <span class="material-icons">rss_feed</span>
+          <h1>Intermediaire</h1>
+        </div>
+        <h2>Création Blog</h2>
+        <p>
+          Apprendre a créer un blog sur votre Android.
+        </p>
+        <button>commencer</button>
+      </div>
+
+      <div class="ava d">
+        <div class="icon">
+          <span class="material-icons">code</span>
+          <h1>Independant</h1>
+        </div>
+        <h2>Html et Css</h2>
+        <p>
+          Apprendre le Html et Css sur votre android
+        </p>
+        <button>commencer</button>
+      </div>
+    </div>
    </section>
 
 
