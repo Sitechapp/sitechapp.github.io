@@ -1,10 +1,3 @@
-var vid = document.getElementById('videos');
-
-function video (){
-    window.location = vid;
-}
-
-
 function openMenu(){
     var nav = document.getElementById("nav");
     nav.style.width = "250px";
@@ -52,7 +45,7 @@ videoList.forEach(vid =>{
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("october 26, 2022 19:37:25").getTime();
+var countDownDate = new Date("october 30, 2022 19:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

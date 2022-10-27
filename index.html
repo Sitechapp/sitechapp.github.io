@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/formulaire.css">
 </head>
 <body>
   <header>
@@ -88,7 +91,7 @@
          <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
          <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
          <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
-         <li><span id="second"></span><b>:</b><span class="t" >Sc</span><div id="div1" class="fa"></div></li>
+         <li><span id="second"></span><b>:</b><span class="t" >Sc</span> <div id="div1" class="fa"></div></li>
          <button onclick="formation()">Suivez...</button>
        </ul>
       </div>
@@ -103,10 +106,33 @@
         
        </div>
     </div>
-
    </section>
 
-   <section>
+   <section id="coursdetails">
+    <div class="cours">
+      <h1>Creation blog sur android</h1><hr>
+      <div class="coursflex">
+        <div class="texte">
+          <p>
+            Apprendre a creer un blog gratuit sur 
+            android avec le plateforme blogger.
+          </p>
+  
+          <p>
+            Document disponible par module et chaque 
+            module contient video et audio
+          </p>
+  
+          <button>Je veux participer</button>
+        </div>
+        <div class="image">
+          <img src="/images/commen_creer _blog.png" alt="">
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <section id="cours">
     <div class="classe">
       <div class="deb d">
         <div class="icon">
@@ -160,44 +186,63 @@
     </div>
    </section>
 
+   <section id="login">
+    <center>
+        <div id="panel">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+          </svg>
+          <h2 id="msg">Login</h2>
+          <label for="usename">Username</label>
+          <input type="text" id="username">
+          <label for="password">Password</label>
+          <input type="password" id="pass">
+          <button id="login" class="btn btn-secondary btn-lg btn-block">Login</button>
+        </div>
+      </center>
+    </section>
 
     <section id="video">
           <!--Video formation de la l'application-->
      <div>
       <video width="100%"  id="myvideo" poster="images/slide2.jpg">
         <source src="https://drive.google.com/uc?id=1XDD6ETWygUxzBaKWXi-J3avgljCOVwSl" type="video/mp4">
-        <source src="https://drive.google.com/uc?id=1XDD6ETWygUxzBaKWXi-J3avgljCOVwSl" type="video/ogg">
       </video>
-      <div class="myvideo">
+      <div id="myvideos" style="display: none;">
         <button onclick="playVid();" id="a"><i class="fa fa-play"></i></button>
         <button onclick="pauseVid();" id="b"><i class="fa fa-pause"></i></button>
         <button onclick="openFullscreen();" id="c"><i class="fa fa-arrows-alt"></i></button>
       </div>
 
-      <h1>Formation gratuit pour debutant</h1>
-      <h2>Comment creer un blog sur blogger</h2>
-      <p>
-        Nous verons dans cette formation comment creer un blog
-        a partie de votre android, il n'y aura pas de langage
-        porgrammation dans cette formation:
-      </p>
-      <h3>Module 1 de la fromation</h3><hr>
-      <ul>
-        <strong>Module #1</strong>
-        <li>Definiton blog</li>
-        <li>Quel platforme choisit</li>
-        <li>Qu'avons nou besoin pour commencer</li>
-      </ul>
+      <div class="coutenueV">
+        <h1>Formation gratuit debutant</h1>
+        <p>
+          Nous verons dans cette formation comment creer un blog
+          a partie de votre android, il n'y aura pas de langage
+          porgrammation dans cette formation:
+        </p>
+        <h2>Coutenue de la formation</h2>
+        <ul>
+          <strong>Module #1</strong>
+          <li>Definiton blog</li>
+          <li>Quel platforme choisit</li>
+          <li>Qu'avons nou besoin pour commencer</li>
+        </ul>
 
-      <ul>
-        <strong>Module #2</strong>
-       <li>Comment creer un compte gmail</li>
-       <li>Creer votre premier blog</li>
-       <li>Ecrire et publier votre premier article</li>
-      </ul>
+        <ul>
+          <strong>Module #2</strong>
+        <li>Comment creer un compte gmail</li>
+        <li>Creer votre premier blog</li>
+        <li>Ecrire et publier votre premier article</li>
+        </ul>
+      </div>
+      <a id="telecharger" href="https://drive.google.com/uc?export=download&id=1_BGrvcv9KUfcQ5DI4qSoVfxaEHQ-hAdu"></a>
+     <div class="btn"><button onclick="telecharger()">Je veux participer</button></div>
+      
      </div>
-     <a id="telecharger" href="https://drive.google.com/uc?export=download&id=1_BGrvcv9KUfcQ5DI4qSoVfxaEHQ-hAdu"></a>
-     <button onclick="telecharger()">Telecharger</button>
+     
      
     </section>
 
@@ -226,20 +271,82 @@
 
 
 
-    <div id="formulaire">
+    <!--Formulaire d'inscirption pour la formation -->
+    <div id="formulaire" >
       <form autocomplete="off" method="post" name="google-sheet">
-        <div class="container">
+        <div class="form">
           <h1>Document</h1>
           <p>Remplire le formulaire pour télécharger</p>
           <hr>
+          <div class="input">
+            <input type="text" placeholder="Votre nom complet" name="Nom" id="nom" required>
+          </div>
       
-          <label for="email"><b>Votre Nom</b></label>
-          <input type="text" placeholder="Enter Email" name="Nom" id="nom" required>
-      
-          <label for="psw"><b>Votre Email</b></label>
-          <input type="email" placeholder="Entrer votre email" name="Email" id="email" required>
-          <hr>
-          <input type="text" name="Reference" value="module1" style="display: none;">
+          <div class="input">
+            <input type="email" placeholder="Entrer votre email" name="Email" id="email" required>
+          </div>
+
+          <div class="input inputFlex">
+            <select name="Code" id="code" onChange="update()">
+              <option>Code de votre pays</option>
+              <option value="+229">Benin (+229)</option>
+              <option value="+257">Burundi (+257)</option>
+              <option value="+226">Burkina Faso (+226)</option>
+              <option value="+237">Cameroon (+237)</option>
+              <option value="+1">Canada (+1)</option>
+              <option value="+238">Cape Verde (+238)</option>
+              <option value="+236">Central African Republic (+236)</option>
+              <option value="+242">Congo (+242)</option>
+              <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+              <option value="+225">Cote D'Ivoire (+225)</option>
+              <option value="+1809">Dominican Republic (+1809)</option>
+              <option value="+298">Faroe Islands (+298)</option>
+              <option value="+594">French Guiana (+594)</option>
+              <option value="+509">Haiti (+509)</option>
+              <option value="+352">Luxembourg (+352)</option>
+              <option value="+853">Macao (+853)</option>
+              <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+              <option value="+261">Madagascar (+261)</option>
+              <option value="+223">Mali (+223)</option>
+              <option value="+377">Monaco (+377)</option>
+              <option value="+227">Niger (+227)</option>
+              <option value="+234">Nigeria (+234)</option>
+              <option value="+262">Reunion (+262)</option>
+              <option value="+250">Rwanda (+250)</option>
+              <option value="+268">Swaziland (+268)</option>
+              <option value="+228">Togo (+228)</option>
+              <option value="+690">Tokelau (+690)</option>
+              <option value="+676">Tonga (+676)</option>
+              <option value="+260">Zambia (+260)</option>
+              <option value="+263">Zimbabwe (+263)</option>
+            </select>
+            <input type="text" placeholder="Votre Numero WhatsApp" name="Phone" id="phone" required>
+          </div>
+
+          <div class="input inputFlex">
+            <select name="Niveau" id="nv">
+              <option>Niveau en Informatique</option>
+              <option value="Débutant">Débutant</option>
+              <option value="Elementaire">Elementaire</option>
+              <option value="Intermediaire">Intermediaire</option>
+              <option value="Avancée">Avancée</option>
+            </select>
+
+            <select name="Sexe" id="sexe">
+              <option>Votre Sexe</option>
+              <option value="Homme">Homme</option>
+              <option value="Femme">Femme</option>
+              <option value="Autres">Autres</option>
+            </select>
+
+            <select name="Reference" id="ref">
+              <option>Votre reference</option>
+              <option value="Whatsapp">Whatsapp</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Autres">Autres</option>
+            </select>
+          </div>
+          <input type="text" name="Reference" value="Blogger" style="display: none;">
           <button type="submit" class="registerbtn">Télécharger</button>
         </div>
       </form>
@@ -249,7 +356,7 @@
   <!--Pied de page de mon application-->
   <footer>
     <ul class="listFooter">
-      <li onclick="video()"> <i class="fa fa-youtube"></i></li>
+      <li onclick="vido()"> <i class="fa fa-youtube"></i></li>
       <li><i class="fa fa-facebook"></i></li>
       <li class="faHome" onclick="home()"><i class="fa fa-home"></i></li>
       <li onclick="reload()"><i class="fa fa-refresh"></i></a></li>
@@ -284,5 +391,35 @@
 </script>
   <script src="/js/js.js"></script>
   <script src="/js/btn.js"></script>
+  <script src="/js/login.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzhavZ0FFiiOFJRCQgftVFeNZrcBBo1YkJv5VEhD3Os-CXAg03My7ekbekdJQg-oCDE/exec'
+    const form = document.forms['google-sheet']
+
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    alert('ruban');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => document.getElementById('myForm').style.display = "none")
+       // .then(response => window.location = document.getElementById('lien'))
+        .then(response => document.getElementById('name').value = '')
+        .then(response => document.getElementById('email').value = '')
+        .then(response => document.getElementById('phone').value = '')
+        .catch(error => console.error('Error!', error.message))
+    });
+
+</script>
+
+<script type="text/javascript">
+			function update() {
+				var select = document.getElementById('code');
+				var option = select.options[select.selectedIndex];
+
+				document.getElementById('phone').value = option.value;
+			}
+
+			update();
+		</script>
 </body>
 </html>

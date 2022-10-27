@@ -3,8 +3,15 @@ var videos = document.getElementById('video');
 var what = document.getElementById("whatsapp");
 var t = document.getElementById("telecharger");
 var formulaire = document.getElementById("formulaire");
+var cours = document.getElementById("cours");
+var login = document.getElementById("login");
+var crs = document.getElementById("coursdetails");
 
-//boutton home
+login.style.display = 'none';
+cours.style.display = 'none';
+crs.style.display = 'none';
+
+//----------------------boutton home-----------------//
 function home(){
     var progress = document.getElementById('myProgress');
     var i = 0;
@@ -20,11 +27,13 @@ function home(){
         
         i = 0;
         setTimeout(() => {
-          document.location.reload(true);
+          //document.location.reload(true);
           progress.style.display = 'none';
-          hom.style.display = 'block';
+            hom.style.display = 'block';
             videos.style.display = 'none';
             what.style.display = 'none';
+            cours.style.display = 'none';
+            login.style.display = 'none';
         }, 2000);
       }else {
         width++;
@@ -103,6 +112,11 @@ function telecharger(){
     }
   }
   }
+  var vid = document.getElementById('videos');
+
+    function video (){
+        window.location = vid;
+    }
 
   //boutton open whatsapp
     function whatspp(){

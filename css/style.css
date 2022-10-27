@@ -15,6 +15,7 @@ ul li{
     margin: 2px;
     padding: 2px;
     outline: none;
+    list-style: none;
 }
 a{
     text-decoration: none;
@@ -180,8 +181,8 @@ button:hover{
 
 main{
     width: 99%;
-    height: 100vh;
-    margin: 35px 0px 50px 0px;
+    height: 100%;
+    margin: 50px 0px 50px 0px;
     border:1px solid lime;
 }
 
@@ -324,6 +325,10 @@ main{
         z-index: 1;
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     }
+    #whatsapp .btn-close h3{
+        font-size: 5vw;
+        margin: 10px;
+    }
     #closeWhatsapp{
         background: white;
         color: blue;
@@ -382,73 +387,11 @@ main{
 
 
 @media (max-width: 800px){
-    #formulaire{
-        display: none;
-        background: white;
-        padding: 5px;
-        width: 300px;
-        border: 1px solid red;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    /* Full-width input fields */
-    #formulaire input[type=text], #formulaire input[type=email] {
-    width: 90%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
- 
-  }
-  
-  #formulaire input[type=text]:focus, #formulaire input[type=email]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Overwrite default styles of hr */
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-  
-  /* Set a style for the submit/register button */
-  .registerbtn {
-    background-color: #022ff7;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-  
-  .registerbtn:hover {
-    opacity:1;
-  }
-  
-  /* Add a blue text color to links */
-  a {
-    color: dodgerblue;
-  }
-  
-  /* Set a grey background color and center the text of the "sign in" section */
-  .signin {
-    background-color: #f1f1f1;
-    text-align: center;
-  }
-}
-
-@media (max-width: 800px){
     .classe{
         width: 100%;
         height: 100%;
         display: flex;
-        border: 1px solid blue;
+        margin: 0px 0px 1px 0px;
        
     }
 
@@ -458,7 +401,7 @@ main{
         margin: 5px;
         padding: 0px;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);   
     }
     .classe .icon{
