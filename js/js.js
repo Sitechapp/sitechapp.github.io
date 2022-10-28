@@ -186,7 +186,7 @@ e.preventDefault()
 alert('ruban');
 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => document.getElementById('formulaire').style.display = "none")
-    .then(response => window.location = document.getElementById('telecharger'))
+    //.then(response => window.location = document.getElementById('telecharger'))
     .then(response => document.getElementById('name').value = '')
     .then(response => document.getElementById('email').value = '')
     .then(response => document.getElementById('phone').value = '')
