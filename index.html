@@ -4,24 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" type="text/css" href="/css/login.css">
   <link rel="stylesheet" href="/css/formulaire.css">
 </head>
-<body>
+<body onload="loadbody();">
   <header>
    <ul class="listHeader">
     <li onclick="openMenu()" id="openMenu"> <i class="fa fa-bars"></i></li>
-   </ul>
-   <div class="userDetails"></div>
-   <div class="image">
-    <i class="fa fa-backward" onclick="back()"></i>
- </div>
+   </ul><div class="espace"></div>
+   <h1>Rc <span id="rc"></span></h1>
    
     
   </header>
@@ -39,48 +37,20 @@
       <li><span class="material-icons">add_to_drive</span><a href="">Suites Google Drive</a></li><hr>
       <li><span class="material-icons">smart_display</span><a href="">Video informatique</a></li><hr>
       <li><span class="material-icons">newspaper</span><a href="">Articles Android</a></li>
+      <li id="log"><span  class="material-icons">newspaper</span>Logout</li>
     </ul>
   </menu>
   <main onclick="main()">
-
+   
     <section id="home">
       <!--Les document recent de l'application em slide-->
     <div class="slideDocs">
-       <div class="livre">
-         <div class="image"><img src="https://drive.google.com/uc?id=1Z41XhE8ZI7f6bBSMDFHYOLM5S5y1DHjA" alt=""></div>
-         <div class="text">
-           <h1>Creer un blog sur Android</h1>
-           <p class="cite">
-             Comment creer un blog sur android, Module #1
-         </p>
-         <p><span>Prix</span> <span>Free</span> <b> Rm</b></p>
-         <button>Je veux Ceci !</button>
-         </div>
-       </div>
-
-       <div class="livre">
-         <div class="image"><img src="https://drive.google.com/uc?id=1fa_aZGbFrFnRWJSYwP0Qmtz0VS1kTPPJ" alt=""></div>
-         <div>
-           <h1>porgrammation web</h1>
-           <p class="cite">
-             Apprendre le html et css sur android Module #1
-           </p>
-         <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
-         <button>Je veux Ceci !</button>
-         </div>
-       </div>
-     
-       <div class="livre">
-         <div class="image"><img src="https://drive.google.com/uc?id=1SB-4yrBxHY5YgfWG4aMo16Xi01I45ZZu" alt=""></div>
-         <div>
-           <h1>Touche de combinaison</h1>
-          <p class="cite">
-            Les touches de combinaison de votre clavier
-          </p>
-         <p><span>Prix</span> <span>1000</span> <b> Rm</b></p>
-         <button>Je veux Ceci !</button>
-         </div>
-       </div>
+      <section class="homeHeader">
+        <div class="homeh1">
+          <h1><span>Bienvenue</span> <span id="username"></span></h1>
+          <h3><span>Dans ma comunautée</span></h3>
+        </div>
+      </section>
     </div>
 
     <!--La partie de la bienvenue de la'application-->
@@ -97,14 +67,32 @@
       </div>
        <div class="infos-details">
          <div class="text">
-           <h3>Bienvenue dans ma comunautée</h3>
            <p>
-             Suivez des formations pa whatsapp tous les jours
+             Suivez des formations par whatsapp tous les jours
            </p>
          </div>
          <div class="images"><img src="/images/logo.png" alt=""></div>
         
        </div>
+    </div>
+   </section>
+
+   <section id="htmlcss">
+    <div class="hc">
+      <h1>Cours Html et css</h1> <hr>
+      <div class="hcinfos" >
+        <div class="texte">
+          <h2>Apprendre a creer un site web sur android</h2>
+          <ul>
+            <li>Groupe WhatsApp</li>
+            <li>Groupe Telegram</li>
+            <li>Certifcat inclus </li>
+          </ul>
+          <p onclick="htmlcss()">Je veux ce cours</p>
+          <button onclick="updateprofile()">update</button>
+        </div>
+        <div class="image"><img src="/images/programmation.png" alt=""></div>
+      </div>
     </div>
    </section>
 
@@ -132,28 +120,29 @@
     </div>
    </section>
 
+   <!--Partie cours de l'application-->
    <section id="cours">
     <div class="classe">
       <div class="deb d">
         <div class="icon">
-          <span class="material-icons">android</span>
-          <h1>Debutant</h1>
+          <span class="material-icons">code</span>
+          <h1>Module #1</h1>
         </div>
-        <h2>Initiation Android</h2>
+        <h2>Element de base</h2>
         <p>
-          Apprendre a bien utiliser votre android
+          Comprendre comment fonctionne un site web
         </p>
         <button>commencer</button>
       </div>
 
       <div class="ele d">
         <div class="icon">
-          <span class="material-icons">add_to_drive</span>
-          <h1>Elementaire</h1>
+          <span class="material-icons">code</span>
+          <h1>Module #2</h1>
         </div>
-        <h2>Suites google drive</h2>
+        <h2>Les applications</h2>
         <p>
-          Utiliser les suites bureautique de Drive
+          Qu'avez-vous bessoin pour creer un site web?
         </p>
         <button>commencer</button>
       </div>
@@ -162,12 +151,12 @@
     <div class="classe">
       <div class="int d">
         <div class="icon">
-          <span class="material-icons">rss_feed</span>
-          <h1>Intermediaire</h1>
+          <span class="material-icons">code</span>
+          <h1>Module #3</h1>
         </div>
-        <h2>Création Blog</h2>
+        <h2>La base du html</h2>
         <p>
-          Apprendre a créer un blog sur votre Android.
+          Commencer a créer votre premiere page web.
         </p>
         <button>commencer</button>
       </div>
@@ -175,18 +164,19 @@
       <div class="ava d">
         <div class="icon">
           <span class="material-icons">code</span>
-          <h1>Independant</h1>
+          <h1>Module #4</h1>
         </div>
-        <h2>Html et Css</h2>
+        <h2>La base du css</h2>
         <p>
-          Apprendre le Html et Css sur votre android
+          Integrer le css dans votre page web html.
         </p>
         <button>commencer</button>
       </div>
     </div>
    </section>
 
-   <section id="login">
+   <!--partie login acces a formation-->
+   <section id="login" >
     <center>
         <div id="panel">
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +186,7 @@
           </svg>
           <h2 id="msg">Login</h2>
           <label for="usename">Username</label>
-          <input type="text" id="username">
+          <input type="text" id="usernme">
           <label for="password">Password</label>
           <input type="password" id="pass">
           <button id="login" class="btn btn-secondary btn-lg btn-block">Login</button>
@@ -204,6 +194,7 @@
       </center>
     </section>
 
+    <!--partie plan de tous les formation-->
     <section id="video">
           <!--Video formation de la l'application-->
      <div>
@@ -217,25 +208,32 @@
       </div>
 
       <div class="coutenueV">
-        <h1>Formation gratuit debutant</h1>
+        <h1>Formation gratuit débutant</h1>
         <p>
-          Nous verons dans cette formation comment creer un blog
-          a partie de votre android, il n'y aura pas de langage
-          porgrammation dans cette formation:
+          Nous verons dans cette formation comment créer un site web a partie
+          d'un téléphone android:
         </p>
         <h2>Coutenue de la formation</h2>
         <ul>
           <strong>Module #1</strong>
-          <li>Definiton blog</li>
-          <li>Quel platforme choisit</li>
-          <li>Qu'avons nou besoin pour commencer</li>
+          <li>Definition site web</li>
+          <li>Definition url et differente parties</li>
+          <li>Definition et utiliter d'un navigateur</li>
         </ul>
 
         <ul>
           <strong>Module #2</strong>
-        <li>Comment creer un compte gmail</li>
-        <li>Creer votre premier blog</li>
-        <li>Ecrire et publier votre premier article</li>
+          <li>Definition html et css</li>
+          <li>Editeur de texte pour android</li>
+          <li>Et application utile pour travailler</li>
+        </ul>
+
+        <ul>
+          <strong>Module #3</strong>
+        <li>Les balises de bases du html</li>
+        <li>Creer votre premier page web</li>
+        <li>Comment creer un formulaire de contact</li>
+        
         </ul>
       </div>
       <a id="telecharger" href="https://drive.google.com/uc?export=download&id=1_BGrvcv9KUfcQ5DI4qSoVfxaEHQ-hAdu"></a>
@@ -254,6 +252,7 @@
     </div>
    
 
+    <!--Espace pour messsage whatsapp-->
     <div id="whatsapp">
       <div class="btn-close">
         <div id="closeWhatsapp" onclick="btnWhat()">x</div>
@@ -267,9 +266,6 @@
       </div>
       <button onclick="send_handle()">Envoyer votre message</button>
     </div>
-
-
-
 
     <!--Formulaire d'inscirption pour la formation -->
     <div id="formulaire" >
@@ -351,13 +347,15 @@
         </div>
       </form>
     </div>
+
   </main>
+
 
   <!--Pied de page de mon application-->
   <footer>
     <ul class="listFooter">
       <li onclick="vido()"> <i class="fa fa-youtube"></i></li>
-      <li><i class="fa fa-facebook"></i></li>
+      <li onclick="fb()"><i class="fa fa-facebook"></i></li>
       <li class="faHome" onclick="home()"><i class="fa fa-home"></i></li>
       <li onclick="reload()"><i class="fa fa-refresh"></i></a></li>
       <li onclick="whatspp()"><i class="fa fa-whatsapp"></i></li>
@@ -366,50 +364,52 @@
   <div style="display: none;">
     <a href="pages/videos.html" id="videos"></a>
   </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
 
 <script>
-  // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyCTgqtMVnMcOqcQ7pDqoUA-F_kR-KlSqfg",
-    authDomain: "paimente-bb7cc.firebaseapp.com",
-    databaseURL: "https://paimente-bb7cc-default-rtdb.firebaseio.com",
-    projectId: "paimente-bb7cc",
-    storageBucket: "paimente-bb7cc.appspot.com",
-    messagingSenderId: "772305114013",
-    appId: "1:772305114013:web:73485cfdbb0d2eb3d91574",
-    measurementId: "G-BXF8NJ7L8Q"
+            authDomain: "paimente-bb7cc.firebaseapp.com",
+            databaseURL: "https://paimente-bb7cc-default-rtdb.firebaseio.com",
+            projectId: "paimente-bb7cc",
+            storageBucket: "paimente-bb7cc.appspot.com",
+            messagingSenderId: "772305114013",
+            appId: "1:772305114013:web:73485cfdbb0d2eb3d91574",
+            measurementId: "G-BXF8NJ7L8Q"
   };
-  // Initialize Firebase
+
   firebase.initializeApp(firebaseConfig);
+
+  // Initialize variables
+
+
+  const auth = firebase.auth();
+  const fs = firebase.firestore();
+  const db = firebase.database();
 </script>
+
+<script src="/server/public/users.js"></script>
   <script src="/js/js.js"></script>
   <script src="/js/btn.js"></script>
   <script src="/js/login.js"></script>
+  <script src="/js/btnPartege.js"></script>
+  
 
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzhavZ0FFiiOFJRCQgftVFeNZrcBBo1YkJv5VEhD3Os-CXAg03My7ekbekdJQg-oCDE/exec'
-    const form = document.forms['google-sheet']
-
-    form.addEventListener('submit', e => {
-    e.preventDefault()
-    alert('ruban');
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => document.getElementById('myForm').style.display = "none")
-       // .then(response => window.location = document.getElementById('lien'))
-        .then(response => document.getElementById('name').value = '')
-        .then(response => document.getElementById('email').value = '')
-        .then(response => document.getElementById('phone').value = '')
-        .catch(error => console.error('Error!', error.message))
-    });
-
-</script>
 
 <script type="text/javascript">
 			function update() {
@@ -421,5 +421,61 @@
 
 			update();
 		</script>
+
+    <script>
+        // logout
+function log() {
+    alert('holla');
+    auth.signOut();
+    window.location = "trye.html";
+}
+    </script>
+
+    <script>
+      firebase.auth().onAuthStateChanged((user) => {
+    var user = firebase.auth().currentUser;
+    var log =document.getElementById('log');
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      //https://firebase.google.com/docs/reference/js/firebase.User
+      var uid = user.uid;
+      fs.collection('users').doc(user.uid).get().then((snapshot) => {
+        console.log(snapshot.data().Name);
+        username.innerText = snapshot.data().Name;
+        document.getElementById('rc').innerText = snapshot.data().Rcoins;
+        log.style.display = 'block';
+        log.innerHTML ='Deconnectez';
+
+    })
+    } else {
+      // User is signed out
+      localStorage.setItem('username', user)
+      console.log('user is not signed in to retrive username');
+      log.style.display = 'block';
+      log.innerHTML ='Connectez-vous';
+    }
+  });
+  
+    </script>
+
+
+<script type="text/javascript">
+  import { getAuth, updateProfile } from "firebase/auth";
+function updateprofile(){
+  alert('oknnnn');
+updateProfile(auth.currentUser, {
+  Name: 'joseph', 
+  photoURL: "https://example.com/jane-q-user/profile.jpg"
+}).then(() => {
+  // Profile updated!
+  // ...
+  alert('oknnnn');
+}).catch((error) => {
+  // An error occurred
+  // ...
+  alert('noon');
+});
+}
+</script>
 </body>
 </html>

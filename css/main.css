@@ -1,3 +1,103 @@
+.espace{
+    width: 100%;
+}
+@media (max-width: 800px){
+  .homeHeader{
+    background-image: url('/images/back.jpg');
+    background-size: cover;
+    margin-bottom: 5px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.9;
+  } 
+
+  .homeh1{
+    background: black;
+    opacity: 0.8;
+    width: 100%;
+    box-shadow: 0px 0px 2px 1px black;
+    padding: 10px;
+    display: block;
+  }
+  .homeh1 h1{
+    font-size: 6vw;
+    text-align: center;
+    color: #FFF;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  }
+  .homeh1 h3{
+    font-size: 6vw;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+  }
+
+  
+}
+
+@media (max-width: 800px){
+    .hc{
+        background-color: rgb(1, 7, 34);
+        box-shadow: 0px 0px 8px 3px black;
+        margin: 1px;
+        color: white;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .hc h1{
+        font-size: 7vw;
+        text-align: center;
+        font-weight: bold;
+    }
+    .hc hr{
+        background-color: white;
+        width: 70%;
+        margin: auto;
+    }
+    .hc h2{
+        font-size: 5.3vw;
+        text-align: center;
+        font-weight: bold;
+    }
+    .hc p{
+        font-size: 4vw;
+    }
+    .hc .hcinfos{
+        margin-top: 15px;
+    }
+    .hc .hcinfos .image{
+        min-width: 100px;
+        max-width: 130px;
+        height: 150px;
+        margin-left: 5px;
+    }
+    .hc .texte{
+        width: 100%;
+    }
+    .hc .texte ul li{
+        margin: 0px;
+        font-size: 4vw;
+    }
+    .hc .texte p{
+        border: #FFF 1px solid;
+        text-align: center;
+        font-size: 4vw;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .hc img{
+        width: 100%;
+    }
+    .hcinfos{
+        display: flex;
+        padding: 8px;
+    }
+}
 
 @media (max-width: 800px){
     .slideDocs{
@@ -37,51 +137,7 @@
     display: none;
   }
 
-    .livre .image{
-        max-width: 120px;
-        min-width: 10px;
-        max-height: 140px;
-        display: block;
-        overflow: hidden;
-        margin-right: 8px;
-        border: 1px solid red;
-    }
-    .livre .image img{
-        width: 250px;
-        max-height: 120px;
-    }
-    .livre{
-        display: flex;
-        min-width: 95%;
-        margin: 5px;
-        padding: 4px;
-        box-shadow: 0px 0px 8px 1px black;
-    }
-
-    .livre .text{
-        max-width: 90%;
-    }
-    .livre h1{
-        font-size: 5vw;
-        color: blue;
-        margin-top: 2px;
-        margin-bottom: 5px;
-    }
-    .livre .cite{
-        text-align: justify;  
-        padding-bottom: 4px; 
-        font-size: 4vw;
-    }
     
-    .livre p{
-        margin-top: 2px;
-        margin: 5px;
-    }
-
-    .livre span{
-        color: red;
-    }
-
     button{
         padding: 5px;
         background-color: blue;
@@ -94,7 +150,7 @@
 
 }
 
-
+/*partie cours de l'applicaton html et css*/
 @media (max-width: 800px){
     .cours{
         width: 100%;
@@ -124,6 +180,77 @@
 
     }
 }
+
+
+
+@media (max-width: 800px){
+    .classe{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: 0px 0px 1px 0px;
+       
+    }
+
+    .classe .d{
+        width: 100%;
+        height: 100%;
+        margin: 5px;
+        padding: 0px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);   
+    }
+    .classe .icon{
+        align-items: center;
+        background: black;
+        width: 98%;
+        display: flex;
+        flex-wrap:nowrap;
+        padding-right: 1px;
+        margin: 0px;
+    }
+    .classe .d h1{
+        width: 100%;
+        padding-left: 5px;
+        font-size: 5vw;
+        color: white;
+        margin-right: 5px;
+        margin-left: 1px;
+        text-align: left;
+    }
+    .classe .d h2{
+        font-size: 4.8vw;
+        color:orangered;
+        margin: 5px;
+        padding: 0px;
+
+    }
+
+    .classe .d p{
+        margin: 2px;
+        font-size: 4vw;
+        padding: 3px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .classe .d span,.classe .d .fa{
+        font-size: 5vw;
+        position: relative;
+        color: white;
+        padding: 3px;
+        text-align: left;
+        margin: auto;
+        left: 1%;
+        border-radius: 1px;
+    }
+
+    .classe button{
+        padding: 2px;
+        margin: 1px;
+    }
+}
+
+
 
 @media (max-width: 800px){
 

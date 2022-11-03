@@ -36,12 +36,13 @@ button:hover{
 
 @media (max-width: 800px){
     header{
-        height: 50px;
+        height: 40px;
         min-width: 100%;
         background: orangered;
         position: fixed;
         top: 0;
         display: flex;
+        align-items: center;
     }
     .listHeader{
         align-items: center;
@@ -55,6 +56,21 @@ button:hover{
     header i{
         font-size: 18px;
         color: white;
+    }
+    header h1{
+        width: 100%;
+        color: white;
+        font-size: 6vw;
+        padding: 5px;
+        background-color: blue;
+        text-align: center;
+        margin: 5px;
+        float: right;
+    }
+    header h1 span{
+        font-size: 5vw;
+        font-weight: bold;
+        font-family:'Arial Narrow', 'Franklin Gothic Medium',  Arial, sans-serif;
     }
 
     header .image{
@@ -219,11 +235,11 @@ main{
    }
    .timer ul li{
     background: white;
-    color: black;
+    color: rgb(0, 60, 255);
     list-style: none;
     margin: 2px 1px 2px 2px;
     padding: 1px;
-    font-size: 4.5vw;
+    font-size: 4vw;
     font-family: Fantasy;
     box-shadow: 0px 3px 3px 0px rgb(40, 241, 0);
     text-shadow: 4px 3px 9px rgb(252, 29, 0);
@@ -277,6 +293,7 @@ main{
    }
 
 }
+
 
 @media (max-width: 800px){
     #myProgress{
@@ -385,74 +402,6 @@ main{
 
 }
 
-
-@media (max-width: 800px){
-    .classe{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        margin: 0px 0px 1px 0px;
-       
-    }
-
-    .classe .d{
-        width: 100%;
-        height: 100%;
-        margin: 5px;
-        padding: 0px;
-        overflow: hidden;
-        border-radius: 5px;
-        box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);   
-    }
-    .classe .icon{
-        align-items: center;
-        background: black;
-        width: 98%;
-        display: flex;
-        flex-wrap:nowrap;
-        padding-right: 10px;
-        margin: 0px;
-    }
-    .classe .d h1{
-        width: 100%;
-        padding-left: 5px;
-        font-size: 5vw;
-        color: white;
-        margin-right: 5px;
-        margin-left: 1px;
-        text-align: left;
-    }
-    .classe .d h2{
-        font-size: 4.8vw;
-        color:orangered;
-        margin: 5px;
-        padding: 0px;
-
-    }
-
-    .classe .d p{
-        font-size: 4vw;
-        padding: 3px;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    .classe .d span,.classe .d .fa{
-        font-size: 5vw;
-        position: relative;
-        color: white;
-        padding: 3px;
-        text-align: left;
-        margin: auto;
-        left: 1%;
-        border-radius: 1px;
-    }
-
-    .classe button{
-        padding: 2px;
-    }
-}
-
-
-
 @media (max-width: 800px){
     .container {
         position: relative;
@@ -471,6 +420,53 @@ main{
         height: 100%;
         border: none;
       }
+}
+
+@media (max-width: 800px){
+   
+.like-outer{
+  width: 250px;
+  float: left;
+}
+.like-area{
+  width:100%;
+  float: left;
+}
+.like-area ul{
+  list-style: none;
+  margin: 0px
+}
+.like-area ul li{
+  display: inline-block;
+  margin: 0px 5px 0px 0px;
+}
+.like-area ul li a{
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  color: #000;
+  cursor: pointer;
+  float: left;
+  -webkit-user-select: none; /* Safari */      
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+.like-no{
+  font-size: 20px;
+}
+.like-area i{
+  float: left;
+}
+.like-area .fas{
+  font-size: 0px;
+}
+.like-active .fas{
+ font-size: 25px;
+}
+.like-active .far{
+ font-size: 0px;
+}
 }
 
 
@@ -492,10 +488,15 @@ main{
         margin-bottom: 3px;
     }
     footer li{
+        width: 8vw;
+        height: 8vw;
         background-color: white;
-        padding: 3px 5px 3px 5px;
+        padding: 2px 5px 2px 5px;
         border-radius: 10px;
         margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     footer li:hover{
@@ -510,7 +511,8 @@ main{
         box-shadow: 0px 0px 10px 1px;
     }
     .listFooter li i{
-        font-size: 35px;
+        font-size: 5.5vw;
+        text-align: center;
     }
 
 
