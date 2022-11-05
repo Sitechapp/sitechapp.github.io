@@ -68,6 +68,7 @@ function formation(){
           hom.style.display = 'none';
             videos.style.display = 'block';
             what.style.display = 'none';
+            html.style.display = 'none';
         }, 2000);
       }else {
         width++;
@@ -80,37 +81,37 @@ function formation(){
   }
 
     //boutton cours html et css
-function htmlcss(){
-  var progress = document.getElementById('myProgress');
-  var i = 0;
-  progress.style.display = 'block';
-if (i == 0) {
-  i = 1;
-  var elem = document.getElementById("myBar");
-  var width = 0;
-  var id = setInterval(frame, 0);
-  function frame() {
-    if (width >= 100) {
-      clearInterval(id);
-      
-      i = 0;
-      setTimeout(() => {
-        //document.location.reload(true);
-        progress.style.display = 'none';
-        hom.style.display = 'none';
-          videos.style.display = 'block';
-          what.style.display = 'none';
-          html.style.display = 'none';
-      }, 2000);
-    }else {
-      width++;
-      elem.style.width = width + "%";
-      elem.innerHTML = width + "%";
-      
+    function htmlcss(){
+      var htmlp = document.getElementById('progressLogin');
+      var i = 0;
+      htmlp.style.display = 'block';
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar2");
+      var width = 0;
+      var id = setInterval(frame, 0);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          
+          i = 0;
+          setTimeout(() => {
+            //document.location.reload(true);
+            htmlp.style.display = 'none';
+            hom.style.display = 'none';
+              videos.style.display = 'block';
+              what.style.display = 'none';
+              html.style.display = 'none';
+          }, 2000);
+        }else {
+          width++;
+          elem.style.width = width + "%";
+          elem.innerHTML = width + "%";
+          
+        }
+      }
     }
-  }
-}
-}
+    }
 
     //boutton telecharger formation par module
 function telecharger(){
@@ -146,6 +147,9 @@ function telecharger(){
     }
   }
   }
+
+
+   
   var vid = document.getElementById('videos');
 
     function video (){
@@ -178,6 +182,10 @@ function telecharger(){
         + "Message: " + msg + "%0a"
 
     window.open(url, '_blank').focus();
+    }
+
+    function closeform(){
+      formulaire.style.display = "none";
     }
 
     

@@ -1,3 +1,5 @@
+var fa = document.getElementById('FA');
+var btnf = document.getElementById('btnformation');
 function openMenu(){
     var nav = document.getElementById("nav");
     nav.style.width = "250px";
@@ -45,7 +47,7 @@ videoList.forEach(vid =>{
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("november 3, 2022 19:37:25").getTime();
+var countDownDate = new Date("november 14, 2022 19:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -76,7 +78,12 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Il n'y plus de formatiion";
+    fa.innerHTML = "Groupe formation est fermé";
     document.getElementById('timer').style.display = 'none';
+    btnf.style.display = "none";
+  }else{
+    fa.innerHTML = "Groupe formation est ouverte";
+    btnf.style.display = "block";
   }
 }, 1000);
 

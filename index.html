@@ -37,7 +37,7 @@
       <li><span class="material-icons">add_to_drive</span><a href="">Suites Google Drive</a></li><hr>
       <li><span class="material-icons">smart_display</span><a href="">Video informatique</a></li><hr>
       <li><span class="material-icons">newspaper</span><a href="">Articles Android</a></li>
-      <li id="log"><span  class="material-icons">newspaper</span>Logout</li>
+      <li id="log" onclick="log()"><span  class="material-icons">newspaper</span></li>
     </ul>
   </menu>
   <main onclick="main()">
@@ -62,13 +62,16 @@
          <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
          <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
          <li><span id="second"></span><b>:</b><span class="t" >Sc</span> <div id="div1" class="fa"></div></li>
-         <button onclick="formation()">Suivez...</button>
+         <button style="display: none;" onclick="formation()">Suivez...</button>
        </ul>
       </div>
        <div class="infos-details">
          <div class="text">
            <p>
-             Suivez des formations par whatsapp tous les jours
+             Suivez des formations par whatsapp
+           </p>
+           <p id="FA">
+
            </p>
          </div>
          <div class="images"><img src="/images/logo.png" alt=""></div>
@@ -79,17 +82,17 @@
 
    <section id="htmlcss">
     <div class="hc">
-      <h1>Cours Html et css</h1> <hr>
+      <h1>Cours Html et css</h1> 
+      <h2>Apprendre a créer un site web sur android</h2><hr>
       <div class="hcinfos" >
         <div class="texte">
-          <h2>Apprendre a creer un site web sur android</h2>
+        
           <ul>
             <li>Groupe WhatsApp</li>
             <li>Groupe Telegram</li>
             <li>Certifcat inclus </li>
           </ul>
-          <p onclick="htmlcss()">Je veux ce cours</p>
-          <button onclick="updateprofile()">update</button>
+          <p id="btnformation" onclick="htmlcss()">Je veux ce cours</p>
         </div>
         <div class="image"><img src="/images/programmation.png" alt=""></div>
       </div>
@@ -250,6 +253,13 @@
       <h1><cite>Attendez...</cite></h1>
       <div id="myBar">10%</div>
     </div>
+
+    <!--Nofictaion pour connection l'application-->
+    <div id="progressLogin">
+      <h1><cite>Vous ete deconnecté...</cite></h1><hr>
+      <div id="myBar2">10%</div>
+      <p>Connectez-vous</p>
+    </div>
    
 
     <!--Espace pour messsage whatsapp-->
@@ -269,10 +279,12 @@
 
     <!--Formulaire d'inscirption pour la formation -->
     <div id="formulaire" >
+      <div class="formclose" onclick="closeform()">x</div>
+      <div class="image"> <img src="/images/logo.png" alt=""></div>
       <form autocomplete="off" method="post" name="google-sheet">
         <div class="form">
-          <h1>Document</h1>
-          <p>Remplire le formulaire pour télécharger</p>
+          <h1>Particiepez dans la formation</h1>
+          <p>Remplire le formulaire pour vous inscrire</p>
           <hr>
           <div class="input">
             <input type="text" placeholder="Votre nom complet" name="Nom" id="nom" required>
@@ -425,9 +437,8 @@
     <script>
         // logout
 function log() {
-    alert('holla');
     auth.signOut();
-    window.location = "trye.html";
+    window.location = "users/login.html";
 }
     </script>
 

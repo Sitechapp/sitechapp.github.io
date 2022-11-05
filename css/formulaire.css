@@ -8,32 +8,62 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        box-shadow: 0px 0px 1px 3px blue;
+        box-shadow: 0px 0px 10px 1px blue;
     }
     #formulaire form{
         padding: 5px;
         margin: auto;
         width: 98%;
     }
+    .formclose{
+      color: red;
+      font-size: 5.5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      padding: 2px;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px 0px blue;
+    }
+    #formulaire .image{
+      background: rgb(235, 233, 233);
+      width: 50%;
+      overflow: hidden;
+      margin:10px auto;
+      padding: 1px 10px 1px 10px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 1px 3px blue;
+    }
+
+    #formulaire h1{
+      font-size: 6.2vw;
+      text-align: center;
+    }
+    #formulaire form p{
+      font-size: 5vw;
+    }
     .form .input{
         border: 1px solid blue;
         margin: 5px;
+        overflow: hidden;
     }
     /* Full-width input fields */
     #formulaire input[type=text], #formulaire input[type=email] {
     width: 100%;
     padding: 10px;
-    margin: 5px 0 12px 0;
+    margin: 0px 0 0px 0;
     display: inline-block;
-    border: none;
     background: none;
  
   }
 
   #code{
-    width: 100px;
+    width: 50px;
     padding: 10px;
-    margin: 5px 5px 12px 5px;
+    margin: 0;
     display: inline-block;
     border: none;
     background: none;
@@ -42,7 +72,7 @@
   .input select{
     width: 100%;
     padding: 10px;
-    margin: 5px 5px 12px 5px;
+    margin: 0px;
     display: inline-block;
     border: none;
     background: none;
