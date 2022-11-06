@@ -185,12 +185,14 @@ function pauseVid() {
 }
 
 
+var nam =document.getElementById('nom').value;
+var phone =document.getElementById('phone').value;
+var email =document.getElementById('email').value;
+var code =document.getElementById('code').value;
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw1zvGP8B33Q2dWFqN9l8ljFgipbwu2H3utyK3iFNGNslUkRNstDll_oH30-3wZ1_dx/exec'
 const form = document.forms['google-sheet']
-
 form.addEventListener('submit', e => {
 e.preventDefault()
-alert('ruban');
 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => document.getElementById('formulaire').style.display = "none")
     //.then(response => window.location = document.getElementById('telecharger'))

@@ -228,14 +228,14 @@
           <strong>Module #2</strong>
           <li>Definition html et css</li>
           <li>Editeur de texte pour android</li>
-          <li>Et application utile pour travailler</li>
+          <li>Application de travailler</li>
         </ul>
 
         <ul>
           <strong>Module #3</strong>
         <li>Les balises de bases du html</li>
-        <li>Creer votre premier page web</li>
-        <li>Comment creer un formulaire de contact</li>
+        <li>Créer votre premier page web</li>
+        <li>Comment créer un formulaire de contact</li>
         
         </ul>
       </div>
@@ -256,9 +256,9 @@
 
     <!--Nofictaion pour connection l'application-->
     <div id="progressLogin">
-      <h1><cite>Vous ete deconnecté...</cite></h1><hr>
+      <h1><cite>Attendez...</cite></h1><hr>
       <div id="myBar2">10%</div>
-      <p>Connectez-vous</p>
+      <p style="display: none;">Connectez-vous</p>
     </div>
    
 
@@ -278,7 +278,7 @@
     </div>
 
     <!--Formulaire d'inscirption pour la formation -->
-    <div id="formulaire" >
+    <div id="formulaire" style="display: block;" >
       <div class="formclose" onclick="closeform()">x</div>
       <div class="image"> <img src="/images/logo.png" alt=""></div>
       <form autocomplete="off" method="post" name="google-sheet">
@@ -287,7 +287,7 @@
           <p>Remplire le formulaire pour vous inscrire</p>
           <hr>
           <div class="input">
-            <input type="text" placeholder="Votre nom complet" name="Nom" id="nom" required>
+            <input type="text" placeholder="Votre nom complet" name="Nom" id="nom">
           </div>
       
           <div class="input">
@@ -355,7 +355,7 @@
             </select>
           </div>
           <input type="text" name="Reference" value="Blogger" style="display: none;">
-          <button type="submit" class="registerbtn">Télécharger</button>
+          <button type="submit" class="registerbtn">Je m'inscris</button>
         </div>
       </form>
     </div>
@@ -427,7 +427,6 @@
 			function update() {
 				var select = document.getElementById('code');
 				var option = select.options[select.selectedIndex];
-
 				document.getElementById('phone').value = option.value;
 			}
 
@@ -468,25 +467,5 @@ function log() {
   });
   
     </script>
-
-
-<script type="text/javascript">
-  import { getAuth, updateProfile } from "firebase/auth";
-function updateprofile(){
-  alert('oknnnn');
-updateProfile(auth.currentUser, {
-  Name: 'joseph', 
-  photoURL: "https://example.com/jane-q-user/profile.jpg"
-}).then(() => {
-  // Profile updated!
-  // ...
-  alert('oknnnn');
-}).catch((error) => {
-  // An error occurred
-  // ...
-  alert('noon');
-});
-}
-</script>
 </body>
 </html>
