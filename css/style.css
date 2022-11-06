@@ -2,12 +2,10 @@ body{
     background-color: white;
     margin: 0px;
     display: none;
-    overflow-x: hidden;
 }
 *{
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
 }
 ul {
     padding: 2px;
