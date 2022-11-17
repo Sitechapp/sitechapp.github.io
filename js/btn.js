@@ -32,7 +32,7 @@ function home(){
           //document.location.reload(true);
           progress.style.display = 'none';
             hom.style.display = 'block';
-            videos.style.display = 'none';
+            html.style.display = 'block';
             what.style.display = 'none';
             cours.style.display = 'none';
             login.style.display = 'none';
@@ -96,9 +96,9 @@ function formation(){
             //document.location.reload(true);
             htmlp.style.display = 'none';
             hom.style.display = 'none';
-              videos.style.display = 'block';
               what.style.display = 'none';
               html.style.display = 'none';
+              document.getElementById('formulaire').style.display = 'block';
           }, 2000);
         }else {
           width++;
@@ -207,4 +207,5 @@ function telecharger(){
     function closeform(){
       formulaire.style.display = "none";
       document.getElementById('home').style.display = 'block';
+      html.style.display = 'block';
     }
