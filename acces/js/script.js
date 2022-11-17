@@ -4,14 +4,31 @@ var what = document.getElementById("whatsapp");
 var t = document.getElementById("telecharger");
 var formulaire = document.getElementById("formulaire");
 var cours = document.getElementById("cours");
+var login = document.getElementById("login");
 var crs = document.getElementById("coursdetails");
 var html = document.getElementById("htmlcss");
-var btnforma = document.getElementById("forma");
+
+//login.style.display = 'block';
+formulaire.style.display = 'none';
 
 
+function openMenu(){
+  var nav = document.getElementById("nav");
+  nav.style.width = "250px";
+  if(nav.style.width === "250px"){
+      nav.style.left = "0px";
+      nav.style.display = 'block';
+  }
+}
 
-crs.style.display = 'none';
-btnforma.style.display = 'none';
+function main(){
+  var nav = document.getElementById("nav");
+  nav.style.width = "0px";
+  if(nav.style.width === "0px"){
+      nav.style.left = "-10px";
+  }
+  
+}
 
 //----------------------boutton home-----------------//
 function home(){
@@ -48,34 +65,6 @@ function home(){
   }
 
 
-  //boutton fromation
-function formation(){
-    var progress = document.getElementById('myProgress');
-    var i = 0;
-    progress.style.display = 'block';
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 0;
-    var id = setInterval(frame, 0);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        
-        i = 0;
-        setTimeout(() => {
-          //document.location.reload(true);
-          window.location = 'acces/acces.html';
-        }, 2000);
-      }else {
-        width++;
-        elem.style.width = width + "%";
-        elem.innerHTML = width + "%";
-        
-      }
-    }
-  }
-  }
 
     //boutton cours html et css
     function htmlcss(){
@@ -113,6 +102,7 @@ function formation(){
     //boutton telecharger formation par module
 function telecharger(){
     var progress = document.getElementById('myProgress');
+    var lc = document.getElementById('Loginconnection');
     var i = 0;
     progress.style.display = 'block';
   if (i == 0) {
@@ -127,8 +117,14 @@ function telecharger(){
         i = 0;
         setTimeout(() => {
           //document.location.reload(true);
-          progress.style.display = 'none';
+          if(document.getElementById('username').value == ""){
+            progress.style.display = 'none';
+            lc.style.display = 'block';
+          }else{
+            progress.style.display = 'none';
             window.location = 'login.html';
+          }
+          
         }, 2000);
       }else {
         width++;
@@ -204,6 +200,6 @@ function telecharger(){
     window.open(url, '_blank').focus();
     }
 
-    function closeform(){
-      formulaire.style.display = "none";
-    }
+    //function closeform(){
+     // formulaire.style.display = "none";
+  //  }

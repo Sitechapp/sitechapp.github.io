@@ -1,0 +1,88 @@
+.btn{
+    background-color: blue;
+    color: aliceblue;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 6vw;
+    height: 50px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+    border: lime 1px solid;
+}
+
+body{
+    background-color: white;
+}
+@media (max-width: 800px){
+    #infoForma{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+       
+    }
+    .if{
+        width: 90%;
+        padding: 10px;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+        margin:auto;
+    }
+    .coutenueV h1{
+        font-size: 6vw;
+        color: orangered;
+    }
+    .coutenueV p{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .coutenueV h2{
+        margin: 5px;
+        text-align: center;
+        color: red;
+    }
+    .coutenueV ul strong{
+        color: rgb(0, 80, 252);
+    }
+
+    #infoForma .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .lc{
+        width: 79%;
+        font-weight: bold;
+        color: blue;
+        padding: 10px;
+        background-color: aliceblue;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    .lc p{
+        font-size: 5vw;
+        text-align: center;
+        color: red;
+    }
+    .lc button{
+        background: rgb(0, 132, 255);
+        border: none;
+        padding: 6px;
+        margin: 10px;
+        color: #FFF;
+        font-size: 4.6vw;
+    }
+    .lc button a{
+        text-decoration: none;
+        color: #FFF;
+    }
+
+}

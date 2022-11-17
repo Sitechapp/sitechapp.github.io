@@ -1,5 +1,6 @@
 var fa = document.getElementById('FA');
 var btnf = document.getElementById('btnformation');
+
 function openMenu(){
     var nav = document.getElementById("nav");
     nav.style.width = "250px";
@@ -47,7 +48,7 @@ videoList.forEach(vid =>{
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("november 14, 2022 19:37:25").getTime();
+var countDownDate = new Date("november 20, 2022 19:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -78,12 +79,14 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Il n'y plus de formatiion";
-    fa.innerHTML = "Groupe formation est fermé";
+    fa.innerHTML = "Clicquer sur boutton pour Intégrer";
     document.getElementById('timer').style.display = 'none';
-    btnf.style.display = "none";
+    btnforma.style.display = 'block';
+  
+   
   }else{
-    fa.innerHTML = "Groupe formation est ouverte";
-    btnf.style.display = "block";
+    fa.innerHTML = "Le groupe sera disponible tréès bientot";
+    
   }
 }, 1000);
 
@@ -109,33 +112,7 @@ function chargebattery() {
   chargebattery();
   setInterval(chargebattery, 5000);
 
-  function reload(){
-    var progress = document.getElementById('myProgress');
-    var i = 0;
-    progress.style.display = 'block';
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 0;
-    var id = setInterval(frame, 0);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        
-        i = 0;
-        setTimeout(() => {
-          document.location.reload(true);
-          progress.style.display = 'none';
-        }, 2000);
-      }else {
-        width++;
-        elem.style.width = width + "%";
-        elem.innerHTML = width + "%";
-        
-      }
-    }
-  }
-  }
+  
 
   
 
@@ -158,49 +135,6 @@ function openFullscreen() {
   }
 }
 
-
-
-  var videoa = document.getElementById("a");
-  var videob = document.getElementById("b");
-  var videoc = document.getElementById("c");
-  videob.style.display = "none";
-function playVid() {
-  
-  elem.play();
-  videoa.style.display = "none";
-  videob.style.display = "block";
-  videoc.style.display = "block";
-
-  
-}
-
-
-   
-function pauseVid() {
-  elem.pause();
-  videoa.style.display = "block";
-  videob.style.display = "none";
-  videoc.style.display = "block";
-
-}
-
-
-var nam =document.getElementById('nom').value;
-var phone =document.getElementById('phone').value;
-var email =document.getElementById('email').value;
-var code =document.getElementById('code').value;
-const scriptURL = 'https://script.google.com/macros/s/AKfycbw1zvGP8B33Q2dWFqN9l8ljFgipbwu2H3utyK3iFNGNslUkRNstDll_oH30-3wZ1_dx/exec'
-const form = document.forms['google-sheet']
-form.addEventListener('submit', e => {
-e.preventDefault()
-fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => document.getElementById('formulaire').style.display = "none")
-    //.then(response => window.location = document.getElementById('telecharger'))
-    .then(response => document.getElementById('name').value = '')
-    .then(response => document.getElementById('email').value = '')
-    .then(response => document.getElementById('phone').value = '')
-    .catch(error => console.error('Error!', error.message))
-});
 
 
 
