@@ -206,4 +206,5 @@ function telecharger(){
 
     function closeform(){
       formulaire.style.display = "none";
+      document.getElementById('home').style.display = 'block';
     }

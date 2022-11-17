@@ -85,7 +85,7 @@
 
 
 <!--Document a telecharger sugestion-->
-    <div id="docs" style="display: none;">
+    <div id="docs">
       <div class="cardItems">
         <div class="items">
           <div class="imageItem"><img src="/images/commen_creer _blog.png" alt="">
@@ -164,6 +164,88 @@
       </div>
     </div>
    </section>
+   <!--Formulaire d'inscirption pour la formation -->
+   <div id="formulaire" style="display: block;">
+    <div class="formclose" onclick="closeform()">x</div>
+    <form autocomplete="off" method="post" name="google-sheet">
+      <div class="form">
+        <h1>Particiepez dans la formation</h1>
+        <p>Remplire le formulaire pour vous inscrire</p>
+        <hr>
+        <div class="input">
+          <input type="text" placeholder="Votre nom complet" name="Nom" id="nom">
+        </div>
+    
+        <div class="input">
+          <input type="email" placeholder="Entrer votre email" name="Email" id="email" required>
+        </div>
+
+        <div class="input inputFlex">
+          <select name="Code" id="code" onChange="update()">
+            <option>Code de votre pays</option>
+            <option value="+229">Benin (+229)</option>
+            <option value="+257">Burundi (+257)</option>
+            <option value="+226">Burkina Faso (+226)</option>
+            <option value="+237">Cameroon (+237)</option>
+            <option value="+1">Canada (+1)</option>
+            <option value="+238">Cape Verde (+238)</option>
+            <option value="+236">Central African Republic (+236)</option>
+            <option value="+242">Congo (+242)</option>
+            <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+            <option value="+225">Cote D'Ivoire (+225)</option>
+            <option value="+1809">Dominican Republic (+1809)</option>
+            <option value="+298">Faroe Islands (+298)</option>
+            <option value="+594">French Guiana (+594)</option>
+            <option value="+509">Haiti (+509)</option>
+            <option value="+352">Luxembourg (+352)</option>
+            <option value="+853">Macao (+853)</option>
+            <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+            <option value="+261">Madagascar (+261)</option>
+            <option value="+223">Mali (+223)</option>
+            <option value="+377">Monaco (+377)</option>
+            <option value="+227">Niger (+227)</option>
+            <option value="+234">Nigeria (+234)</option>
+            <option value="+262">Reunion (+262)</option>
+            <option value="+250">Rwanda (+250)</option>
+            <option value="+268">Swaziland (+268)</option>
+            <option value="+228">Togo (+228)</option>
+            <option value="+690">Tokelau (+690)</option>
+            <option value="+676">Tonga (+676)</option>
+            <option value="+260">Zambia (+260)</option>
+            <option value="+263">Zimbabwe (+263)</option>
+  <option value="+235">Tchad (+235)</option>
+          </select>
+          <input type="text" placeholder="Votre Numero WhatsApp" name="Phone" id="phone" required>
+        </div>
+
+        <div class="input inputFlex">
+          <select name="Niveau" id="nv">
+            <option>Niveau en Informatique</option>
+            <option value="Débutant">Débutant</option>
+            <option value="Elementaire">Elementaire</option>
+            <option value="Intermediaire">Intermediaire</option>
+            <option value="Avancée">Avancée</option>
+          </select>
+
+          <select name="Sexe" id="sexe">
+            <option>Votre Sexe</option>
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+            <option value="Autres">Autres</option>
+          </select>
+
+          <select name="Reference" id="ref">
+            <option>Votre reference</option>
+            <option value="Whatsapp">Whatsapp</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Autres">Autres</option>
+          </select>
+        </div>
+        <input type="text" name="Reference" value="Blogger" style="display: none;">
+        <button type="submit" class="registerbtn">Je m'inscris</button>
+      </div>
+    </form>
+    </div>
 
 
     <!--tous les popoup de la page ici-->
@@ -315,5 +397,15 @@ function log() {
   });
   
     </script>
+
+<script type="text/javascript">
+  function update() {
+    var select = document.getElementById('code');
+    var option = select.options[select.selectedIndex];
+    document.getElementById('phone').value = option.value;
+  }
+
+  update();
+</script>
 </body>
 </html>
