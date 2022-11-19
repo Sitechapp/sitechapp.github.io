@@ -78,7 +78,7 @@
            <p id="FA">
 
            </p>
-          <center> <p id="forma" onclick="formation()">Suivez la formation</p></center>
+          <center> <p id="forma" onclick="formation()" style="display: block;">Suivez la formation</p></center>
          </div>
          <div class="images"><img src="/images/logo.png" alt=""></div>
         
@@ -395,6 +395,7 @@ function log() {
       lock.style.display = 'block';
 
       log.innerHTML ='Connectez-vous';
+      window.location = 'users/login.html'
     }
   });
   

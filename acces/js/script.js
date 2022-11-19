@@ -100,6 +100,7 @@ function home(){
     }
 
     //boutton telecharger formation par module
+    document.getElementById('Loginconnection').style.display = 'none';;
 function telecharger(){
     var progress = document.getElementById('myProgress');
     var lc = document.getElementById('Loginconnection');

@@ -82,7 +82,7 @@
       <div class="panel" id="form">
         <h1><span> Holla !</span> <span id="username"></span></h1><hr>
         <h2>Avoir accès</h2>
-        <p p="msg">Integrer dans le groupe</p>
+        <p id="msg">Integrer dans le groupe</p>
         <div class="input">
             <div class="i"><i class="fa fa-users"></i></div>
             <div><input type="text" id="user" placeholder="Entre le User"></div>
@@ -97,7 +97,16 @@
         <div>
             <h1>SITECH (VIP)</h1>
             <h2>Groupe Formation</h2>
-            <button class="btn">Integrer,Maintenant</button>
+            <p>
+              <ul>
+                <li>1- cliquer sur le boutton au-dessous</li>
+                <li>Ouvrer votre navigateur chrome, collez le lien</li>
+              </ul>
+            </p>
+            <!-- The text field -->
+            <p id="lien"></p>
+            <input type="text" value="https://chat.whatsapp.com/BWIu2Oinj9tEhsfLhffYbx" style="display: none;" id="myInput">
+            <button class="btn" onclick="myFunction()">Integrer,Maintenant</button>
         </div>
     </div>
     </div>
@@ -112,7 +121,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
   <script>
-    document.getElementById('message').style.display='none';
+    document.getElementById('message').style.display = 'none';
   </script>
   <script>
         // Your web app's Firebase configuration
@@ -140,8 +149,10 @@
           var user = document.getElementById("user");
           var password = document.getElementById("pass");
           if (username.value==loginInfo.user && password.value==loginInfo.password)
-            location.replace("https://chat.whatsapp.com/BWIu2Oinj9tEhsfLhffYbx");
+            //location.replace("https://chat.whatsapp.com/BWIu2Oinj9tEhsfLhffYbx");
             document.getElementById('msg').innerTex = 'Bien recu';
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('form').style.display = 'none';
           });
       });
   </script>
@@ -170,6 +181,23 @@
   }
 });
 
+  </script>
+
+  <script>
+    function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  document.getElementById('lien').innerText = "coller le lien dans votre navigateur: " + copyText.value ;
+}
   </script>
   </body>
 </html>
