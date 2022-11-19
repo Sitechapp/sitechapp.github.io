@@ -142,7 +142,7 @@ const form = document.forms['google-sheet']
 form.addEventListener('submit', e => {
 e.preventDefault()
 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => document.getElementById('formulaire').style.display = "none")
+    .then(response => document.getElementById('formulaire').style.display = "block")
     //.then(response => window.location = document.getElementById('telecharger'))
     .then(response => document.getElementById('name').value = '')
     .then(response => document.getElementById('email').value = '')
