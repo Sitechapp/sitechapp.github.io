@@ -65,7 +65,7 @@ function formation(){
         i = 0;
         setTimeout(() => {
           //document.location.reload(true);
-          window.location = 'acces/acces.html';
+          window.location = 'https://chat.whatsapp.com/BWIu2Oinj9tEhsfLhffYbx';
         }, 2000);
       }else {
         width++;

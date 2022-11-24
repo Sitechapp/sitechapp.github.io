@@ -1,19 +1,17 @@
-
-  //Envoyer message whatsapp comme partage
-  //var postTitle = encodeURI("Programmation web en html et css\nFormation pour débutant en programmation web\n\nDans cette formation ,je t'apprends:\n\nLa base de la prommation web?\nComment créer votre premier page web?\nComment héberger gratuitement?\n\n");
- function partager(){
-    var title = document.getElementById("title");
+var title = document.getElementById("title");
+    var h1 = document.getElementById("h1");
     var sub = document.getElementById("sub");
-    var prix = document.getElementById("prix");
+    var price = document.getElementById("price");
     var auteur = document.getElementById("auteur");
-   
-    var url = "https://wa.me/18094513048?text="
-    + "*Title*: " + title.innerText + "%0a"
-    + "*Sous-Title*: " + sub.innerText + "%0a"
-    + "*Prix*: " + prix.innerText + "%0a"
-    + "Auteur: " + auteur.innerText + "%0a"
 
-window.open(url, '_blank').focus();
+    //share produit sur whatsapp
+function partager (){
+  var appLien = "https://sitechinfos.blogspot.com/p/sitech.html"
+  var share = encodeURI("*APPLACTION : Sitech Info*" +"\n\n" +"*Sous-Titre:*" +" "+ sub.textContent  +'\n'+"*Prix :*" +" " +price.textContent +" "+"*Rc*"+'\n'+"*Auteur :*"+" "+auteur.innerText + "\n\n"+"Telecharger l'application"+"\n"+appLien);
+  var url = "whatsapp://send?text="
+  + share + "%0a"
+
+  window.open(url, '_blank').focus();
 }
 
 
