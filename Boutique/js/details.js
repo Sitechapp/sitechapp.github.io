@@ -6,8 +6,9 @@ var title = document.getElementById("title");
 
     //share produit sur whatsapp
 function partager (){
-  var appLien = "https://sitechinfos.blogspot.com/p/sitech.html"
-  var share = encodeURI("*APPLACTION : Sitech Info*" +"\n\n" +"*Sous-Titre:*" +" "+ sub.textContent  +'\n'+"*Prix :*" +" " +price.textContent +" "+"*Rc*"+'\n'+"*Auteur :*"+" "+auteur.innerText + "\n\n"+"Telecharger l'application"+"\n"+appLien);
+  var mess = "Salut j'ai trouvé ceci sur l'Application *Sitech Info*"
+  var appLien = "https://sitechinfos.blogspot.com/p/sitechinfo.html"
+  var share = encodeURI("*APPLACTION : Sitech Info*" +"\n\n"+ "_*"+mess+"*_" + "\n\n" +"*Sous-Titre:*" +" "+ "_"+sub.textContent+"_"  +'\n\n'+"*Prix :*" +" " +price.textContent +" "+"*Rc*"+'\n'+"*Auteur :*"+" "+auteur.innerText + "\n\n"+"Télécharger l'application"+"\n"+appLien);
   var url = "whatsapp://send?text="
   + share + "%0a"
 
