@@ -160,6 +160,30 @@
 .like-active .far{
  font-size: 0px;
 }
+
+
+
+
+.update{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
+  width: 80%;
+  box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.update h1{
+  font-size: 6vw;
+  text-align: center;
+  color:#0C74E6;
+}
+.update h2{
+  font-size: 6vw;
+  text-align: center;
+  color:#fc4b04;
+}
 }
 
 

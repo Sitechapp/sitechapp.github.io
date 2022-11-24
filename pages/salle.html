@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/salle.css">
+</head>
+<body>
+    <main>
+        <header >
+            <ul>
+                <div class="sp"></div>
+                <li id="username"></li>
+                <div ></div>
+                <li><input data-value type="number" value="0" id="rc">/100</li>
+            </ul>
+        </header>
+
+        <div class="coutenue">
+            <section id="bv">
+                <div class="et">
+                    <h1>Bienvenue cher (e) Etudiant</h1>
+                    <h2>Gérer Votre Niveau</h2>
+                    <div id="myProgress">
+                        <div id="myBar2">1</div>
+                      </div>
+                      <div class="btn" id="lva" onclick="lv(event)">Commencer le cours</div>
+                </div>
+            </section>
+
+
+
+            <section id="lvA">
+                <h1>Chapitre 1</h1>
+
+                <div class="btn" id="lvb" >J'ai terminé ce chapitre</div>
+            </section>
+
+            <section id="lvB">
+                <h1>Chapitre 2</h1>
+                <div class="btn" id="lvc" >J'ai terminé ce chapitre</div>
+            </section>
+
+            <section id="lvC">
+                <h1>Chapitre 3</h1>
+                <div class="btn" id="lvd" >J'ai terminé ce chapitre</div>
+            </section>
+
+            <section id="lvD">
+                <h1>Chapitre 4</h1>
+                <div class="btn" id="lve" >J'ai terminé ce chapitre</div>
+            </section>
+
+            <section id="lvE">
+                <h1>Chapitre 5</h1>
+                <div class="btn" id="qiz">J'ai terminé ce chapitre</div>
+            </section>
+
+            <section id="qiz">
+                <h1>Question et Reponse</h1>
+            </section>
+        </div>
+
+
+
+        <footer>
+            <ul>
+
+            </ul>
+        </footer>
+    </main>
+
+    <script type="text/javascript" src="js/salle.js"></script>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script type="text/javascript">
+  
+    
+  const firebaseConfig = {
+    apiKey: "AIzaSyCvqf6mNg-FsbcU7vZf52xEi6Skp9tz3yU",
+    authDomain: "signup-286f7.firebaseapp.com",
+    databaseURL: "https://signup-286f7-default-rtdb.firebaseio.com",
+    projectId: "signup-286f7",
+    storageBucket: "signup-286f7.appspot.com",
+    messagingSenderId: "579225916993",
+    appId: "1:579225916993:web:f4f70c8c24584a770018c0",
+    measurementId: "G-RH5HF2F7DN"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const fs = firebase.firestore();
+
+    firebase.auth().onAuthStateChanged((user) => {
+    var user = firebase.auth().currentUser;
+    var log =document.getElementById('log');
+    var rc =document.getElementById('rc').value;
+    var elem = document.getElementById("myBar2");
+    var lva = document.getElementById("lva");
+    if (user) {
+    // User is signed in, see docs for a list of available properties
+    //https://firebase.google.com/docs/reference/js/firebase.User
+
+    var uid = user.uid;
+    fs.collection('users').doc(user.uid).get().then((snapshot) => {
+    console.log(snapshot.data().Name);
+    console.log(snapshot.data().Rcoins);
+    username.innerText = snapshot.data().Name;
+    document.getElementById('rc').value = snapshot.data().Rcoins;
+    elem.innertext = snapshot.data().Rcoins;
+    var bv = document.getElementById('bv');
+var a = document.getElementById('lvA');
+var b = document.getElementById('lvB');
+var c = document.getElementById('lvC');
+var d = document.getElementById('lvD');
+var e = document.getElementById('lvE');
+var lva = document.getElementById('lva');
+var qiz = document.getElementById('qiz');
+    lva.style.display = 'block';
+    var progress = document.getElementById('myProgress');;
+        progress.style.display = 'block';
+        
+        var b = 0;
+          if ( document.getElementById('rc').value == "1") {
+            console.log(rc);
+                elem.style.width = '20%';
+                a.style.display= 'block';
+                bv.style.display = 'none';
+            }else if(document.getElementById('rc').value == "2"){
+                elem.style.width = '40%';
+                document.getElementById('lvB').style.display= 'block';
+                bv.style.display = 'none';
+            }else if(document.getElementById('rc').value == "3"){
+                elem.style.width = '60%';
+                c .style.display = 'block';
+                bv.style.display = 'none';
+            }else if(document.getElementById('rc').value == "4"){
+                elem.style.width = '80%';
+                d.style.display = 'block';
+                bv.style.display = 'none';
+            }else if(document.getElementById('rc').value == "5"){
+                elem.style.width = '100%';
+                document.getElementById('lvE').style.display = 'block';
+                bv.style.display = 'none';
+            }
+           
+            document.getElementById("lvb").addEventListener("click", myFunction);
+            function myFunction() {
+                var level = 1;
+                var l = 1+ 1;
+                document.location.reload(true);
+                fs.collection('users').doc(user.uid).update({
+                  Rcoins : l
+                  
+    })
+   
+    
+}
+
+
+
+document.getElementById("lvc").addEventListener("click", lvc);
+            function lvc() {
+                var level = 2;
+                var l = level+ 1;
+                fs.collection('users').doc(user.uid).update({
+                  Rcoins : l
+    })
+   
+    
+}
+
+document.getElementById("lvd").addEventListener("click", lvd);
+            function lvd() {
+                var lv = document.getElementById('rc').value;
+                var level = 3;
+                var l = level + 1;
+                lv.innerHtml = l;
+                document.location.reload(true);
+                fs.collection('users').doc(user.uid).update({
+                  Rcoins : l
+    })
+   
+    
+}
+
+document.getElementById("lve").addEventListener("click", lve);
+            function lve() {
+                var lv = document.getElementById('rc').value;
+                var level = 4;
+                var l = level + 1;
+                lv.innerHtml = l;
+                location.reload();
+                fs.collection('users').doc(user.uid).update({
+                  Rcoins : l
+    })
+   
+    
+}
+
+
+
+    })
+    } else {
+    // User is signed out
+    localStorage.setItem('username', user)
+    console.log('user is not signed in to retrive username');
+    document.getElementById('lva').style.display = 'none';
+    }
+    });
+
+  
+    
+  </script>
+
+
+<script>
+
+</script>
+
+  
+</body>
+</html>

@@ -135,7 +135,7 @@ function openFullscreen() {
   }
 }
 
-// var phone =document.getElementById('phone').value;
+/* var phone =document.getElementById('phone').value;
 var code =document.getElementById('code').value;
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw1zvGP8B33Q2dWFqN9l8ljFgipbwu2H3utyK3iFNGNslUkRNstDll_oH30-3wZ1_dx/exec'
 const form = document.forms['google-sheet']
@@ -148,6 +148,37 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => document.getElementById('email').value = '')
     .then(response => document.getElementById('phone').value = '')
     .catch(error => console.error('Error!', error.message))
-}); //
+}); */
+
+
+
+    //boutton cours html et css
+    function htmlcss(){
+      var htmlp = document.getElementById('progressLogin');
+      var i = 0;
+      htmlp.style.display = 'block';
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar2");
+      var width = 0;
+      var id = setInterval(frame, 0);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          
+          i = 0;
+          setTimeout(() => {
+            //document.location.reload(true);
+            window.location = "/Boutique/courshtml/htmlCss.html";
+          }, 2000);
+        }else {
+          width++;
+          elem.style.width = width + "%";
+          elem.innerHTML = width + "%";
+          
+        }
+      }
+    }
+    }
 
 

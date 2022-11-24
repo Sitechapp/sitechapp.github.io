@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" type="text/css" href="/css/login.css">
   <link rel="stylesheet" href="/css/formulaire.css">
+  <link rel="stylesheet" href="/Boutique/css/details.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7979799450178267"
      crossorigin="anonymous"></script>
+     <script type="text/javascript" src="/Boutique/js/details.js"></script>
 </head>
 <body>
   <header>
@@ -46,145 +46,43 @@
       <li id="log" onclick="log()"></li>
     </ul>
   </menu>
+
   <main onclick="main()">
-   
-    <section id="home">
-      <!--Les document recent de l'application em slide-->
-    <div class="slideDocs" style="display: NONE;">
-      <section class="homeHeader">
-        <div class="homeh1">
-          <h1><span>Bienvenue</span></h1>
-          <h3><span>Dans ma comunautée</span></h3>
-        </div>
-      </section>
-    </div>
-
-    <!--La partie de la bienvenue de la'application-->
-    <div class="infos">
-     <div class="timer">
-       <h4 id="demo">Formation en cours</h4>
-       <ul id="timer">
-         <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
-         <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
-         <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
-         <li><span id="second"></span><b>:</b><span class="t" >Sc</span> <div id="div1" class="fa"></div></li>
-       </ul>
-      </div>
-       <div class="infos-details">
-         <div class="text">
-           <p>
-             Suivez des formations par whatsapp
-           </p>
-           <p id="FA">
-
-           </p>
-          <center> <p id="forma" onclick="formation()" style="display: block;">Suivez la formation</p></center>
-         </div>
-         <div class="images"><img src="/images/logo.png" alt=""></div>
-        
-       </div>
-    </div>
-
-
-<!--Document a telecharger sugestion-->
-    <div id="docs" style="display: none;">
-      <div class="cardItems">
-        <div class="items">
-          <div class="imageItem"><img src="/images/commen_creer _blog.png" alt="">
-            <div class="texteItem">
-              <div class="t">
-                <h1>Creation Blog Mobile</h1>
-              <p><span>Prix :</span><span>100</span></p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-
-        <div class="items" style="margin: 1px 10px 1px 10px ;">
-          <div class="imageItem"><img src="/images/commen_creer _blog.png" alt="">
-            <div class="texteItem">
-              <h1>Creation Blog Mobile</h1>
-              <p><span>Prix :</span><span>100</span></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="items">
-          <div class="imageItem"><img src="/images/commen_creer _blog.png" alt="">
-            <div class="texteItem">
-              <h1>Creation Blog Mobile</h1>
-              <p><span>Prix :</span><span>100</span></p>
-            </div>
+   <section id="detail">
+    <div class="details">
+        <div class="img"><img src="/images/html et css.png" alt=""></div>
+        <div class="text">
+          <h1 id="title">Programmation Web en HTML & CSS</h1>
+          <h1 id="sub">Document sur Programmation web pour débutant en Html et Css</h1>
+          <ul>
+            <li><span>prix</span> <b>:</b> <input type="number" id="prix" value="0.00" disabled="false"> <strong>Rc</strong></li>
+            <li><span>NB Pages</span> <b>:</b> <span id="prix">2</span> <strong>Pages</strong></li>
+            <li><span id="auteur">Auteur</span> <b>:</b><strong>Ruban Joseph</strong></li>
+          </ul>
+          <center><cite>Ce document est disponible gratuite que pour vous <br>Partager ce document sur WhatsApp dans deux groupes</cite></center>
+          <div class="Btn">
+            <button onclick="telecharger()"><i class="fa fa-cloud-download"></i>Télécharger</button>
+            <button onclick="partager()"><i class="fa fa-whatsapp"></i>Partager</button>
           </div>
         </div>
       </div>
-    </div>
-
-    <section id="htmlcss">
-      <div class="hc">
-        <h1>Cours Html et css</h1> 
-        <h2>Apprendre a créer un site web sur android</h2><hr>
-        <div class="hcinfos" >
-          <div class="texte">
-          
-            <ul>
-              <li>Groupe WhatsApp</li>
-              <li>Groupe Telegram</li>
-              <li>Certifcat inclus </li>
-            </ul>
-            <p id="btnformation" onclick="htmlcss()">Télécharger Version (<i>1.0</i>)</p>
-          </div>
-          <div class="image"><img src="/images/programmation.png" alt=""></div>
-        </div>
-      </div>
-     </section>
-   </section>
-
-   
-<!--cours creation blog-->
-   <section id="coursdetails" style="display: none;">
-    <div class="cours">
-      <h1>Creation blog sur android</h1><hr>
-      <div class="coursflex">
-        <div class="texte">
-          <p>
-            Apprendre a creer un blog gratuit sur 
-            android avec le plateforme blogger.
-          </p>
-  
-          <p>
-            Document disponible par module et chaque 
-            module contient video et audio
-          </p>
-  
-          <button>Je veux participer</button>
-        </div>
-        <div class="image">
-          <img src="/images/commen_creer _blog.png" alt="">
-        </div>
-      </div>
-    </div>
-   </section>
-   <!--Formulaire d'inscirption pour la formation -->
-   <div id="formulaire">
-    <div class="formclose" onclick="closeform()">x</div>
-    <form autocomplete="off" method="post" name="google-sheet">
-      <div class="form">
-        <h1>Particiepez dans la formation</h1>
-        <p id="msgF">Remplire le formulaire pour vous inscrire</p>
-        <hr>
-        <div class="input">
-          <input type="text" placeholder="Votre nom complet" name="Nom" id="nom">
-        </div>
     
-        <div class="input">
-          <input type="email" placeholder="Entrer votre email" name="Email" id="email" required>
-        </div>
+   </section>
 
+
+   
+   <!--Formulaire d'inscirption pour la formation -->
+   <section id="forma" class="f">
+    <div class="form">
+      <div class="formclose" onclick="closeform()">x</div>
+      <form autocomplete="off" method="post" name="google-sheet">
+        <div class="img"></div>
+        <div id="message"><h1>message</h1></div>
+        <hr>
+        <input type="text"id="SERIE" name="Serie" value="SI0001" style="display: none;">
         <div class="input inputFlex">
-          <select name="Code" id="code" onChange="update()">
-            <option>Code de votre pays</option>
+          <select required name="Code" id="code" onChange="update()">
+            <option id="vide" ></option>
             <option value="+229">Benin (+229)</option>
             <option value="+257">Burundi (+257)</option>
             <option value="+226">Burkina Faso (+226)</option>
@@ -217,61 +115,20 @@
             <option value="+263">Zimbabwe (+263)</option>
   <option value="+235">Tchad (+235)</option>
           </select>
-          <input type="text" placeholder="Votre Numero WhatsApp" name="Phone" id="phone" required>
+          <input type="text" onclick="inputitem()" placeholder="Votre Numero WhatsApp" name="Phone" id="phone" required>
         </div>
-
-        <div class="input inputFlex">
-          <select name="Niveau" id="nv">
-            <option>Niveau en Informatique</option>
-            <option value="Débutant">Débutant</option>
-            <option value="Elementaire">Elementaire</option>
-            <option value="Intermediaire">Intermediaire</option>
-            <option value="Avancée">Avancée</option>
-          </select>
-
-          <select name="Sexe" id="sexe">
-            <option>Votre Sexe</option>
-            <option value="Homme">Homme</option>
-            <option value="Femme">Femme</option>
-            <option value="Autres">Autres</option>
-          </select>
-
-          <select name="Reference" id="ref">
-            <option>Votre reference</option>
-            <option value="Whatsapp">Whatsapp</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Autres">Autres</option>
-          </select>
-        </div>
-        <input type="text" name="Reference" value="Blogger" style="display: none;">
-        <button type="submit" id="submit" onclick="submit()" class="registerbtn">Je m'inscris</button>
-      </div>
-    </form>
+        <input type="text" name="Docs" value="HTML ET CSS (VERS-1.0)" style="display: none;">
+        <center><cite>Pour Télécharger Ce Document Entrer Votre Numéro</cite></center>
+        <button type="submit" id="submit" class="btn">Télécharger</button>
+      </form>
     </div>
+   </section>
 
-
-    <!--tous les popoup de la page ici-->
-    <div id="versapp" class="update">
-      <h1>Mise-a-jours Disponible</h1>
-      <h2>Cliquez sur le bouton au-dessous</h2>
-      <p><span>Version :</span><strong id="avers"></strong> </p>
-      <p><span>Version :</span><strong id="nvers"></strong> </p>
-      <center><button>Update l'application</button></center>
-
-    </div>
      <!--Nofictaion pour rafraishir l'application-->
      <div id="myProgress">
       <h1><cite>Attendez...</cite></h1>
       <div id="myBar">10%</div>
     </div>
-
-    <!--Nofictaion pour connection l'application-->
-    <div id="progressLogin">
-      <h1><cite>Attendez...</cite></h1><hr>
-      <div id="myBar2">10%</div>
-      <p style="display: none;">Connectez-vous</p>
-    </div>
-   
 
     <!--Espace pour messsage whatsapp-->
     <div id="whatsapp">
@@ -281,7 +138,7 @@
      </div>
       <div  class="whainput inp">
         <i class="fa fa-user"></i>
-        <input type="text" name="value[]" value="" id="name" class="default" ></div>
+        <input type="text" name="value" value="" id="name" class="default" ></div>
       <div class="whainput">
         <textarea name="" id="msg"></textarea>
       </div>
@@ -294,13 +151,13 @@
   <!--Pied de page de mon application-->
   <footer>
     <div class="footer">
-      <div class="li" onclick="boutique()">
+      <div class="li">
         <div class="liImage"><a href="Boutique/boutique.html"><i class="fa fa-shopping-basket"></i></a></div>
         <div class="liText">Boutique</div>
 
       </div>
-      <div class="li" onclick="article()">
-        <div class="liImage"><a href="APK/Sitech Info.apk" download><i class="fa fa-file-archive-o"></i></a></div>
+      <div class="li">
+        <div class="liImage"><a href="APK/Sitech Info.apk" download><i class="fa fa-facebook"></i></a></div>
         <div class="liText">Article</div>
       </div>
       <div class="li" onclick="home()">
@@ -311,8 +168,8 @@
         <div class="liImage"><i class="fa fa-refresh"></i></div>
         <div class="liText">rafraishir</div>
       </div>
-      <div class="li" onclick="whatspp()">
-        <div class="liImage"><a href="https://chat.whatsapp.com/BWIu2Oinj9tEhsfLhffYbx"><i id="lock" class="fa fa-lock"></i><i id="unlock" class="fa fa-whatsapp"></i></a></div>
+      <div class="li" onclick="lock()">
+        <div class="liImage"><a href="https://chat.whatsapp.com/BWIu2Oinj9tEhsfLhffYbx"><i id="lock" class="fa fa-lock"></i><i id="unlock" class="fa fa-unlock"></i></a></div>
         <div class="liText">Compte</div>
       </div>
     </div>
@@ -361,38 +218,6 @@
   //const db = firebase.database();
 </script>
 
-  <script src="/js/js.js"></script>
-  <script src="/js/btn.js"></script>
-  
-  <script>
-    let obj = {
-    Name :'ruban',
-    age: 23
-  }
-  
-  firebase.database().ref('users/user1').set(obj)
-  
-        // // read data
-       
-        firebase.database().ref("APP").on("value", (snapshot) => {
-        console.log(snapshot.val());
-        document.getElementById('nvers').innerText= snapshot.val().Nversion;
-        document.getElementById('avers').innerText= snapshot.val().Aversion;
-  
-        var newv =  document.getElementById('nvers').innerText= snapshot.val().Nversion;
-        var holdv =  document.getElementById('avers').innerText= snapshot.val().Aversion;
-  
-        alert(age);
-        if(newv > holdv){
-          document.getElementById('versapp').style.display = 'none';
-        }
-      });
-      document.getElementById('versapp').style.display = 'none';
-  </script>
-  
-
-
-
     <script>
         // logout
 function log() {
@@ -427,7 +252,6 @@ function log() {
       console.log('user is not signed in to retrive username');
       log.style.display = 'block';
       lock.style.display = 'block';
-
       log.innerHTML ='Connectez-vous';
       window.location = 'users/login.html'
     }
@@ -440,9 +264,28 @@ function log() {
     var select = document.getElementById('code');
     var option = select.options[select.selectedIndex];
     document.getElementById('phone').value = option.value;
+    document.getElementById('message').innerText = option.value;
   }
 
   update();
 </script>
+
+
+<a id="docs" href="https://drive.google.com/uc?export=download&id=18f4ygWRPIVEWDog27urZJpojNrkPd71m"></a>
+<script type="text/javascript">
+ var docs = document.getElementById('docs');
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxqgM0hURUnfX3jg9xb89QZuCAVV_LCe2eZ6HbVJZ1wAc8iblDUMdTHZ52CruzhP4IN/exec'
+const form = document.forms['google-sheet']
+form.addEventListener('submit', e => {
+e.preventDefault()
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => document.getElementById('forma').style.display = "block")
+    .then(response => window.location = document.getElementById('docs'))
+    .then(response => document.getElementById('phone').value = '')
+    //.catch(error => console.error('Error!', error.message))
+});
+</script>
+
+<script type="text/javascript" src="/Boutique/js/details.js"></script>
 </body>
 </html>

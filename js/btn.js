@@ -94,11 +94,7 @@ function formation(){
           i = 0;
           setTimeout(() => {
             //document.location.reload(true);
-            htmlp.style.display = 'none';
-            hom.style.display = 'none';
-              what.style.display = 'none';
-              html.style.display = 'none';
-              document.getElementById('formulaire').style.display = 'block';
+            window.location = "/Boutique/courshtml/htmlCss.html";
           }, 2000);
         }else {
           width++;

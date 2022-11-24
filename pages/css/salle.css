@@ -1,0 +1,188 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background: white;
+    overflow: hidden;
+}
+.sp{
+    width: 100%;
+    height: 100%;
+}
+
+.btn{
+    border: 1px solid lime;
+    margin: 10px auto;
+    padding: 8px;
+    background: rgba(0, 0, 255, 0.267);
+    color: rgb(3, 47, 243);
+    text-align: center;
+    width: max-content;
+    cursor: pointer;
+}
+.btn:hover{
+    background: orangered;
+    border: 1px solid rgb(0, 38, 255);
+    color: #fff;
+}
+ 
+/* header de la page*/
+@media (max-width: 800px){
+    header{
+        background: blue;
+        height: 40px;
+    }
+    header ul{
+        height: 100%;
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header ul li{
+        padding: 0px;
+        height: fit-content;
+        color: white;
+        border: 1px solid white;
+        margin: 5px;
+        padding: 2px 5px 2px 5px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    header ul li input{
+        max-width: 100px;
+        width: 100%;
+        pointer-events: none;
+        background-color: blue;
+        text-align: center;
+        border:none;
+        padding: 0px;
+        border: 1px solid #fff;
+        font-size: 5vw;
+        color: white;
+        margin-right: 5px;
+    }
+}
+@media (max-width: 800px){
+    .coutenue{
+        height: 100vh;
+        border: lime 1px solid;
+        margin-bottom: 50px;
+        overflow-y: scroll;
+        
+        
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+.coutenue::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.coutenue {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+    #bv{
+        height: 100vh;
+        align-items: center;
+        
+    }
+   
+    #bv .et{
+        width: 80%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    }
+    #bv .et h1{
+        font-size: 6vw;
+        margin: 1px;
+        text-align: center;
+    }
+    #bv .et h2{
+        font-size: 6vw;
+        margin: 8px;
+        text-align: center;
+    }
+
+    #bv .et .btn{
+        border: 2px solid blue;
+        margin: 10px;
+        padding: 5px;
+        text-align: center;
+        font-size: 6vw;
+        margin: auto;
+    }
+
+    }
+
+    @media (max-width: 800px){
+        #myProgress{
+            margin: 10px;
+            background-color: black;
+            padding: 1px;
+        }
+        #myProgress h1{
+            color: white;
+        }
+    
+        #myBar2 {
+            width: 10%;
+            height: 10px;
+            background-color: #2d00f7;
+            text-align: center; /* To center it horizontally (if you want) */
+            line-height: 30px; /* To center it vertically */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+          }
+    }
+
+
+
+
+    #lvA{
+        border: 1px solid blue;
+        height: auto;
+        display: none;
+    }
+    #lvB{
+        border: 1px solid rgb(250, 2, 2);
+        height: auto;
+        display: none;
+    }
+    #lvC, #lvD, #lvE{
+        border: 1px solid rgb(0, 255, 13);
+        height: auto;
+        display: none;
+    }
+    #lvD{
+        border: 1px solid rgb(255, 0, 0);
+        height: auto;
+        display: none;
+    }
+    #lvE, #qiz{
+        border: 1px solid rgb(1, 1, 32);
+        height: auto;
+        display: none;
+    }
+
+
+
+
+@media (max-width: 800px){
+    footer{
+        width: 100%;
+        background: blue;
+        height: 40px;
+        position: fixed;
+        bottom: 0;
+    }
+}
