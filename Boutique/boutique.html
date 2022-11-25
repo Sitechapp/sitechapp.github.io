@@ -10,11 +10,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/css/app.css">
-  <link rel="stylesheet" type="text/css" href="Boutique.css">
+  <link rel="stylesheet" href="/Boutique/css/Boutique.css">
+  <script src="/js/App.js"></script>
+  <script src="/Boutique/js/Boutique.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7979799450178267"
      crossorigin="anonymous"></script>
 </head>
-<body class="body">
+<body>
   <header>
    <ul class="listHeader">
    
@@ -42,100 +44,82 @@
       <li><span class="material-icons">newspaper</span><a >Articles Android</a></li>
       <li id="log" onclick="log()"></li>
     </ul>
-
-    <input type="number" data-value value="" id="version">
   </menu>
-  <main onclick="main()" class="main">
-    <div class="content">
-      <section id="displonible">
-        <div class="search">
-          <h1>Trouver un articles</h1>
-          <div class="input"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."><span><i class="fa fa-search"></i></span> </div>
+
+  <main  onclick="closeMenu()">
+    <div class="search">
+        <div class="seachItem">
+            <title>Chercher un document</title>
+           <div class="searchInput">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <i class="fa fa-search"></i>
+           </div>
         </div>
-  
-        <ul id="myUL" class="articles">
-            <a href="/pages/courshtml/details/htmlCss.html">
-              <li class="list">
-                <div class="li">
-                  <div class="images"><img src="/images/html et css.png" alt=""></div>
-                  <div class="texte">
-                    <p class="title"><a href="#">Programmation block en Html & Css</a></p>
-                    <p class="t2" id="t">Document sur programmation web en html et css pour débutant</p>
-                    <ul>
-                      <li><span>Prix :</span> <span id="prix">0.00</span> <span>Rc</span></li>
-                    </ul>
-                    
-                  </div>
-                 
-                </div>
-              </li>
-            </a>
-        </ul>
-      </section>
-
-
-
-      <section class="grid-1">
-        <div class="item-1">1</div>
-        <div class="item-2">2</div>
-        <div class="item-3">3</div>
-        <div class="item-4">4</div>
-        <div class="item-5">5</div>
-        <div class="item-6">6</div>
-        <div class="item-7">7</div>
-        <div class="item-8">8</div>
-        <div class="item-9">9</div>
-      </section>
     </div>
-    <script src="Boutique.js"></script>
+        <section>
+            <ul id="myUL" class="card">
+                <li class="item">
+                    <img src="/images/html et css.png" alt="">
+                    <a href="#">
+                        HTML & CSS
+                    </a>
+                    <p>
+                        <span>Prix</span><span>0.00</span>
+                    </p>
+                    <center><a href="/Boutique/courshtml/htmlCss.html"><button class="liBtn">Je veux ceci !</button></a></center>
+                </li>
+                <li class="item">
+                    <img src="/images/commen_creer _blog.png" alt="">
+                    <a href="#">
+                        Création Blog
+                    </a>
+                    <p>
+                        <span>Prix</span><span>0.00</span>
+                    </p>
+                    <center><a href="/Boutique/bogging/blogMobile.html"><button class="liBtn">Je veux ceci !</button></a></center>
+                </li>
+            </ul>
+        </section>
 
 
 
 
-
-    <!--tous les popoup de la page ici-->
      <!--Nofictaion pour rafraishir l'application-->
-     <div id="myProgress">
-      <h1><cite>Attendez...</cite></h1>
-      <div id="myBar">10%</div>
-    </div>
-
-    <!--Nofictaion pour connection l'application-->
-    <div id="progressLogin">
-      <h1><cite>Attendez...</cite></h1><hr>
-      <div id="myBar2">10%</div>
-      <p style="display: none;">Connectez-vous</p>
-    </div>
-   
-
-    <!--Espace pour messsage whatsapp-->
-    <div id="whatsapp">
-      <div class="btn-close">
-        <div id="closeWhatsapp" onclick="btnWhat()">x</div>
-        <h3>Contactez-nous</h3>
-     </div>
-      <div  class="whainput inp">
-        <i class="fa fa-user"></i>
-        <input type="text" name="value[]" value="" id="name" class="default" ></div>
-      <div class="whainput">
-        <textarea name="" id="msg"></textarea>
-      </div>
-      <button onclick="send_handle()">Envoyer votre message</button>
-    </div>
-
+        <section>
+            <div id="myProgress">
+                <h1><cite>Attendez...</cite></h1>
+                <div id="myBar">10%</div>
+              </div>
+          
+              <!--Espace pour messsage whatsapp-->
+              <div id="whatsapp">
+                <div class="btn-close">
+                  <div id="closeWhatsapp" onclick="btnWhat()">x</div>
+                  <h3>Contactez-nous</h3>
+               </div>
+                <div  class="whainput inp">
+                  <i class="fa fa-user"></i>
+                  <input type="text" name="value[]" value="" id="name" class="default" ></div>
+                <div class="whainput">
+                  <textarea name="" id="msg"></textarea>
+                </div>
+                <button onclick="send_handle()">Envoyer votre message</button>
+              </div>
+          
+        </section>
   </main>
 
 
   <!--Pied de page de mon application-->
   <footer>
     <div class="footer">
-      <div class="li">
-        <div class="liImage"><i class="fa fa-youtube"></i></div>
+      <div class="li" onclick="boutique()">
+        <div class="liImage"><i class="fa fa-shopping-basket"></i></a></div>
         <div class="liText">Boutique</div>
 
       </div>
-      <div class="li">
-        <div class="liImage"><i class="fa fa-facebook"></i></div>
+      <div class="li" onclick="article()">
+        <div class="liImage"><a><i class="fa fa-file-archive-o"></i></a></div>
         <div class="liText">Article</div>
       </div>
       <div class="li" onclick="home()">
@@ -146,8 +130,8 @@
         <div class="liImage"><i class="fa fa-refresh"></i></div>
         <div class="liText">rafraishir</div>
       </div>
-      <div class="li" onclick="lock()">
-        <div class="liImage"><a href="https://chat.whatsapp.com/BWIu2Oinj9tEhsfLhffYbx"><i id="lock" class="fa fa-lock"></i><i id="unlock" class="fa fa-unlock"></i></a></div>
+      <div class="li" onclick="whatspp()">
+        <div class="liImage"><a><i id="lock" class="fa fa-lock"></i><i id="unlock" class="fa fa-whatsapp"></i></a></div>
         <div class="liText">Compte</div>
       </div>
     </div>
@@ -170,10 +154,9 @@
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
-
   
 <script>
   const firebaseConfig = {
@@ -196,11 +179,6 @@
   const fs = firebase.firestore();
   //const db = firebase.database();
 </script>
-
-  
-
-
-
 
     <script>
         // logout
@@ -238,34 +216,10 @@ function log() {
       lock.style.display = 'block';
 
       log.innerHTML ='Connectez-vous';
-      window.location = '/users/login.html'
+      window.location = 'users/login.html'
     }
   });
-
   
     </script>
-
-<script>
-  function myFunction() {
-    // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
-  
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
-    }
-  }
-  </script>
-
 </body>
 </html>
