@@ -1,7 +1,7 @@
+
 var hom = document.getElementById('home');
 var what = document.getElementById("whatsapp");
-var main = document.getElementById("main");
-
+var main = document.getElementById("maind");
 
 
 
@@ -23,13 +23,49 @@ function closeMenu(){
     
 }
 
-  maind.onclick = () => {
+
+
+//Boutton menue
+function html(){
+  var progress = document.getElementById('myProgress');
+  var i = 0;
+  progress.style.display = 'block';
+if (i == 0) {
+  i = 1;
+  var elem = document.getElementById("myBar");
+  var width = 0;
+  var id = setInterval(frame, 0);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      
+      i = 0;
+      setTimeout(() => {
+       window.location = "/pages/salle.html"
+      }, 2000);
+    }else {
+      width++;
+      elem.style.width = width + "%";
+      elem.innerHTML = width + "%";
+      
+    }
+  }
+}
+}
+
+
+
+
+
+
+  function mainD() {
   var nav = document.getElementById("nav");
   nav.style.width = "0px";
   if(nav.style.width === "0px"){
       nav.style.left = "-10px";
   }
 }
+
 
 
 function send_handle(){

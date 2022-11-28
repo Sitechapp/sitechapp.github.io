@@ -4,42 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="css/salle.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="/js/App.js" defer></script>
 </head>
-<body>
-    <main>
-        <header >
-            <ul>
-                <div class="sp"></div>
-                <li id="username"></li>
-                <div ></div>
-                <li><input data-value type="number" value="0" id="rc">/100</li>
-            </ul>
-        </header>
+<body >
+    <header  class="header">
+        <div class="barHeader">
+            <div onclick="openMenu()" id="openMenu" style="border: none;"><i class="fa fa-bars"></i></div>
+            <p id="username"></p>
+            <p></p>
+            <div class="rc"><input data-value type="number" value="0" id="rc"><span class="l">Lv</span>/5 <span class="l">Lv</span></div>
+        </div>
+    </header>
+    <menu id="nav">
+        <div class="closeMenu" onclick="closeMenu()">x</div>
+        <div class="navHeader">
+    
+        </div>
+    
+        <ul>
+            <li oncanplay="cblog()"><span class="material-icons">
+              rss_feed
+              </span><a >Création Blog</a></li><hr>
+            <li onclick="html()"><i class="material-icons">code</i><a>porgrammation web</a></li><hr>
+            <li onclick="drive()"><span class="material-icons">add_to_drive</span><a >Suites Google Drive</a></li><hr>
+            <li onclick="video()"><span class="material-icons">smart_display</span><a >Video informatique</a></li><hr>
+            <li onclick="article()"><span class="material-icons">newspaper</span><a >Articles Android</a></li>
+            <li id="log" onclick="log()"></li>
+          </ul>
+      </menu>
 
-        <div class="coutenue">
+    <main onclick="mainD()">
+        <div>
             <section id="bv">
+                <div class="espace"></div>
                 <div class="et">
                     <h1>Bienvenue cher (e) Etudiant</h1>
                     <h2>Gérer Votre Niveau</h2>
-                    <div id="myProgress">
-                        <div id="myBar2">1</div>
+                    <div id="myProgress2">
+                        <div id="myBar3"><span id="e">%</span></div>
                       </div>
-                      <div class="btn" id="lva" onclick="lv(event)">Commencer le cours</div>
+                      <div class="btn" id="lva">Commencer le cours</div>
                 </div>
+                <div class="espace"></div>
             </section>
 
 
 
             <section id="lvA">
                 <h1>Chapitre 1</h1>
-
+                <h1>Introuction html</h1>
+                <p>
+                  HTML est le langage de balisage standard pour la création de pages Web. 
+                  HTML signifie Hyper Text Markup Language.
+                </p>
+        
+                <p>
+                    On utilise le langage html  pour la création de site web et application web. 
+                    Le Html décrit la structure d'unne page web, il se compose d'élément. 
+                    Ces élément indiquent au navigateur, comment afficher le contenue.
+                  </p>
+                  
+                  <p>
+                    Voici la structure d'une page web, c'est ce qu'on appelle le squelette html, 
+                    il est la base de tous les pages web construisent en html.
+                  </p>
+                  
+                  <img src="/images/squelette.png" alt=""> 
+                  <h3>Nous allons vous donner un peu de détails sur le squelette html</h3>
+                  <ul>
+                    <li>La &lt;!DOCTYPE html>déclaration définit que ce document est un document HTML5
+                    </li>
+                    <li>L' &lt;html&gt; élément est l'élément racine d'une page HTML
+                    </li>
+                    <li>L' &lt;head&gt; élément contient des méta-informations sur la page HTML
+                    </li>
+                    <li>L' &lt;title&gt; élément spécifie un titre pour la page HTML (qui s'affiche dans la barre 
+                        de titre du navigateur ou dans l'onglet de la page)
+                    </li>
+                    <li>L' &lt;body&gt; élément définit le corps du document et est un conteneur pour tous les 
+                        contenus visibles, tels que les titres, les paragraphes, les images, les hyperliens, 
+                        les tableaux, les listes, etc.
+                    </li>
+                  </ul>
+                  <h3>Qu'est-ce qu'un élément HTML ?
+                  </h3>
+                  <p>
+                    Un élément HTML est défini par une balise de début, du contenu et une balise de fin:
+          
+                  </p>
+          
+                  <p>
+                    &lt; name &gt;  Le contenu va ici... &lt; /name &gt;<br>
+          
+                    L' élément HTML est tout, de la balise de début à la balise de fin :
+                    &lt; h1 &gt; Ma première rubrique &lt; /h1 &gt;
+                    &lt; p &gt; Mon premier paragraphe.&lt; /p &gt;
+          
+                  </p>
                 <div class="btn" id="lvb" >J'ai terminé ce chapitre</div>
             </section>
 
             <section id="lvB">
                 <h1>Chapitre 2</h1>
-                <div class="btn" id="lvc" >J'ai terminé ce chapitre</div>
+                <h3>Navigateurs Web
+                </h3>
+                <p>
+                  Le but d'un navigateur web (Chrome, Edge, Firefox, Safari) est de lire des documents HTML 
+                  et de les afficher correctement.
+        
+                </p>
+                <p>
+                  Un navigateur n'affiche pas les balises HTML, mais les utilise pour déterminer comment afficher 
+                  le document:
+        
+                </p>
+                <img src="/images/navigateur.png" alt="">
+                <h3>Structure des pages HTML
+                </h3>
+                <p>Ci-dessous, une visualisation d'une structure de page HTML:</p>
+        
+                <img src="/images/structure.png" alt="">
+                <p class="i">
+                  <i>
+                      Remarque:Le contenu de la section &lt;<strong>body</strong>&gt; (la zone blanche ci-dessus) sera affiché dans un navigateur.
+                      Le contenu de l'élément &lt; title &gt; sera affiché dans la barre de titre du navigateur ou dans l'onglet 
+                          de la page.
+                  </i>
+                </p>
+                <p><strong>D'autres cours seront disponible bientot</strong></p>
+                <div class="btn" id="lvc" style="display: none;">J'ai terminé ce chapitre</div>
             </section>
 
             <section id="lvC">
@@ -62,13 +161,71 @@
             </section>
         </div>
 
+   <!--tous les popoup de la page ici-->
+   <div id="versapp" class="update" style="display: none;">
+    <h1>Mise-a-jours Disponible</h1>
+    <h2>Cliquez sur le bouton au-dessous</h2>
+    <p><span>Version :</span><strong id="avers"></strong> </p>
+    <p><span>Version :</span><strong id="nvers"></strong> </p>
+    <center><button>Update l'application</button></center>
 
+  </div>
+   <!--Nofictaion pour rafraishir l'application-->
+   <div id="myProgress">
+    <h1><cite>Attendez...</cite></h1>
+    <div id="myBar">10%</div>
+  </div>
 
-        <footer>
-            <ul>
+  <!--Nofictaion pour connection l'application-->
+  <div id="progressLogin">
+    <h1><cite>login...</cite></h1><hr>
+    <div id="myBar2">10%</div>
+    <p style="display: none;">Connectez-vous</p>
+  </div>
+ 
 
-            </ul>
-        </footer>
+  <!--Espace pour messsage whatsapp-->
+  <div id="whatsapp">
+    <div class="btn-close">
+      <div id="closeWhatsapp" onclick="btnWhat()">x</div>
+      <h3>Contactez-nous</h3>
+   </div>
+    <div  class="whainput inp">
+      <i class="fa fa-user"></i>
+      <input type="text" name="value[]" value="" id="name" class="default" ></div>
+    <div class="whainput">
+      <textarea name="" id="msg"></textarea>
+    </div>
+    <button onclick="send_handle()">Envoyer votre message</button>
+  </div>
+
+        <!--Pied de page de mon application-->
+  <footer>
+    <div class="footer">
+      <div class="li" onclick="boutique()">
+        <div class="liImage"><i class="fa fa-shopping-basket"></i></a></div>
+        <div class="liText">Boutique</div>
+
+      </div>
+      <div class="li" onclick="article()">
+        <div class="liImage"><a><i class="fa fa-file-archive-o"></i></a></div>
+        <div class="liText">Article</div>
+      </div>
+      <div class="li" onclick="home()">
+        <div class="liImage"><i class="fa fa-home"></i></div>
+        <div class="liText">Accueil</div>
+      </div>
+      <div class="li" onclick="reload()">
+        <div class="liImage"><i class="fa fa-refresh"></i></div>
+        <div class="liText">rafraishir</div>
+      </div>
+      <div class="li" onclick="whatspp()">
+        <div class="liImage"><a><i id="lock" class="fa fa-lock"></i><i id="unlock" class="fa fa-whatsapp"></i></a></div>
+        <div class="liText">Compte</div>
+      </div>
+    </div>
+   
+  </footer>
     </main>
 
     <script type="text/javascript" src="js/salle.js"></script>
@@ -122,43 +279,76 @@ var d = document.getElementById('lvD');
 var e = document.getElementById('lvE');
 var lva = document.getElementById('lva');
 var qiz = document.getElementById('qiz');
+var bar =document.getElementById('myBar3');
+var e = document.getElementById('e');
     lva.style.display = 'block';
-    var progress = document.getElementById('myProgress');;
+    var progress = document.getElementById('myProgress2');;
         progress.style.display = 'block';
         
         var b = 0;
-          if ( document.getElementById('rc').value == "1") {
-            console.log(rc);
-                elem.style.width = '20%';
+          if ( document.getElementById('rc').value === "1") {
+                e.textContent = '20%';
+                bar.style.width = '20%';
+                //a.style.display= 'block';
+               // bv.style.display = 'none';
+            }else if(document.getElementById('rc').value == "2"){
+                e.textContent = '40%';
+                bar.style.width = '40%';
+                //document.getElementById('lvB').style.display= 'block';
+                //bv.style.display = 'none';
+            }else if(document.getElementById('rc').value == "3"){
+                e.textContent = '60%';
+                bar.style.width = '60%';
+                //c .style.display = 'block';
+                //bv.style.display = 'none';
+            }else if(document.getElementById('rc').value == "4"){
+                e.textContent = '80%';
+                elem.textContent = '80%';
+                bar.style.width = '80%';
+                //d.style.display = 'block';
+                //bv.style.display = 'none';
+            }else if(document.getElementById('rc').value == "5"){
+                e.textContent = '100%';
+                bar.style.width = '100%';
+                //document.getElementById('lvE').style.display = 'block';
+                //bv.style.display = 'none';
+            }
+
+
+            
+            document.getElementById("lva").addEventListener("click", bien);
+            function bien() {
+                if ( document.getElementById('rc').value <= 1) {
                 a.style.display= 'block';
                 bv.style.display = 'none';
-            }else if(document.getElementById('rc').value == "2"){
-                elem.style.width = '40%';
-                document.getElementById('lvB').style.display= 'block';
-                bv.style.display = 'none';
-            }else if(document.getElementById('rc').value == "3"){
-                elem.style.width = '60%';
-                c .style.display = 'block';
-                bv.style.display = 'none';
-            }else if(document.getElementById('rc').value == "4"){
-                elem.style.width = '80%';
-                d.style.display = 'block';
-                bv.style.display = 'none';
-            }else if(document.getElementById('rc').value == "5"){
-                elem.style.width = '100%';
-                document.getElementById('lvE').style.display = 'block';
-                bv.style.display = 'none';
+                }else if(document.getElementById('rc').value == "2"){
+                    document.getElementById('lvB').style.display= 'block';
+                    bv.style.display = 'none';
+                }else if(document.getElementById('rc').value == "3"){
+                    c.style.display = 'block';
+                    bv.style.display = 'none';
+                }else if(document.getElementById('rc').value == "4"){
+                    d.style.display = 'block';
+                    bv.style.display = 'none';
+                }else if(document.getElementById('rc').value == "5"){
+                    document.getElementById('lvE').style.display = 'block';
+                    bv.style.display = 'none';
+                }
             }
            
+
             document.getElementById("lvb").addEventListener("click", myFunction);
             function myFunction() {
                 var level = 1;
                 var l = 1+ 1;
-                document.location.reload(true);
+                //document.location.reload(true);
                 fs.collection('users').doc(user.uid).update({
                   Rcoins : l
                   
-    })
+    }).then(() => {
+        document.getElementById('lvB').style.display= 'block';
+                    a.style.display = 'none';
+        });
    
     
 }
@@ -171,7 +361,10 @@ document.getElementById("lvc").addEventListener("click", lvc);
                 var l = level+ 1;
                 fs.collection('users').doc(user.uid).update({
                   Rcoins : l
-    })
+    }).then(() => {
+        document.getElementById('lvC').style.display= 'block';
+        document.getElementById('lvB').style.display= 'none';
+        });
    
     
 }
@@ -182,10 +375,13 @@ document.getElementById("lvd").addEventListener("click", lvd);
                 var level = 3;
                 var l = level + 1;
                 lv.innerHtml = l;
-                document.location.reload(true);
+                //document.location.reload(true);
                 fs.collection('users').doc(user.uid).update({
                   Rcoins : l
-    })
+    }).then(() => {
+        document.getElementById('lvD').style.display= 'block';
+        document.getElementById('lvC').style.display= 'none';
+        });
    
     
 }
@@ -199,7 +395,10 @@ document.getElementById("lve").addEventListener("click", lve);
                 location.reload();
                 fs.collection('users').doc(user.uid).update({
                   Rcoins : l
-    })
+    }).then(() => {
+        document.getElementById('lvE').style.display= 'block';
+        document.getElementById('lvE').style.display= 'none';
+        });
    
     
 }
