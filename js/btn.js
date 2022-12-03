@@ -31,7 +31,7 @@ function formation(){
         i = 0;
         setTimeout(() => {
           //document.location.reload(true);
-          window.location = 'https://chat.whatsapp.com/BWIu2Oinj9tEhsfLhffYbx';
+          window.location = 'https://chat.whatsapp.com/IjKueHjJJ0cBYPLYzMMYPl';
         }, 2000);
       }else {
         width++;
