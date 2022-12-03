@@ -246,17 +246,32 @@ main{
 
 @media (max-width: 800px){
     #myProgress{
-        display: none;
-        margin: 10px;
-        background-color: black;
+        width: 80%;
+        display: block;
+        margin: 10px auto;
+        background-color: rgb(248, 247, 247);
         padding: 10px;
+        padding-top: 2px;
         position: fixed;
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
+        border-radius: 15px;
+        box-shadow: 0px 0px 5px 1px rgb(3, 62, 255);
     }
-    #myProgress h1{
-        color: white;
+    #myProgress h1 cite{
+        color: rgb(0, 68, 255);
+        font-size: 7vw;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #myProgress h1 cite{
+        color: rgb(0, 68, 255);
+        font-size: 7vw;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
     #myBar2 {
