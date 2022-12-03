@@ -2,6 +2,7 @@
 var hom = document.getElementById('home');
 var what = document.getElementById("whatsapp");
 var main = document.getElementById("maind");
+var nav = document.getElementById("nav");
 
 
 
@@ -28,6 +29,7 @@ function closeMenu(){
 //Boutton menue
 function html(){
   var progress = document.getElementById('myProgress');
+  nav.style.width = '0px';
   var i = 0;
   progress.style.display = 'block';
 if (i == 0) {
@@ -41,7 +43,7 @@ if (i == 0) {
       
       i = 0;
       setTimeout(() => {
-       window.location = "/pages/courshtml/htmlEtCss.html"
+       window.location = "/pages/courshtml/htmlEtCss.html";
       }, 2000);
     }else {
       width++;
