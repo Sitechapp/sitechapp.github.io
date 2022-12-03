@@ -247,7 +247,7 @@ main{
 @media (max-width: 800px){
     #myProgress{
         width: 80%;
-        display: block;
+        display: none;
         margin: 10px auto;
         background-color: rgb(248, 247, 247);
         padding: 10px;
