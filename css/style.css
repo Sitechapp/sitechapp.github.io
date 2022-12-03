@@ -14,7 +14,7 @@
     
    }
    .timer h4{
-    font-size: 7vw;
+    font-size: 6vw;
     text-align: center;
     margin: 2px;
     text-transform: uppercase;
@@ -58,6 +58,7 @@
     font-size: 4.5vw;
     text-align: center;
     margin: 2px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    }
    .timer .btn{
     margin: 2px auto;
