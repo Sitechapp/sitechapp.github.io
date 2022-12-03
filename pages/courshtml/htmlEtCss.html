@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/courshtml.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7979799450178267"
+     crossorigin="anonymous"></script>
+     <script src="/js/qiz.js" defer></script>
+     <script src="/js/articles.js" defer></script>
+</head>
+<body>
+  <header>
+   <ul class="listHeader">
+   
+    <li onclick="openMenu()" id="openMenu" style="border: none;"> <i class="fa fa-bars"></i></li>
+    <div class="sp" style="width: 100%;"></div>
+    <li><input type="text" id="username" disabled></li>
+    <li><input data-value type="number" disabled id="rc"></li>
+   </ul><div class="espace"></div>
+   
+    
+  </header>
+  <menu id="nav">
+    <div class="closeMenu" onclick="closeMenu()">x</div>
+    <div class="navHeader">
+
+    </div>
+
+    <ul>
+      <li><span class="material-icons">
+        rss_feed
+        </span><a >Création Blog</a></li><hr>
+      <li><i class="material-icons">code</i><a >porgrammation web</a></li><hr>
+      <li><span class="material-icons">add_to_drive</span><a >Suites Google Drive</a></li><hr>
+      <li><span class="material-icons">smart_display</span><a >Video informatique</a></li><hr>
+      <li><span class="material-icons">newspaper</span><a >Articles Android</a></li>
+      <li id="log" onclick="log()"></li>
+    </ul>
+  </menu>
+  <main onclick="mainD()">
+    
+    <section class="article" id="a">
+        
+      <h1>Comment  et pourquoi créer un dossier ?</h1>
+      <p>
+        Pour créer un site web sur Android, il faut commencer par le dossier, 
+      car le dossier vous permet de stocker vos différentes fichiers, tels que : 
+      image , audio, pages, et vidéo etc…
+      </p>
+      <ul>
+        <h3>Pour créer un dossier:</h3>
+        <li>Allez dans le file manager</li>
+        <li>Cliquer sur new folder</li>
+      </ul>
+      <p>
+        Renommer le dossier avec le nom de vote site web, 
+        pour pouvoir l'identifier parmi tous vos dossiers. 
+      Exemple : (sitech).
+      </p>
+      <p>
+        Considère le premier dossier que vous avez créer comme le dossier principale de votre site web 
+      et a l'intérieur de ce dossier vous pouvez créer d'autre dossier pour vos différentes fichiers.
+      </p>
+      <h3>Suivez l'image pour bien comprendre :</h3>
+      <img src="/images/creer dossier.png" alt="">
+
+      <p><i>Vous avez terminé ce cours, cliquez sur le bouton</i></p>
+      <div class="btn">
+        <button id="aa">Cours suivant...</button>
+      </div>
+    </section>
+
+    <section class="article" id="b">
+      <h1>Commençons la création de note site web ?</h1>
+
+      <p>
+        Pour créer un site web sur Android, vous allez 
+        besoin seulement trois applications :
+      </p>
+      <ul>
+        <li>
+          <b>Un éditeur de texte</b> : qui vous permet d’entrer vos code html 
+        et css Téléchargez  anWriter Free html
+        </li>
+        <li>
+          <b>Un navigateur</b> : qui va interpréter vos code et qui va vous permet 
+        de visualiser votre page web
+        </li>
+        <li>
+          <b>Un clavier</b> : Nous devons utiliser un clavier qui nous donne accès a des bouton comme : 
+        tabulation, ctrl, shift etc.., pour cela je vous conseille de télécharger Hackers Keyboard.
+        </li>
+      </ul>
+      <img src="/images/app.png" alt="">
+      <p><i>Vous avez terminé ce cours, cliquez sur le bouton</i></p>
+      <div class="btn">
+        <button id="bb">Cours suivant...</button>
+      </div>
+    </section>
+
+    <section class="article" id="c">
+      <h1>Navigateurs Web</h1>
+
+      <p>
+        Le but d'un navigateur web (Chrome, Edge, Firefox, Safari) 
+        est de lire des documents HTML et de les afficher correctement.
+      </p>
+
+      <p>
+        Un navigateur n'affiche pas les balises HTML, mais les utilisent 
+        pour déterminer comment afficher le document.
+      </p>
+
+      <p>
+        Voici une visualisation d'une structure de page HTML, Vous avez 
+        la structure de la page html a gauche  et  comment apparaitre dans un navigateur.
+      </p>
+      <img src="/images/navi gateur structure.png" alt="">
+      <p><i>Vous avez terminé ce cours, cliquez sur le bouton</i></p>
+      <div class="btn">
+        <button id="cc">Cours suivant...</button>
+      </div>
+    </section>
+
+    <section class="article" id="d">
+      <h1>Qu'est ce que le HTML</h1>
+      <p>
+        HTML est le langage de balisage standard pour la création de pages Web. 
+        HTML signifie Hyper Text Markup Language.
+      </p>
+      <p>
+        On utilise le langage html  pour la création de site web et application web. 
+        Le Html décrit la structure d'une page web, il se compose d'élément. 
+        Ces élément indiquent au navigateur, comment afficher le contenue.
+      </p>
+
+      <p>
+        Voici la structure d'une page web, c'est ce qu'on appelle le squelette html, 
+        il est la base de tous les pages web construisent en html.
+      </p>
+      <img src="/images/squelette.png" alt="">
+      <p><i>Vous avez terminé ce cours, cliquez sur le bouton</i></p>
+      <div class="btn">
+        <button id="dd">Cours suivant...</button>
+      </div>
+    </section>
+
+    <section class="article" id="e">
+      <h1>Nous allons vous donner un peu de détails sur le squelette html</h1>
+      <ul>
+        <li>
+          <b>&lt;!DOCTYPE html&gt;</b> (Type de Document)
+        indique au navigateur que ce document est un document HTML5 , 
+        on le place toujours avant le squelette.
+        </li>
+        <li>
+          <b>&lt;html&gt;</b> est l'élément racine d'une page HTML
+            C'est a l'intérieur de cette balise qu'on va placer la balise &lt;head&gt; et la balise &lt;body&gt;
+        </li>
+        <li>
+          <b>&lt;head&gt;</b>
+            élément contient des méta-informations sur la page HTML,
+            C'est a l'intérieur de cette balise qu'on trouve les information personnel de notre page
+        </li>
+        <li>
+          <b>&lt;title&gt;</b> élément spécifie un titre pour la page HTML (qui s'affiche dans la barre 
+            de titre du navigateur ou dans l'onglet de la page)
+        </li>
+        <li>
+          <b>&lt;body&gt;</b> élément définit le corps du document et est un conteneur pour tous les contenus visibles, 
+            tels que les titres, les paragraphes, les images, les hyperliens, les tableaux, les listes, etc.
+        </li>
+      </ul>
+      <p><i>Vous avez terminé ce cours, cliquez sur le bouton</i></p>
+      <div class="btn">
+        <button id="ee">Cours suivant...</button>
+      </div>
+    </section>
+
+ <!--tous les popoup de la page ici-->
+    <section>
+           
+    <div id="versapp" class="update" style="display: none;">
+        <h1>Mise-a-jours Disponible</h1>
+        <h2>Cliquez sur le bouton au-dessous</h2>
+        <p><span>Version :</span><strong id="avers"></strong> </p>
+        <p><span>Version :</span><strong id="nvers"></strong> </p>
+        <center><button>Update l'application</button></center>
+  
+      </div>
+       <!--Nofictaion pour rafraishir l'application-->
+       <div id="myProgress">
+        <h1><cite>Attendez...</cite></h1>
+        <div id="myBar">10%</div>
+      </div>
+  
+      <!--Nofictaion pour connection l'application-->
+      <div id="progressLogin">
+        <h1><cite>Attendez...</cite></h1><hr>
+        <div id="myBar2">10%</div>
+        <p style="display: none;">Connectez-vous</p>
+      </div>
+     
+  
+      <!--Espace pour messsage whatsapp-->
+      <div id="whatsapp">
+        <div class="btn-close">
+          <div id="closeWhatsapp" onclick="btnWhat()">x</div>
+          <h3>Contactez-nous</h3>
+       </div>
+        <div  class="whainput inp">
+          <i class="fa fa-user"></i>
+          <input type="text" name="value[]" value="" id="name" class="default" ></div>
+        <div class="whainput">
+          <textarea name="" id="msg"></textarea>
+        </div>
+        <button onclick="send_handle()">Envoyer votre message</button>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <!--Pied de page de mon application-->
+  <footer>
+    <div class="footer">
+      <div class="li" onclick="boutique()">
+        <div class="liImage"><i class="fa fa-shopping-basket"></i></a></div>
+        <div class="liText">Boutique</div>
+
+      </div>
+      <div class="li" onclick="article()">
+        <div class="liImage"><a><i class="fa fa-file-archive-o"></i></a></div>
+        <div class="liText">Article</div>
+      </div>
+      <div class="li" onclick="home()">
+        <div class="liImage"><i class="fa fa-home"></i></div>
+        <div class="liText">Accueil</div>
+      </div>
+      <div class="li" onclick="reload()">
+        <div class="liImage"><i class="fa fa-refresh"></i></div>
+        <div class="liText">rafraishir</div>
+      </div>
+      <div class="li" onclick="whatspp()">
+        <div class="liImage"><a><i id="lock" class="fa fa-lock"></i><i id="unlock" class="fa fa-whatsapp"></i></a></div>
+        <div class="liText">Compte</div>
+      </div>
+    </div>
+   
+  </footer>
+  <div style="display: none;">
+    <a href="pages/videos.html" id="videos"></a>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCvqf6mNg-FsbcU7vZf52xEi6Skp9tz3yU",
+    authDomain: "signup-286f7.firebaseapp.com",
+    databaseURL: "https://signup-286f7-default-rtdb.firebaseio.com",
+    projectId: "signup-286f7",
+    storageBucket: "signup-286f7.appspot.com",
+    messagingSenderId: "579225916993",
+    appId: "1:579225916993:web:f4f70c8c24584a770018c0",
+    measurementId: "G-RH5HF2F7DN"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  // Initialize variables
+
+
+  const auth = firebase.auth();
+  const fs = firebase.firestore();
+  //const db = firebase.database();
+</script>
+
+  <script src="/js/App.js" defer></script>
+  
+  <script>
+   /* let obj = {
+    Name :'ruban',
+    age: 23
+  }
+  
+  firebase.database().ref('users/user1').set(obj)
+  
+        // // read data
+       
+        firebase.database().ref("APP").on("value", (snapshot) => {
+        console.log(snapshot.val());
+        document.getElementById('nvers').innerText= snapshot.val().Nversion;
+        document.getElementById('avers').innerText= snapshot.val().Aversion;
+  
+        var newv =  document.getElementById('nvers').innerText= snapshot.val().Nversion;
+        var holdv =  document.getElementById('avers').innerText= snapshot.val().Aversion;
+  
+        alert(age);
+        if(newv > holdv){
+          document.getElementById('versapp').style.display = 'none';
+        }
+      });
+      document.getElementById('versapp').style.display = 'none';*/
+  </script>
+  
+
+
+
+    <script>
+        // logout
+function log() {
+    auth.signOut();
+    window.location = "users/login.html";
+}
+    </script>
+
+    <script>
+      firebase.auth().onAuthStateChanged((user) => {
+    var user = firebase.auth().currentUser;
+    var log =document.getElementById('log');
+    var lock =document.getElementById('lock');
+    var unlock =document.getElementById('unlock');
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      //https://firebase.google.com/docs/reference/js/firebase.User
+      var uid = user.uid;
+      fs.collection('users').doc(user.uid).get().then((snapshot) => {
+        console.log(snapshot.data().Name);
+        console.log(snapshot.data().Rcoins);
+        document.getElementById('username').value = snapshot.data().Name;
+        document.getElementById('rc').value = snapshot.data().Rcoins;
+        log.style.display = 'block';
+        log.innerHTML ='Deconnectez';
+        unlock.style.display = 'block';
+
+    })
+    } else {
+      // User is signed out
+      localStorage.setItem('username', user)
+      console.log('user is not signed in to retrive username');
+      log.style.display = 'block';
+      lock.style.display = 'block';
+
+      log.innerHTML ='Connectez-vous';
+      window.location = 'users/login.html'
+    }
+  });
+  
+    </script>
+
+</body>
+</html>

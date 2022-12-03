@@ -41,7 +41,7 @@ if (i == 0) {
       
       i = 0;
       setTimeout(() => {
-       window.location = "/pages/salle.html"
+       window.location = "/pages/courshtml/htmlEtCss.html"
       }, 2000);
     }else {
       width++;

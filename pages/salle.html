@@ -8,11 +8,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="css/salle.css">
+    <link rel="stylesheet" type="text/css" href="/css/salle.css">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/App.js" defer></script>
 </head>
 <body >
+  <!--Entete de ma page-->
     <header  class="header">
         <div class="barHeader">
             <div onclick="openMenu()" id="openMenu" style="border: none;"><i class="fa fa-bars"></i></div>
@@ -21,6 +22,8 @@
             <div class="rc"><input data-value type="number" value="0" id="rc"><span class="l">Lv</span>/5 <span class="l">Lv</span></div>
         </div>
     </header>
+
+    <!--Menu de mon application-->
     <menu id="nav">
         <div class="closeMenu" onclick="closeMenu()">x</div>
         <div class="navHeader">
@@ -39,9 +42,11 @@
           </ul>
       </menu>
 
+      <!--le corp main de l'application-->
     <main onclick="mainD()">
         <div>
-            <section id="bv">
+          <!--La partie bienvenue de la salle html-->
+            <section id="bv" style="display: none;">
                 <div class="espace"></div>
                 <div class="et">
                     <h1>Bienvenue cher (e) Etudiant</h1>
@@ -55,10 +60,11 @@
             </section>
 
 
-
-            <section id="lvA">
-                <h1>Chapitre 1</h1>
+            <!--Premye chapitre de la formation-->
+            <section id="lvA" style="display: block;">
+                <div class="title"><h1>Niveau 1</h1></div>
                 <h1>Introuction html</h1>
+                <video src="https://res.cloudinary.com/ftechplus/video/upload/v1624329094/html%20et%20css/formation_1_e.1_vtq4ho.mp3"></video>
                 <p>
                   HTML est le langage de balisage standard pour la création de pages Web. 
                   HTML signifie Hyper Text Markup Language.
@@ -110,8 +116,9 @@
                 <div class="btn" id="lvb" >J'ai terminé ce chapitre</div>
             </section>
 
-            <section id="lvB">
-                <h1>Chapitre 2</h1>
+            <!--Dezyem chapitre de la formation-->
+            <section id="lvB" style="display: block;">
+              <div class="title"><h1>Niveau 2</h1></div>
                 <h3>Navigateurs Web
                 </h3>
                 <p>
@@ -137,68 +144,125 @@
                           de la page.
                   </i>
                 </p>
-                <p><strong>D'autres cours seront disponible bientot</strong></p>
-                <div class="btn" id="lvc" style="display: none;">J'ai terminé ce chapitre</div>
+                <div class="btn" id="lvc">J'ai terminé ce niveau</div>
             </section>
 
-            <section id="lvC">
-                <h1>Chapitre 3</h1>
-                <div class="btn" id="lvd" >J'ai terminé ce chapitre</div>
+            <!--Twazyeme chapitre de la formation-->
+            <section id="lvC" style="display: block;">
+              <div class="title"><h1>Niveau 3</h1></div>
+              <h3>Un éditeur pour commencer a coder</h3>
+              <p>
+                Un simple éditeur de texte est tout ce dont vous 
+                avez besoin pour apprendre le HTML.
+              </p>
+              <p>
+                Les pages Web peuvent être créées et modifiées à l'aide
+                 d'éditeurs HTML professionnels.
+              </p>
+              <p>
+                Cependant, pour apprendre le HTML, nous recommandons un simple 
+                éditeur de texte comme visual studio code (PC) ou anWriter free html (Android).
+              </p>
+              <p>
+                Nous pensons que l'utilisation d'un simple éditeur de texte 
+                est un bon moyen d'apprendre le HTML.
+              </p>
+              <ul>
+                <li>Visuale studiio code pour pc</li>
+                <li>anWriter free html pour android</li>
+              </ul>
+
+              <h3>Organiser votre espace de travail</h3>
+              <p>
+                Pour organiser l'espace de travail de votre site web
+                je vous conseil de creer un dossier avec le nom de votre
+                site we.
+              </p>
+              <p>
+                A l'interrieur de ce dossier, nous devons creer trois autres dossier
+              </p>
+              <ul>
+                <li>Un dosier pour stocker nos images</li>
+                <li>Un dossier pour stocker nos pages</li>
+                <li>Un dossier pour stocker nos fichiers css</li>
+              </ul>
+              <h3>Creer votre premier page web</h3>
+              <p>
+                Dan votre editeur de texte, creer un nouveau ficher ensuite, enregistrer le fichier
+                Exemple : <i>index.hmtl</i> , et la vous avez creer votre premier page html.
+              </p>
+
+              <p>
+                Pour visualiser votre page web, allez dans votre dossier et cliquez sur le fichier
+                index.html, ouvrir le fichie dans un navigateur
+              </p>
+              <p>
+                Maintenant, allez dans votre editeur, entrer le code que vous voyez dans l'image, felicitation, vous avez ecrit votre
+                premier code html.
+              </p>
+              <img src="/images/squelette.png" alt="">
+
+                <div class="btn" id="lvd" style="display: none;" >J'ai terminé ce niveau</div>
             </section>
 
-            <section id="lvD">
-                <h1>Chapitre 4</h1>
-                <div class="btn" id="lve" >J'ai terminé ce chapitre</div>
+            <!--quatrieme chapitre de la formation-->
+            <section id="lvD" style="display: block;">
+              <div class="title"><h1>Niveau 4</h1></div>
+
+                <div class="btn" id="lve" >J'ai terminé ce niveau</div>
+            </section>
+            <!--senkyem  chapitre de la formation-->
+            <section id="lvE" style="display: block;">
+              <div class="title"><h1>Niveau 5</h1></div>
+                <div class="btn" id="qiz">J'ai terminé ce niveau</div>
             </section>
 
-            <section id="lvE">
-                <h1>Chapitre 5</h1>
-                <div class="btn" id="qiz">J'ai terminé ce chapitre</div>
-            </section>
-
+            <!--Ekzamen des chpitre-->
             <section id="qiz">
                 <h1>Question et Reponse</h1>
             </section>
         </div>
 
    <!--tous les popoup de la page ici-->
-   <div id="versapp" class="update" style="display: none;">
-    <h1>Mise-a-jours Disponible</h1>
-    <h2>Cliquez sur le bouton au-dessous</h2>
-    <p><span>Version :</span><strong id="avers"></strong> </p>
-    <p><span>Version :</span><strong id="nvers"></strong> </p>
-    <center><button>Update l'application</button></center>
-
-  </div>
-   <!--Nofictaion pour rafraishir l'application-->
-   <div id="myProgress">
-    <h1><cite>Attendez...</cite></h1>
-    <div id="myBar">10%</div>
-  </div>
-
-  <!--Nofictaion pour connection l'application-->
-  <div id="progressLogin">
-    <h1><cite>login...</cite></h1><hr>
-    <div id="myBar2">10%</div>
-    <p style="display: none;">Connectez-vous</p>
-  </div>
- 
-
-  <!--Espace pour messsage whatsapp-->
-  <div id="whatsapp">
-    <div class="btn-close">
-      <div id="closeWhatsapp" onclick="btnWhat()">x</div>
-      <h3>Contactez-nous</h3>
-   </div>
-    <div  class="whainput inp">
-      <i class="fa fa-user"></i>
-      <input type="text" name="value[]" value="" id="name" class="default" ></div>
-    <div class="whainput">
-      <textarea name="" id="msg"></textarea>
+  <div>
+    <div id="versapp" class="update" style="display: none;">
+      <h1>Mise-a-jours Disponible</h1>
+      <h2>Cliquez sur le bouton au-dessous</h2>
+      <p><span>Version :</span><strong id="avers"></strong> </p>
+      <p><span>Version :</span><strong id="nvers"></strong> </p>
+      <center><button>Update l'application</button></center>
+  
     </div>
-    <button onclick="send_handle()">Envoyer votre message</button>
+     <!--Nofictaion pour rafraishir l'application-->
+     <div id="myProgress">
+      <h1><cite>Attendez...</cite></h1>
+      <div id="myBar">10%</div>
+    </div>
+  
+    <!--Nofictaion pour connection l'application-->
+    <div id="progressLogin">
+      <h1><cite>login...</cite></h1><hr>
+      <div id="myBar2">10%</div>
+      <p style="display: none;">Connectez-vous</p>
+    </div>
+   
+  
+    <!--Espace pour messsage whatsapp-->
+    <div id="whatsapp">
+      <div class="btn-close">
+        <div id="closeWhatsapp" onclick="btnWhat()">x</div>
+        <h3>Contactez-nous</h3>
+     </div>
+      <div  class="whainput inp">
+        <i class="fa fa-user"></i>
+        <input type="text" name="value[]" value="" id="name" class="default" ></div>
+      <div class="whainput">
+        <textarea name="" id="msg"></textarea>
+      </div>
+      <button onclick="send_handle()">Envoyer votre message</button>
+    </div>
+  
   </div>
-
         <!--Pied de page de mon application-->
   <footer>
     <div class="footer">
@@ -228,7 +292,7 @@
   </footer>
     </main>
 
-    <script type="text/javascript" src="js/salle.js"></script>
+    <script type="text/javascript" src="/js/salle.js" defer></script>
      <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
@@ -238,182 +302,6 @@
   <script type="text/javascript">
   
     
-  const firebaseConfig = {
-    apiKey: "AIzaSyCvqf6mNg-FsbcU7vZf52xEi6Skp9tz3yU",
-    authDomain: "signup-286f7.firebaseapp.com",
-    databaseURL: "https://signup-286f7-default-rtdb.firebaseio.com",
-    projectId: "signup-286f7",
-    storageBucket: "signup-286f7.appspot.com",
-    messagingSenderId: "579225916993",
-    appId: "1:579225916993:web:f4f70c8c24584a770018c0",
-    measurementId: "G-RH5HF2F7DN"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-
-    const auth = firebase.auth();
-    const fs = firebase.firestore();
-
-    firebase.auth().onAuthStateChanged((user) => {
-    var user = firebase.auth().currentUser;
-    var log =document.getElementById('log');
-    var rc =document.getElementById('rc').value;
-    var elem = document.getElementById("myBar2");
-    var lva = document.getElementById("lva");
-    if (user) {
-    // User is signed in, see docs for a list of available properties
-    //https://firebase.google.com/docs/reference/js/firebase.User
-
-    var uid = user.uid;
-    fs.collection('users').doc(user.uid).get().then((snapshot) => {
-    console.log(snapshot.data().Name);
-    console.log(snapshot.data().Rcoins);
-    username.innerText = snapshot.data().Name;
-    document.getElementById('rc').value = snapshot.data().Rcoins;
-    elem.innertext = snapshot.data().Rcoins;
-    var bv = document.getElementById('bv');
-var a = document.getElementById('lvA');
-var b = document.getElementById('lvB');
-var c = document.getElementById('lvC');
-var d = document.getElementById('lvD');
-var e = document.getElementById('lvE');
-var lva = document.getElementById('lva');
-var qiz = document.getElementById('qiz');
-var bar =document.getElementById('myBar3');
-var e = document.getElementById('e');
-    lva.style.display = 'block';
-    var progress = document.getElementById('myProgress2');;
-        progress.style.display = 'block';
-        
-        var b = 0;
-          if ( document.getElementById('rc').value === "1") {
-                e.textContent = '20%';
-                bar.style.width = '20%';
-                //a.style.display= 'block';
-               // bv.style.display = 'none';
-            }else if(document.getElementById('rc').value == "2"){
-                e.textContent = '40%';
-                bar.style.width = '40%';
-                //document.getElementById('lvB').style.display= 'block';
-                //bv.style.display = 'none';
-            }else if(document.getElementById('rc').value == "3"){
-                e.textContent = '60%';
-                bar.style.width = '60%';
-                //c .style.display = 'block';
-                //bv.style.display = 'none';
-            }else if(document.getElementById('rc').value == "4"){
-                e.textContent = '80%';
-                elem.textContent = '80%';
-                bar.style.width = '80%';
-                //d.style.display = 'block';
-                //bv.style.display = 'none';
-            }else if(document.getElementById('rc').value == "5"){
-                e.textContent = '100%';
-                bar.style.width = '100%';
-                //document.getElementById('lvE').style.display = 'block';
-                //bv.style.display = 'none';
-            }
-
-
-            
-            document.getElementById("lva").addEventListener("click", bien);
-            function bien() {
-                if ( document.getElementById('rc').value <= 1) {
-                a.style.display= 'block';
-                bv.style.display = 'none';
-                }else if(document.getElementById('rc').value == "2"){
-                    document.getElementById('lvB').style.display= 'block';
-                    bv.style.display = 'none';
-                }else if(document.getElementById('rc').value == "3"){
-                    c.style.display = 'block';
-                    bv.style.display = 'none';
-                }else if(document.getElementById('rc').value == "4"){
-                    d.style.display = 'block';
-                    bv.style.display = 'none';
-                }else if(document.getElementById('rc').value == "5"){
-                    document.getElementById('lvE').style.display = 'block';
-                    bv.style.display = 'none';
-                }
-            }
-           
-
-            document.getElementById("lvb").addEventListener("click", myFunction);
-            function myFunction() {
-                var level = 1;
-                var l = 1+ 1;
-                //document.location.reload(true);
-                fs.collection('users').doc(user.uid).update({
-                  Rcoins : l
-                  
-    }).then(() => {
-        document.getElementById('lvB').style.display= 'block';
-                    a.style.display = 'none';
-        });
-   
-    
-}
-
-
-
-document.getElementById("lvc").addEventListener("click", lvc);
-            function lvc() {
-                var level = 2;
-                var l = level+ 1;
-                fs.collection('users').doc(user.uid).update({
-                  Rcoins : l
-    }).then(() => {
-        document.getElementById('lvC').style.display= 'block';
-        document.getElementById('lvB').style.display= 'none';
-        });
-   
-    
-}
-
-document.getElementById("lvd").addEventListener("click", lvd);
-            function lvd() {
-                var lv = document.getElementById('rc').value;
-                var level = 3;
-                var l = level + 1;
-                lv.innerHtml = l;
-                //document.location.reload(true);
-                fs.collection('users').doc(user.uid).update({
-                  Rcoins : l
-    }).then(() => {
-        document.getElementById('lvD').style.display= 'block';
-        document.getElementById('lvC').style.display= 'none';
-        });
-   
-    
-}
-
-document.getElementById("lve").addEventListener("click", lve);
-            function lve() {
-                var lv = document.getElementById('rc').value;
-                var level = 4;
-                var l = level + 1;
-                lv.innerHtml = l;
-                location.reload();
-                fs.collection('users').doc(user.uid).update({
-                  Rcoins : l
-    }).then(() => {
-        document.getElementById('lvE').style.display= 'block';
-        document.getElementById('lvE').style.display= 'none';
-        });
-   
-    
-}
-
-
-
-    })
-    } else {
-    // User is signed out
-    localStorage.setItem('username', user)
-    console.log('user is not signed in to retrive username');
-    document.getElementById('lva').style.display = 'none';
-    }
-    });
-
   
     
   </script>

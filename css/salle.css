@@ -1,0 +1,211 @@
+
+.sp{
+    width: 100%;
+    height: 100%;
+}
+
+.btn{
+    border: 1px solid lime;
+    margin: 10px auto;
+    padding: 8px;
+    background: rgba(0, 0, 255, 0.267);
+    color: rgb(3, 47, 243);
+    text-align: center;
+    width: max-content;
+    cursor: pointer;
+}
+.btn:hover{
+    background: orangered;
+    border: 1px solid rgb(0, 38, 255);
+    color: #fff;
+}
+img{
+    width: 100%;
+}
+ h1{
+    font-size:5.8vw ;
+    color: rgb(0, 38, 255);
+}
+h3{
+    font-size: 5vw;
+    color: orangered;
+}
+ p{
+    font-size: 4vw;
+    line-height: normal;
+    line-break: normal;
+    text-align: justify;
+    margin: 10px;
+    color: black;
+}
+ ul li{
+    font-size: 4vw;
+    color: black;
+    line-height: normal;
+    line-break: normal;
+    text-align: justify;
+}
+
+.i{
+    background: rgb(233, 216, 216);
+    font-size: 3vw;
+    padding: 5px;
+    border-radius: 10pxs;
+}
+ .btn{
+    display: flex;
+    justify-content: space-between;
+}
+.btn button{
+    padding: 4px;
+    font-size: 4vw;
+    margin: 4px;
+}
+ 
+
+@media (max-width: 800px){
+.header{
+    width: 100%;
+    margin: 0px;
+}
+  .barHeader{
+    display: flex;
+    align-items: center;
+  }
+  .barHeader #openMenu i{
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .rc{
+    padding: 4px;
+    background-color: white;
+    display: flex;
+    color: rgb(0, 0, 0);
+    font-size: 5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .rc input{
+    width: 12px;
+    background: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .l{
+    font-size: 3vw;
+    color: #2d00f7;
+}
+
+
+  
+    #bv{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        
+    }
+   
+   
+    #bv .et{
+        width: 80%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    }
+    #bv .et h1{
+        font-size: 6vw;
+        margin: 1px;
+        text-align: center;
+    }
+    #bv .et h2{
+        font-size: 6vw;
+        margin: 8px;
+        text-align: center;
+    }
+
+    #bv .et .btn{
+        border: 2px solid blue;
+        margin: 10px;
+        padding: 5px;
+        text-align: center;
+        font-size: 6vw;
+        margin: auto;
+    }
+    }
+
+
+    @media (max-width: 800px){
+        section .title{
+            background: rgb(0, 0, 27);
+            color: #fff;
+            padding: 2px;
+
+        }
+        section .title h1{
+            color: #fff;
+            font-size: 4vw;
+        }
+        section #myProgress2{
+            background: white;
+        }
+    }
+
+    @media (max-width: 800px){
+        #myProgress2{
+            border-radius: 20px;
+            margin: 10px;
+            background-color: black;
+            padding: 1px;
+        }
+        #myProgress2 h1{
+            color: white;
+        }
+    
+        #myBar3 {
+            border-radius: 20px;
+            width: 1%;
+            height: 10px;
+            background-color: #2d00f7;
+            text-align: center; /* To center it horizontally (if you want) */
+            line-height: 30px; /* To center it vertically */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+          }
+
+         
+    }
+
+
+
+
+    #lvA{
+        border: 1px solid blue;
+        height: auto;
+        display: none;
+    }
+    #lvB{
+        border: 1px solid rgb(250, 2, 2);
+        height: auto;
+        display: none;
+    }
+    #lvC, #lvD, #lvE{
+        border: 1px solid rgb(0, 255, 13);
+        height: auto;
+        display: none;
+    }
+    #lvD{
+        border: 1px solid rgb(255, 0, 0);
+        height: auto;
+        display: none;
+    }
+    #lvE, #qiz{
+        border: 1px solid rgb(1, 1, 32);
+        height: auto;
+        display: none;
+    }
