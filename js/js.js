@@ -78,7 +78,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Il n'y plus de formatiion";
+    document.getElementById("demo").innerHTML = "Bienvenue Dans ma Communauté";
     fa.innerHTML = "Clicquer sur boutton pour Intégrer";
     document.getElementById('timer').style.display = 'none';
     btnforma.style.display = 'block';

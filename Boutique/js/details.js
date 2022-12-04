@@ -27,5 +27,14 @@ function telecharger(){
 }
 
 
+function update() {
+  var select = document.getElementById('code');
+  var option = select.options[select.selectedIndex];
+  document.getElementById('phone').value = option.value;
+  document.getElementById('message').innerText = option.value;
+}
+
+update();
+
 
 

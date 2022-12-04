@@ -16,7 +16,7 @@
   <script src="/js/App.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7979799450178267"
      crossorigin="anonymous"></script>
-     <script type="text/javascript" src="/Boutique/js/details.js"></script>
+     <script type="text/javascript" src="/Boutique/js/details.js" defer></script>
 </head>
 <body>
   <header>
@@ -57,20 +57,39 @@
           <title id="h1">Programmation Web en HTML & CSS</title>
           <h2 id="sub">Document sur Programmation web pour débutant en Html et Css</h2>
           <ul>
-            <li><span>prix</span> <b>:</b> <input type="number" id="prix" value="0.00" disabled="false"> <strong>Rc</strong></li>
+            <li><span>prix</span> <b>:</b> <input type="number" id="prix" value="10" disabled="false"> <strong>Rc</strong></li>
             <li><span>NB Pages</span> <b>:</b> <span id="price">2</span> <strong>Pages</strong></li>
             <li><span >Auteur</span> <b>:</b><strong id="auteur">Ruban Joseph</strong></li>
           </ul>
           <center><cite>Ce document est disponible gratuite que pour vous <br>Partager ce document sur WhatsApp dans deux groupes</cite></center>
           <div class="Btn">
-            <button onclick="telecharger()"><i class="fa fa-cloud-download"></i>Télécharger</button>
+            <button onclick="telecharger()" id="payer"><i class="fa fa-cloud-download"></i>Télécharger</button>
             <button onclick="partager()"><i class="fa fa-whatsapp"></i>Partager</button>
           </div>
         </div>
       </div>
+      <a id="docs" href="https://drive.google.com/uc?export=download&id=18f4ygWRPIVEWDog27urZJpojNrkPd71m"></a>
     
    </section>
-
+  
+   <!--paiment de gestion-->
+   <section>
+    <section id="Opaie" class="paie">
+      <h1>Terminez votre paiement</h1><hr>
+      <p><i id="messages">
+        Cliquer sur le boutton pour terminer votre téléchargement
+      </i></p>
+      <div class="btn"><button id="lvb" class="payer">payer</button></div>
+    </section>
+  
+    <section id="Fpaiment" class="paie">
+      <h1>Merci pour le téléchargement</h1><hr>
+      <p><i>
+        Cliquer sur le boutton pour terminer votre téléchargement
+      </i></p>
+      <div class="btn"><button id="Fermer" class="payer">Fermer cette fenetre</button></div>
+    </section>
+   </section>
 
    
    <!--Formulaire d'inscirption pour la formation -->
@@ -117,11 +136,11 @@
             <option value="+263">Zimbabwe (+263)</option>
   <option value="+235">Tchad (+235)</option>
           </select>
-          <input type="text" onclick="inputitem()" placeholder="Votre Numero WhatsApp" name="Phone" id="phone" required>
+          <input type="text"  placeholder="Votre Numero WhatsApp" name="Phone" id="phone" required>
         </div>
         <input type="text" name="Docs" value="HTML ET CSS (VERS-1.0)" style="display: none;">
         <center><cite>Pour Télécharger Ce Document Entrer Votre Numéro</cite></center>
-        <button type="submit" id="submit" class="btn">Télécharger</button>
+        <button type="submit" id="lvb" class="btn">Télécharger</button>
       </form>
     </div>
    </section>
@@ -220,74 +239,7 @@
   //const db = firebase.database();
 </script>
 
-    <script>
-        // logout
-function log() {
-    auth.signOut();
-    window.location = "users/login.html";
-}
-    </script>
-
-    <script>
-      firebase.auth().onAuthStateChanged((user) => {
-    var user = firebase.auth().currentUser;
-    var log =document.getElementById('log');
-    var lock =document.getElementById('lock');
-    var unlock =document.getElementById('unlock');
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      //https://firebase.google.com/docs/reference/js/firebase.User
-      var uid = user.uid;
-      fs.collection('users').doc(user.uid).get().then((snapshot) => {
-        console.log(snapshot.data().Name);
-        console.log(snapshot.data().Rcoins);
-        document.getElementById('username').value = snapshot.data().Name;
-        document.getElementById('rc').value = snapshot.data().Rcoins;
-        log.style.display = 'block';
-        log.innerHTML ='Deconnectez';
-        unlock.style.display = 'block';
-
-    })
-    } else {
-      // User is signed out
-      localStorage.setItem('username', user)
-      console.log('user is not signed in to retrive username');
-      log.style.display = 'block';
-      lock.style.display = 'block';
-      log.innerHTML ='Connectez-vous';
-      window.location = 'users/login.html'
-    }
-  });
-  
-    </script>
-
-<script type="text/javascript">
-  function update() {
-    var select = document.getElementById('code');
-    var option = select.options[select.selectedIndex];
-    document.getElementById('phone').value = option.value;
-    document.getElementById('message').innerText = option.value;
-  }
-
-  update();
-</script>
-
-
-<a id="docs" href="https://drive.google.com/uc?export=download&id=18f4ygWRPIVEWDog27urZJpojNrkPd71m"></a>
-<script type="text/javascript">
- var docs = document.getElementById('docs');
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxqgM0hURUnfX3jg9xb89QZuCAVV_LCe2eZ6HbVJZ1wAc8iblDUMdTHZ52CruzhP4IN/exec'
-const form = document.forms['google-sheet']
-form.addEventListener('submit', e => {
-e.preventDefault()
-   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => document.getElementById('forma').style.display = "block")
-    .then(response => window.location = document.getElementById('docs'))
-    .then(response => document.getElementById('phone').value = '')
-    //.catch(error => console.error('Error!', error.message))
-});
-</script>
-
-<script type="text/javascript" src="/Boutique/js/details.js"></script>
+<script type="text/javascript" src="/Boutique/js/details.js" defrer></script>
+<script src="/js/paiement.js"></script>
 </body>
 </html>

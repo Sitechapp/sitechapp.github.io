@@ -60,7 +60,7 @@ function calcScore(e){
     if(e.innerHTML===questionBank[i].answer && score<questionBank.length)
     {
         score= score+1;
-        notes = notes+20;
+        notes = notes+10;
         document.getElementById(e.id).style.background= 'limegreen';
     }
     else{

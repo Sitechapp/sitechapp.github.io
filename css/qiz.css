@@ -66,13 +66,13 @@
         text-align: center;
     }
     button{
-        padding: 0.2rem 1.5rem;
+        padding: 5px;
         border: none;
         outline: none;
-        font-size: 1.5rem;
+        font-size: 4vw;
         border-radius: 1.5rem;
-        color: rgba(93,53,156,0.98);
-        background: rgba(161,177,19,0.82);
+        color: rgba(252, 252, 253, 0.98);
+        background: rgba(0, 132, 255, 0.82);
     }
     button:active{
         background: lavender;
