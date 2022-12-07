@@ -1,124 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
-*{
-   font-family: 'Poppins', sans-serif;
-   margin:0; padding:0;
-   box-sizing: border-box;
-   outline: none; border:none;
+video {
+   width: 100%;
+ }
+ #playlist {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+ }
+ .videos a {
    text-decoration: none;
-   text-transform: capitalize;
-}
-
-
-
-@media (max-width: 800px){
-
-    .container{
-        max-width: 100%;
-        height: 100vh;
-        margin-bottom: 300px;
-       
-     }
-     
-     .container .main-video-container{
-        flex:1 1 700px;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0,0,0,.1);
-        background-color: #fff;
-        padding:5px;
-     }
-     
-     .container .main-video-container .main-video{
-        margin-bottom: 7px;
-        border-radius: 5px;
-        width: 100%;
-     }
-     
-     
-     .container .main-video-container .main-vid-title{
-        font-size: 20px;
-        color:#444;
-     }
-     
-     .container .video-list-container{
-        height: 100vh;
-        margin-bottom: 50px;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0,0,0,.1);
-        background-color: #fff;
-        padding:5px;
-        overflow: auto;
-     }
-     /* width */
-     .video-list-container::-webkit-scrollbar {
-        width: 10px;
-    }
-    
-    /* Track */
-    .video-list-container::-webkit-scrollbar-track {
-        background: #f1f1f1; 
-    }
-    
-    /* Handle */
-    .video-list-container::-webkit-scrollbar-thumb {
-        background: #888; 
-    }
-    
-    /* Handle on hover */
-    .video-list-container::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-    }
-     
-     .container .video-list-container::-webkit-scrollbar{
-        display: block;
-        background: orangered; 
-        border-radius: 1px;
-        width: 20px;
-        background-color: white;
-     }
-     
-     .container .video-list-container::-webkit-scrollbar-track{
-        background-color: #fff;
-        border-radius: 5px;
-     }
-     
-     .container .video-list-container::-webkit-scrollbar-thumb{
-        background-color: #444;
-        border-radius: 5px;
-     }
-     
-     .container .video-list-container .list{
-        display: flex;
-        align-items: center;
-        padding:10px;
-        background-color: #eee;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-bottom: 10px;
-     }
-     
-     .container .video-list-container .list:last-child{
-        margin-bottom: 0;
-     }
-     
-     .container .video-list-container .list.active{
-        background-color: #444;
-     }
-     
-     .container .video-list-container .list.active .list-title{
-        color:#fff;
-     }
-     
-     .container .video-list-container .list .list-video{
-        width: 100px;
-        border-radius: 5px;
-     }
-     
-     .container .video-list-container .list .list-title{
-        font-size: 17px;
-        color:#444;
-     }
-     
-}
-
-
+ }
+ .videos .active a {
+   color: #5db0e6;
+   text-decoration: none;
+ }
+ .videos li a {
+   color: #eeeedd;
+   background: #333;
+   padding: 12px;
+   display: block;
+ }
+ .videos li a:hover {
+   text-decoration: none;
+ }
+ 

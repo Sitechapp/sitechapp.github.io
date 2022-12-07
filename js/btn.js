@@ -43,34 +43,7 @@ function formation(){
   }
   }
 
-    //boutton cours html et css
-    function htmlcss(){
-      var htmlp = document.getElementById('progressLogin');
-      var i = 0;
-      htmlp.style.display = 'block';
-    if (i == 0) {
-      i = 1;
-      var elem = document.getElementById("myBar2");
-      var width = 0;
-      var id = setInterval(frame, 0);
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          
-          i = 0;
-          setTimeout(() => {
-            //document.location.reload(true);
-            window.location = "/Boutique/courshtml/htmlCss.html";
-          }, 2000);
-        }else {
-          width++;
-          elem.style.width = width + "%";
-          elem.innerHTML = width + "%";
-          
-        }
-      }
-    }
-    }
+
 
     //boutton telecharger formation par module
 function telecharger(){
