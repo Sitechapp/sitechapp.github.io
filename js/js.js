@@ -81,7 +81,7 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "Bienvenue Dans ma Communauté";
     fa.innerHTML = "Clicquer sur boutton pour Intégrer";
     document.getElementById('timer').style.display = 'none';
-    btnforma.style.display = 'block';
+    //btnforma.style.display = 'block';
   
    
   }else{

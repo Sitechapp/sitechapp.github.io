@@ -13,23 +13,18 @@
   <link rel="stylesheet" href="/css/app.css">
   <link rel="stylesheet" href="/css/formulaire.css">
   <link rel="stylesheet" href="/Boutique/css/details.css">
-  <script src="/js/App.js"></script>
+  <script src="/js/App.js" defer></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7979799450178267"
      crossorigin="anonymous"></script>
      <script type="text/javascript" src="/Boutique/js/details.js" defer></script>
 </head>
 <body>
   <header>
-   <ul class="listHeader">
-   
-    <li onclick="openMenu()" id="openMenu" style="border: none;"> <i class="fa fa-bars"></i></li>
-    <div class="sp" style="width: 100%;"></div>
-    <li><input type="text" id="username" disabled></li>
-    <li><input data-value type="number" disabled id="rc"></li>
-   </ul><div class="espace"></div>
-   
-    
-  </header>
+    <div onclick="openMenu()"><i class="fa fa-bars"></i></div>
+    <div class="espace"></div>
+    <div class="username"><span id="username">Sitech Info</span></div>
+    <div class="rc" > <span id="rc" >0.000</span><strong>Rc</strong></div>
+</header>
   <menu id="nav">
     <div class="closeMenu" onclick="closeMenu()">x</div>
     <div class="navHeader">

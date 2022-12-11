@@ -6,6 +6,44 @@ var nav = document.getElementById("nav");
 
 
 
+firebase.auth().onAuthStateChanged((user) => {
+  var user = firebase.auth().currentUser;
+  var log =document.getElementById('log');
+  var lock =document.getElementById('lock');
+  var unlock =document.getElementById('unlock');
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    //https://firebase.google.com/docs/reference/js/firebase.User
+    var uid = user.uid;
+    fs.collection('users').doc(user.uid).get().then((snapshot) => {
+      console.log(snapshot.data().Name);
+      console.log(snapshot.data().Rcoins);
+      document.getElementById('username').textContent= snapshot.data().Name;
+      document.getElementById('rc').textContent = snapshot.data().Rcoins;
+      log.style.display = 'block';
+      log.innerHTML ='Deconnectez';
+      unlock.style.display = 'block';
+
+  })
+  } else {
+    // User is signed out
+    localStorage.setItem('username', user)
+    console.log('user is not signed in to retrive username');
+    log.style.display = 'block';
+    lock.style.display = 'block';
+
+    log.innerHTML ='Connectez-vous';
+    window.location = 'users/login.html'
+  }
+});
+
+
+
+
+
+
+
+
 function openMenu(){
     var nav = document.getElementById("nav");
     nav.style.width = "250px";
@@ -190,3 +228,20 @@ var what =document.getElementById('whatsapp');
             what.style.left = "-10px";
         }
     }
+
+    function send_handle(){
+      var nm = document.getElementById("name").value;
+      var msg = document.getElementById("msg").value;
+     
+      var url = "https://wa.me/18094513048?text="
+      + "Nom: " + nm + "%0a"
+      + "Message: " + msg + "%0a"
+
+  window.open(url, '_blank').focus();
+  }
+
+  function closeform(){
+    formulaire.style.display = "none";
+    document.getElementById('home').style.display = 'block';
+    html.style.display = 'block';
+  }

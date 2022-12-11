@@ -15,12 +15,49 @@ video {
    text-decoration: none;
  }
  .videos li a {
-   color: #eeeedd;
-   background: #333;
-   padding: 12px;
+   color: #ffffff;
+   padding: 1px;
    display: block;
+   font-size: 4vw;
  }
  .videos li a:hover {
    text-decoration: none;
  }
  
+ .playlist li{
+  background-color: rgb(252, 252, 252);
+  box-shadow: 0px 0px 3px 1px black;
+  display: flex;
+  margin: 2px 1px 10px 1px;
+ }
+ .playlist li .images{
+  width: 80px;
+  min-width: 100px;
+  margin-right: 5px;
+ }
+
+ .playlist li h1{
+  font-size: 5vw;
+  color: blue;
+  margin: 3px;
+ }
+ .playlist li p{
+  font-size: 4vw;
+  color: black;
+  margin: 1px;
+ }
+ .playlist li .btn{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2px;
+ }
+ .playlist li button{
+  padding: 2px;
+  color: white;
+  font-size: 3vw;
+  border-radius: 10px;
+  margin: 1px 3px 1px 3px;
+ }
+ .playlist li .btn button a{
+  color: white;
+ }

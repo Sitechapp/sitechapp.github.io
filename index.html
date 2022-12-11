@@ -19,15 +19,10 @@
 </head>
 <body>
   <header>
-   <ul class="listHeader">
-   
-    <li onclick="openMenu()" id="openMenu" style="border: none;"> <i class="fa fa-bars"></i></li>
-    <div class="sp" style="width: 100%;"></div>
-    <li><input type="text" id="username" disabled></li>
-    <li><input data-value type="number" disabled id="rc"></li>
-   </ul><div class="espace"></div>
-   
-    
+    <div onclick="openMenu()"><i class="fa fa-bars"></i></div>
+    <div class="espace"></div>
+    <div class="username"><span id="username">Sitech Info</span></div>
+    <div class="rc" > <span id="rc" >0.000</span><strong>Rc</strong></div>
   </header>
   <menu id="nav">
     <div class="closeMenu" onclick="closeMenu()">x</div>
@@ -278,14 +273,15 @@
    
 
     <!--Espace pour messsage whatsapp-->
-    <div id="whatsapp">
+    <div id="whatsapp" class="whatsapp">
       <div class="btn-close">
         <div id="closeWhatsapp" onclick="btnWhat()">x</div>
         <h3>Contactez-nous</h3>
      </div>
       <div  class="whainput inp">
         <i class="fa fa-user"></i>
-        <input type="text" name="value[]" value="" id="name" class="default" ></div>
+        <input type="text" name="value[]" value="" id="name" class="default" >
+      </div>
       <div class="whainput">
         <textarea name="" id="msg"></textarea>
       </div>
@@ -365,9 +361,9 @@
   //const db = firebase.database();
 </script>
 
-  <script src="/js/js.js"></script>
-  <script src="/js/btn.js"></script>
-  <script src="/js/App.js"></script>
+  <script src="/js/js.js" defer></script>
+  <script src="/js/btn.js" defer></script>
+  <script src="/js/App.js" defer></script>
   
   <script>
    /* let obj = {
@@ -406,39 +402,6 @@ function log() {
 }
     </script>
 
-    <script>
-      firebase.auth().onAuthStateChanged((user) => {
-    var user = firebase.auth().currentUser;
-    var log =document.getElementById('log');
-    var lock =document.getElementById('lock');
-    var unlock =document.getElementById('unlock');
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      //https://firebase.google.com/docs/reference/js/firebase.User
-      var uid = user.uid;
-      fs.collection('users').doc(user.uid).get().then((snapshot) => {
-        console.log(snapshot.data().Name);
-        console.log(snapshot.data().Rcoins);
-        document.getElementById('username').value = snapshot.data().Name;
-        document.getElementById('rc').value = snapshot.data().Rcoins;
-        log.style.display = 'block';
-        log.innerHTML ='Deconnectez';
-        unlock.style.display = 'block';
-
-    })
-    } else {
-      // User is signed out
-      localStorage.setItem('username', user)
-      console.log('user is not signed in to retrive username');
-      log.style.display = 'block';
-      lock.style.display = 'block';
-
-      log.innerHTML ='Connectez-vous';
-      window.location = 'users/login.html'
-    }
-  });
-  
-    </script>
 
 <script type="text/javascript">
   function update() {

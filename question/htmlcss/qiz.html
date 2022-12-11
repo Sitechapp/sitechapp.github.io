@@ -17,16 +17,11 @@
 </head>
 <body>
   <header>
-   <ul class="listHeader">
-   
-    <li onclick="openMenu()" id="openMenu" style="border: none;"> <i class="fa fa-bars"></i></li>
-    <div class="sp" style="width: 100%;"></div>
-    <li><input type="text" id="username" disabled></li>
-    <li><input data-value type="number" disabled id="rc"></li>
-   </ul><div class="espace"></div>
-   
-    
-  </header>
+    <div onclick="openMenu()"><i class="fa fa-bars">Menu</i></div>
+    <div class="espace"></div>
+    <div class="username"><span id="username">Sitech Info</span></div>
+    <div class="rc" > <span id="rc" >0.000</span><strong>Rc</strong></div>
+</header>
   <menu id="nav">
     <div class="closeMenu" onclick="closeMenu()">x</div>
     <div class="navHeader">
@@ -47,7 +42,7 @@
   <main onclick="mainD()">
   
       <!-- quiz-container -->
-      <div id="quiz-container">
+      <div id="quiz-container" style="display: block;">
         <h1 id="title">Today's Quiz</h1>
           <!-- question container -->
           <div class="questions">
@@ -66,23 +61,24 @@
           </div>
   
       </div>
-  
+      
       <!-- scoreboard section -->
-      <div id="scoreboard">
+      <div id="scoreboard" style="display: block;">
           <img src="/images/logo.png" alt="">
           <h2 id="score-title">Your Score</h2>
           <h2 id="score"></h2>
           <h2 id="notes"></h2>
-          <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+          <button type="button" id="score-btn" style="display: none;" onclick="backToQuiz()">Back to Quiz</button>
           <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
       </div>
-      f
+      
       <!-- answers section -->
-      <div id="answerBank">
+      <div id="answerBank" style="display: block;">
           <h2>Answers :</h2>
           <ol type="1" id="answers">
   
           </ol>
+          <button type="button" id="suivant" onclick="suivant()">Cours Suivants</button>
           <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
       </div>
   
@@ -101,7 +97,7 @@
       </div>
        <!--Nofictaion pour rafraishir l'application-->
        <div id="myProgress">
-        <h1><cite>Attendez...</cite></h1>
+        <h1><cite>Attendez...</cite></h1><hr>
         <div id="myBar">10%</div>
       </div>
   

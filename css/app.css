@@ -43,6 +43,9 @@ cite{
     font-size: 3.5vw;
     text-align: center;
 }
+.espace{
+    width: 100%;
+}
 
 @media (max-width: 800px)
 {
@@ -55,11 +58,13 @@ cite{
     header{
         height: 40px;
         min-width: 100%;
-        background: orangered;
+        background: rgb(0, 47, 255);
         position: fixed;
         top: 0;
+        overflow:hidden;
         display: flex;
         align-items: center;
+        border-bottom: 1px solid white;
     }
     .listHeader{
         align-items: center;
@@ -70,10 +75,51 @@ cite{
         border: 1px solid white;
         color: #FFF;
     }
-    
-    #rc{
-      
+    header .fa-bars{
+        border: 1px solid white;
+        padding: 5px;
+        margin-left: 5px;
+        font-size: 5vw;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .rc{
+        width: 100%;
+        min-width: auto;
+        background-color: white;
+        margin-right: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    .rc span{
+        font-size: 4vw;
+    }
+    .rc strong{
+        color: rgb(255, 4, 4);
+        font-size: 4vw;
+    }
+    #rc{
+       color: rgb(0, 15, 226);
+        text-align: center;
+        margin-right: 2px;
+    }
+    .username{
+        background-color: white;
+        color: rgb(9, 30, 218);
+        margin-right: 5px;
+        width: 100%;
+        min-width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    .username span{
+        font-size: 4vw;
     }
     input:focus{
         background: none;
@@ -135,6 +181,29 @@ cite{
     header .image:focus{
         color: lime;
     }
+
+    
+    .searchInput{
+        width: 100%;
+        background-color: rgb(255, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid red;
+    }
+    .searchInput input{
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+    .searchInput input:focus{
+        background-color: white;
+    }
+
 }
 
 /*la menu de l'application*/
@@ -360,7 +429,7 @@ main{
     }
     #whatsapp .btn-close h3{
         font-size: 5vw;
-        margin: 10px;
+        margin: 1px;
     }
     #closeWhatsapp{
         background: white;
@@ -397,8 +466,8 @@ main{
         font-size: 7vw;
     }
     .whainput input{
-        padding: 5px;
-        margin: 5px;
+        padding: 1px;
+        margin: 1px;
         border: none;
     }
     .whainput input:focus, #msg:focus{
@@ -414,6 +483,13 @@ main{
         padding: 5px;
         resize: none;
         border: none;
+    }
+
+    #whatsapp button{
+        padding: 2px;
+        font-size: 4vw;
+        margin: 1px;
+        width: max-content;
     }
 
 }

@@ -18,15 +18,10 @@
 </head>
 <body>
   <header>
-   <ul class="listHeader">
-   
-    <li onclick="openMenu()" id="openMenu" style="border: none;"> <i class="fa fa-bars"></i></li>
-    <div class="sp" style="width: 100%;"></div>
-    <li><input type="text" id="username" disabled></li>
-    <li><input data-value type="number" disabled id="rc"></li>
-   </ul><div class="espace"></div>
-   
-    
+      <div onclick="openMenu()"><i class="fa fa-bars"></i></div>
+      <div class="espace"></div>
+      <div class="username"><span id="username">Sitech Info</span></div>
+      <div class="rc" > <span id="rc" >0.000</span><strong>Rc</strong></div>
   </header>
   <menu id="nav">
     <div class="closeMenu" onclick="closeMenu()">x</div>
@@ -49,16 +44,34 @@
   <main onclick="mainD()">
    <section id="videos" class="videos">
     <video id="videoplaylist" preload="auto" tabindex="0" controls="" >
-      <source src="https://res.cloudinary.com/ftechplus/video/upload/v1670386432/html%20et%20css/lien_all_eja0ks.mp4">
+      <source src="https://drive.google.com/uc?id=1DFSgSwDEu9K2gh6wnB7SKnzP253RivD9">
     </video>
     
-    <ul id="playlist">
+    <ul id="playlist" class="playlist">
             <li class="active">
-               <a href="https://res.cloudinary.com/ftechplus/video/upload/v1670386432/html%20et%20css/lien_all_eja0ks.mp4">
-                 Comment creer un lien dans une page html
-               </a>
+              <div class="images"><img src="/images/logo.png" alt=""></div>
+             <div>
+              <h1>Inserer un lien</h1>
+              <p>Comment inserer un lien dans une page html, tous le methodes</p>
+             <div class="btn">
+              <button> <a href="https://drive.google.com/uc?id=1DFSgSwDEu9K2gh6wnB7SKnzP253RivD9">Chapitre 1</a></button>
+             </div>
+             </div>
+            </li>
+
+            <li class="active">
+              <div class="images"><img src="/images/logo.png" alt=""></div>
+               <div>
+                <h1>Inserer une image</h1>
+                <p>Comment inserer une image dans une page html, tous le methodes</p>
+                <div class="btn">
+                  <button><a href="https://drive.google.com/uc?id=1c0MmWUvrAooGc2ZkpzDed3zSnWpwIdtX">Explication</a></button>
+                  <button><a href="https://drive.google.com/uc?id=1zHcTKA-mtX4pyW9vuztSnrseXLKgp_83">Pratique</a></button>
+                </div>
+               </div>
             </li>
         </ul>
+        
       <a id="docs" href="https://res.cloudinary.com/ftechplus/video/upload/v1670386432/html%20et%20css/lien_all_eja0ks.mp4"></a>
    </section>
   
@@ -185,38 +198,5 @@ window.location = "users/login.html";
 }
 </script>
 
-<script>
-firebase.auth().onAuthStateChanged((user) => {
-var user = firebase.auth().currentUser;
-var log =document.getElementById('log');
-var lock =document.getElementById('lock');
-var unlock =document.getElementById('unlock');
-if (user) {
-// User is signed in, see docs for a list of available properties
-//https://firebase.google.com/docs/reference/js/firebase.User
-var uid = user.uid;
-fs.collection('users').doc(user.uid).get().then((snapshot) => {
-  console.log(snapshot.data().Name);
-  console.log(snapshot.data().Rcoins);
-  document.getElementById('username').value = snapshot.data().Name;
-  document.getElementById('rc').value = snapshot.data().Rcoins;
-  log.style.display = 'block';
-  log.innerHTML ='Deconnectez';
-  unlock.style.display = 'block';
-
-})
-} else {
-// User is signed out
-localStorage.setItem('username', user)
-console.log('user is not signed in to retrive username');
-log.style.display = 'block';
-lock.style.display = 'block';
-
-log.innerHTML ='Connectez-vous';
-window.location = 'users/login.html'
-}
-});
-
-</script>
 </body>
 </html>

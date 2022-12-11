@@ -11,7 +11,7 @@ var btnforma = document.getElementById("forma");
 
 
 crs.style.display = 'none';
-btnforma.style.display = 'none';
+//btnforma.style.display = 'none';
 
 
   //boutton fromation
@@ -125,22 +125,4 @@ function telecharger(){
         if(what.style.width === "0px"){
             what.style.left = "-10px";
         }
-    }
-
-
-    function send_handle(){
-        var nm = document.getElementById("name").value;
-        var msg = document.getElementById("msg").value;
-       
-        var url = "https://wa.me/18094513048?text="
-        + "Nom: " + nm + "%0a"
-        + "Message: " + msg + "%0a"
-
-    window.open(url, '_blank').focus();
-    }
-
-    function closeform(){
-      formulaire.style.display = "none";
-      document.getElementById('home').style.display = 'block';
-      html.style.display = 'block';
     }
