@@ -53,3 +53,14 @@ function run(song, videoplaylist, link){
         videoplaylist.load();
         videoplaylist.play();
 }
+
+var elem = document.getElementById("videoplaylist");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
