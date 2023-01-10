@@ -46,74 +46,6 @@ videoList.forEach(vid =>{
 
 
 
-
-// Set the date we're counting down to
-var countDownDate = new Date("decembre 7, 2022 23:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  var d =document.getElementById("day");
-  var he =document.getElementById("heure");
-  var m =document.getElementById("minutes");
-  var s =document.getElementById("second");
-  
-    d.innerHTML = days;
-    he.innerHTML = hours;
-    m.innerHTML = minutes;
-    s.innerHTML = seconds;
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Bienvenue Dans ma Communauté";
-    fa.innerHTML = "Clicquer sur boutton pour Intégrer";
-    document.getElementById('timer').style.display = 'none';
-    //btnforma.style.display = 'block';
-  
-   
-  }else{
-    fa.innerHTML = "Le groupe sera disponible tréès bientot";
-    
-  }
-}, 1000);
-
-
-
-function chargebattery() {
-    var a;
-    a = document.getElementById("div1");
-    a.innerHTML = "&#xf244;";
-    setTimeout(function () {
-        a.innerHTML = "&#xf243;";
-      }, 1000);
-    setTimeout(function () {
-        a.innerHTML = "&#xf242;";
-      }, 2000);
-    setTimeout(function () {
-        a.innerHTML = "&#xf241;";
-      }, 3000);
-    setTimeout(function () {
-        a.innerHTML = "&#xf240;";
-      }, 4000);
-  }
-  chargebattery();
-  setInterval(chargebattery, 5000);
-
-  
-
   
 
   function back(){
@@ -180,5 +112,52 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       }
     }
     }
+
+
+   
+    function closemessage(){
+      document.getElementById('item').style.display = 'none';
+     }
+
+   /*  function ca(){
+      var htmlp = document.getElementById('progressLogin');
+      var i = 0;
+      htmlp.style.display = 'block';
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar2");
+      var width = 0;
+      var id = setInterval(frame, 0);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          
+          i = 0;
+          setTimeout(() => {
+            //document.location.reload(true);
+            window.location = "/coursAndroid/coursAndroid.html";
+          }, 2000);
+        }else {
+          width++;
+          elem.style.width = width + "%";
+          elem.innerHTML = width + "%";
+          
+        }
+      }
+    }
+     }*/
+    
+     function closemessage(){
+      document.getElementById('item').style.display = 'none';
+     }
+
+ function pasDisponible(){
+  document.getElementById('item').style.display = 'block';
+  document.getElementById('cardMessage').textContent ='Pas encore disponible pour le moment';
+ }
+
+
+
+
 
 

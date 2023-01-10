@@ -19,7 +19,7 @@
 </head>
 <body>
   <header>
-    <div onclick="openMenu()"><i class="fa fa-bars"></i></div>
+    <div id="m" onclick="openMenu()"><i class="fa fa-bars"></i></div>
     <div class="espace"></div>
     <div class="username"><span id="username">Sitech Info</span></div>
     <div class="rc" > <span id="rc" >0.000</span><strong>Rc</strong></div>
@@ -34,137 +34,109 @@
       <li oncanplay="cblog()"><span class="material-icons">
         rss_feed
         </span><a >Création Blog</a></li><hr>
-      <li onclick="html()"><i class="material-icons">code</i><a>porgrammation web</a></li><hr>
-      <li onclick="drive()"><span class="material-icons">add_to_drive</span><a >Suites Google Drive</a></li><hr>
-      <li onclick="video()"><span class="material-icons">smart_display</span><a >Video informatique</a></li><hr>
-      <li onclick="article()"><span class="material-icons">newspaper</span><a >Articles Android</a></li>
+      <li onclick="html()"><i class="material-icons">code</i><a>Pwogramasyon web</a></li><hr>
+      <li onclick="drive()"><span class="material-icons">add_to_drive</span><a >Swit Goolge Drive</a></li><hr>
+      <li onclick="video()"><span class="material-icons">smart_display</span><a >Video Enfomatik</a></li><hr>
+      <li onclick="article()"><span class="material-icons">newspaper</span><a >Atik sou android</a></li>
       <li id="log" onclick="log()"></li>
     </ul>
   </menu>
   <main  id="maind" onclick="mainD()">
-
-    <section id="home">
-      <!--Les document recent de l'application em slide-->
-    <div class="slideDocs" style="display: NONE;">
-      <section class="homeHeader">
-        <div class="homeh1">
-          <h1><span>Bienvenue</span></h1>
-          <h3><span>Dans ma comunautée</span></h3>
+  
+    <section class="home">
+      <div class="backHome">
+        <div class="detailsHome">
+          <h1>Mwen swete ou byenvini</h1>
+          <h2>swiv fomasyon enfomatik an kreyol</h2>
+          <p>
+            OU ap Kapab swif fosyon, telechaje dokiman, 
+            gade tout astis enfomatik sou android an kreyol
+          </p>
+          <center><button>fomasyon an kou</button></center>
         </div>
-      </section>
-    </div>
-
-    <!--La partie de la bienvenue de la'application-->
-    <div class="infos">
-     <div class="timer">
-       <h4 id="demo">Formation en cours</h4>
-       <ul id="timer">
-         <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
-         <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
-         <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
-         <li><span id="second"></span><b>:</b><span class="t" >Sc</span> <div id="div1" class="fa"></div></li>
-       </ul>
       </div>
-       <div class="infos-details">
-         <div class="text">
-           <p>
-             Suivez des formations par whatsapp
-           </p>
-           <p id="FA">
+    </section>
 
-           </p>
-          <center>
-            <button id="format"  onclick="formation()" ><i class="fa fa-whatsapp"></i><span>Rejoignez Notre Groupe</span></button>
-          </center>
-         </div>
-         <div class="images"><img src="/images/logo.png" alt=""></div>
-        
-       </div>
-    </div>
-
-
-<!--Document a telecharger sugestion-->
-    <div id="docs" style="display: none;">
-      <div class="cardItems">
+   <section>
+    <div class="card">
+      <div class="souCard">
         <div class="items">
-          <div class="imageItem"><img src="/images/commen_creer _blog.png" alt="">
-            <div class="texteItem">
-              <div class="t">
-                <h1>Creation Blog Mobile</h1>
-              <p><span>Prix :</span><span>100</span></p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-
-        <div class="items" style="margin: 1px 10px 1px 10px ;">
-          <div class="imageItem"><img src="/images/commen_creer _blog.png" alt="">
-            <div class="texteItem">
-              <h1>Creation Blog Mobile</h1>
-              <p><span>Prix :</span><span>100</span></p>
-            </div>
-          </div>
+          <div><span><i class="fa fa-android"></i></span></div>
+          <p><strong>Fomasyon</strong></p>
         </div>
 
         <div class="items">
-          <div class="imageItem"><img src="/images/commen_creer _blog.png" alt="">
-            <div class="texteItem">
-              <h1>Creation Blog Mobile</h1>
-              <p><span>Prix :</span><span>100</span></p>
-            </div>
-          </div>
+          <div><span><i class="fa fa-android"></i></span></div>
+          <p><strong>Astis android</strong></p>
+        </div>
+
+        <div class="items">
+          <div><span><i class="fa fa-android"></i></span></div>
+          <p><strong>dokiman</strong></p>
         </div>
       </div>
     </div>
+   </section>
 
-    <section id="htmlcss">
-      <div class="hc">
-        <h1>Video en ligne</h1> 
-        <h2>Apprendre a creer des liens en html</h2><hr>
-        <div class="hcinfos" >
-          <div class="texte">
-          
-            <ul>
-              <li>Lien Externe au Site</li>
-              <li>Lien Vers des pages internes au site</li>
-              <li>Lien Vers des endroits precis du site </li>
-              <li>Lien Vers des endroits precis d'une autre page du site </li>
+    <section class="card-home">
+      <div class="carde">
+        <div class="item">
+          <div class="i"><i class="fa fa-android"></i></div>
+          <h1>Kou android</h1>
+          <p>Aprann enfomatik sou android ou</p>
+          <center><button onclick="pasDisponible()">Suivre</button></center>
+        </div>
 
-            </ul>
-            <p id="btnformation" onclick="htmlcss()">Regarder la video</p>
+        <div class="item">
+          <div class="i"><i class="fa fa-file-archive-o"></i></div>
+          <h1>Atik sou Android</h1>
+          <p>Li atik tout atik ki fet pou android</p>
+          <center><button onclick="pasDisponible()">Suivre</button></center>
+        </div>
+
+        <div class="item" style="display: none;">
+          <div class="i"><i class="fa fa-youtube-play"></i></div>
+          <h1>Vidéo</h1>
+          <p>Astis enpotan sou android e ki enpotan</p>
+          <center><button onclick="pasDisponible()">Suivre</button></center>
+        </div>
+
+        <div class="item" style="display: none;">
+          <div class="i"><i class="fa fa-whatsapp"></i></div>
+          <h1>Dokiman fomasyon</h1>
+          <p>telechaje tout dokiman fomasyon yo isit la</p>
+          <center><button onclick="pasDisponible()">Suivre</button></center>
+        </div>
+      </div>
+      
+      <div class="item" id="item">
+        <h1 id="cardH1Message">Notifikasyon</h1>
+        <p id="cardMessage">Option sa poko disponib</p>
+        <center><button onclick="closemessage()">close</button></center>
+      </div>
+      
+    </section>
+
+    <section>
+      <div class="card">
+        <div class="souCard">
+          <div class="items" onclick = "window.location.href='https://facebook.com/enfomatkreyol';">
+            <div><span><i class="fa fa-facebook"></i></span></div>
+            <p><strong>Facebook</strong></p>
           </div>
-          <div class="image" style="display: none;"><img src="/images/programmation.png" alt=""></div>
+  
+          <div class="items" onclick = "window.location.href='https://www.youtube.com/c/lepoeteht';">
+            <div><span><i class="fa fa-youtube"></i></span></div>
+            <p><strong>Youtube</strong></p>
+          </div>
+  
+          <div class="items" onclick = "window.location.href='https://t.me/enfomatkreyol';">
+            <div><span><i class="fa fa-send"></i></span></div>
+            <p><strong>Telegram</strong></p>
+          </div>
         </div>
       </div>
      </section>
-   </section>
-
-   
-<!--cours creation blog-->
-   <section id="coursdetails" style="display: none;">
-    <div class="cours">
-      <h1>Creation blog sur android</h1><hr>
-      <div class="coursflex">
-        <div class="texte">
-          <p>
-            Apprendre a creer un blog gratuit sur 
-            android avec le plateforme blogger.
-          </p>
-  
-          <p>
-            Document disponible par module et chaque 
-            module contient video et audio
-          </p>
-  
-          <button>Je veux participer</button>
-        </div>
-        <div class="image">
-          <img src="/images/commen_creer _blog.png" alt="">
-        </div>
-      </div>
-    </div>
-   </section>
    <!--Formulaire d'inscirption pour la formation -->
    <div id="formulaire">
     <div class="formclose" onclick="closeform()">x</div>
@@ -248,15 +220,6 @@
     </form>
     </div>
 
-
-    <!--tous les popoup de la page ici-->
-    <div id="versapp" class="update" style="display: none;">
-      <h1>Mise-a-jours Disponible</h1>
-      <h2>Cliquez sur le bouton au-dessous</h2>
-      <p><span>Version :</span><strong id="avers"></strong> </p>
-      <p><span>Version :</span><strong id="nvers"></strong> </p>
-      <center><button>Update l'application</button></center>
-
     </div>
      <!--Nofictaion pour rafraishir l'application-->
      <div id="myProgress">
@@ -294,7 +257,7 @@
   <!--Pied de page de mon application-->
   <footer>
     <div class="footer">
-      <div class="li" onclick="boutique()">
+      <div class="li" onclick="aa()">
         <div class="liImage"><i class="fa fa-shopping-basket"></i></a></div>
         <div class="liText">Boutique</div>
 
@@ -341,14 +304,13 @@
   
 <script>
   const firebaseConfig = {
-    apiKey: "AIzaSyCvqf6mNg-FsbcU7vZf52xEi6Skp9tz3yU",
-    authDomain: "signup-286f7.firebaseapp.com",
-    databaseURL: "https://signup-286f7-default-rtdb.firebaseio.com",
-    projectId: "signup-286f7",
-    storageBucket: "signup-286f7.appspot.com",
-    messagingSenderId: "579225916993",
-    appId: "1:579225916993:web:f4f70c8c24584a770018c0",
-    measurementId: "G-RH5HF2F7DN"
+    apiKey: "AIzaSyBdR6bkRWKLArTX_ASA6wDhMmz4gMxx3Go",
+  authDomain: "enfomakreyol.firebaseapp.com",
+  projectId: "enfomakreyol",
+  storageBucket: "enfomakreyol.appspot.com",
+  messagingSenderId: "1012107743957",
+  appId: "1:1012107743957:web:4420430b0f9aebfbadc85c",
+  measurementId: "G-SQ9HKZV3J6"
   };
 
   firebase.initializeApp(firebaseConfig);
@@ -362,8 +324,8 @@
 </script>
 
   <script src="/js/js.js" defer></script>
-  <script src="/js/btn.js" defer></script>
   <script src="/js/App.js" defer></script>
+  <script src="/js/video.js" defer></script>
   
   <script>
    /* let obj = {
@@ -412,5 +374,10 @@ function log() {
 
   update();
 </script>
+
+
+
+
+
 </body>
 </html>

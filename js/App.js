@@ -1,9 +1,9 @@
 
+
 var hom = document.getElementById('home');
 var what = document.getElementById("whatsapp");
 var main = document.getElementById("maind");
 var nav = document.getElementById("nav");
-
 
 
 firebase.auth().onAuthStateChanged((user) => {
