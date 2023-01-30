@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="inscripiton.css">
+    <title>Document</title>
+
+    <style>
+        body{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/Images/back.jpg');
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+.formulaire{
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.719);
+    display: inline-block;
+}
+
+.formulaire .titre{
+    background: white;
+    margin: 0px;
+    padding: 10px;
+}
+.titre h1{
+    font-size: 28px;
+    text-align: center;
+}
+
+form{
+    width: max-content;
+    padding: 5px;
+    margin: auto;
+}
+.input{
+    width: 95%;
+    border: 1px dashed blue;
+    margin: auto;
+    overflow: hidden;
+}
+.input input{
+    width: 100%;
+    padding: 6px;
+}
+
+.select{
+    display: flex;
+}
+.select select{
+    width: 100%;
+    padding: 7px;
+}
+
+form button{
+    width: 95%;
+    padding: 5px;
+    border: none;
+    background: rgb(0, 45, 243);
+    color: white;
+    cursor: pointer;
+    margin-top: 3px;
+}
+form button:hover{
+    background: black;
+}
+
+@media (max-width: 800px){
+    .formulaire{
+        width: 90%;
+    }
+    .titre h1{
+        font-size: 6vw;
+    }
+
+    form{
+        width: fit-content;
+        padding: 5px;
+        margin: auto;
+        overflow: hidden;
+    }
+    .input{
+        width: 95%;
+        border: 1px dashed blue;
+        overflow: hidden;
+    }
+    .input input{
+        width: 100%;
+        padding: 6px;
+    }
+}
+    </style>
+</head>
+<body>
+    <main>
+        <section class="formulaire">
+            <div class="titre">
+                <h1>Remplire le formulaire pour la formation</h1>
+                <h2></h2>
+            </div>
+            <form autocomplete="off" method="post" name="google-sheet" class="form">
+               <center>
+                <div class="input"> <input type="text" name="Nom" id="name" placeholder="Nom Conplet" required/></div>
+                <div class="input"><input type="emial" name="Email" id="email" placeholder="email" required/></div>
+                <div class="input"><input type="number" name="Phone" id="phone" placeholder="numero" required/></div>
+                <div class="input"><input type="text"  name="Adresse" id="image" placeholder="Votre Adresse" required/></div>
+               </center>
+                
+                <div class="input select" >
+                    <input type="date" name="Age" id="date" required class="date"/>
+                </div>
+                <div class="select input">
+                    <select name="Sexe" id="sexe" required>
+                        <option value="">Votre Sexe</option>
+                        <option value="Masculin">Masculin</option>
+                        <option value="Feminin">Feminin</option>
+                    </select>
+                    <select name="Reference" id="Ref" onchange="select()" required>
+                        <option value="">Reference</option>
+                        <option value="Whatsapp">Whatsapp</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Ticktok">Ticktok</option>
+                        <option value="ED">Yon etidyan</option>
+                    </select>
+                    <select name="Niveau" id="Niv" required>
+                        <option value="">Niveau</option>
+                        <option value="Debutant">Debutant</option>
+                        <option value="ntermediaire">Intermediaire</option>
+                        <option value="Avancée">Avancée</option>
+                    </select>
+                </div>
+                <div class="input" id="reference"><input type="text"  name="Reference" id="ER" placeholder="Nom etidyan ki refere ou an"/></div>
+                <center><button type="submit">Enregistrez-vous pour la formation</button></center>
+            </form>
+        </section>
+    </main>
+
+    <script src="inscription.js"></script>
+    <script>
+        var emailV, nameV, phoneV, UrlV, sexeV, dateV, imagesV;
+
+function readFom() {
+  emailV = document.getElementById("email").value;
+  nameV = document.getElementById("name").value;
+  phoneV = document.getElementById("phone").value;
+  nV = document.getElementById("Niv").value;
+  dateV = document.getElementById("date").value;
+  sexeV = document.getElementById("sexe").value;
+  adressV = document.getElementById("image").value;
+  refV = document.getElementById("Ref").value;
+  Nmref = document.getElementById("ER").value;
+  msg = document.getElementById("msg");
+  console.log(emailV, nameV, phoneV, nV, sexeV, dateV, adressV, refV);
+}
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzYglbFFmreDw7gp2U16iRyvrjjyJmRCh3Cu7-xl9dx5zvPfH8byTlAH6dODsp63gva/exec'
+const form = document.forms['google-sheet']
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => document.getElementById('myForm').style.display = "none")
+    .then(response => document.getElementById('msg').style.display = "block")
+    .then(response => window.location = document.getElementById('lien'))
+    .then(response => document.getElementById('name').value = '')
+    .then(response => document.getElementById('email').value = '')
+    .then(response => document.getElementById('phone').value = '')
+    .catch(error => console.error('Error!', error.message))
+});
+
+var refV = document.getElementById("Ref");
+
+document.getElementById("reference").style.display = "none";
+function select(){
+  readFom();
+  if(refV == "ED"){
+    document.getElementById("reference").style.display = "block";
+  }else{
+    document.getElementById("reference").style.display = "none";
+  }
+
+}
+    </script>
+</body>
+</html>
