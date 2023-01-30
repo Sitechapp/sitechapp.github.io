@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+    background: white;
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+    /*background-image: url('https://drive.google.com/uc?id=1uH0LmIK-Aj4TdnWDKtbw5auEaARJyrl6');*/
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    background-color: rgb(22, 21, 21);
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+}
+
+.home{
+    width: 75%;
+    margin: auto;
+}
+
+.images{
+    width: 15%;
+    margin:10px auto;
+}
+.home h1{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.home h1 span{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home h3{
+    font-size: 28px;
+    margin: 10px 40px 10px 40px;
+    padding: 30px 47px 10px 47px;
+    color: white;
+    text-align: center;
+}
+
+.time{
+    width: max-content;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.time p{
+    background: white;
+    margin: 5px;
+    padding: 10px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.time .space{
+    height: 2px;
+    width: 10px;
+    color: white;
+    background: white;
+}
+
+#message{
+    width: 100%;
+    background: white;
+    color: black;
+    margin: auto;
+    display: none;
+}
+#message h1{
+    color: blue;
+    font-size: 36px;
+    margin: 2px 2px 5px 2px;
+}
+#message p{
+    font-size: 18px;
+    text-align: center;
+}
+
+button{
+    padding: 7px;
+    border: none;
+    background: black;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: linear-gradient(blue, rgb(2, 0, 0));
+}
+
+
+#formulaire{
+    display: none;
+    width: 40%;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+form{
+    width: 80%;
+    margin: auto;
+}
+
+form .formTitle{
+    background-color: black;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+#close{
+    background: white;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+}
+form .input{
+    overflow: hidden;
+    background-color: white;
+    margin: 5px 0px 5px 0px;
+}
+form .inputFlex{
+    display: flex;
+}
+form input{
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+
+form select{
+    padding: 10px;
+    width: 100px;
+    margin: 5px;
+    border: none;
+}
+form input:focus{
+    outline: none;
+    border: none;
+}
+
+form button{
+    width: 100%;
+}
+
+.btn{
+    width: max-content;
+    margin:10px auto;
+}
+
+#list ul{
+ padding: 2px;
+ margin: 2px;
+}
+
+#list h4{
+    font-size: 28px;
+    color: lime;
+}
+#list hr{
+    width: 30%;
+}
+#list li{
+    padding: 2px;
+    margin: 2px;
+    list-style: none;
+   }
+
+   table{
+    background: white;
+    padding: 2px;
+    color: black;
+    display: flex;
+   }
+
+   tr {
+    background-color: lightGrey;
+    }
+
+tr:nth-child(2n) {
+    background-color: grey;
+    }
+
+    td{
+        padding: 5px;
+    }
+
+
+   @media (max-width: 800px){
+    .home{
+        width: 100%;
+        margin: auto;
+        padding: 5px;
+    }
+    
+    .images{
+        width: 25%;
+        margin:10px auto;
+    }
+    .home h1{
+        font-size: 6vw;
+        color: white;
+        text-align: center;
+    }
+    .home h1 span{
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .home h3{
+        font-size: 5vw;
+        margin:12px auto;
+        padding: 1px;
+        color: white;
+        text-align: center;
+    }
+    
+    .time{
+        width: max-content;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .time p{
+        background: white;
+        margin: 5px;
+        padding: 10px;
+        color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    }
+    .time .space{
+        height: 2px;
+        width: 10px;
+        color: white;
+        background: white;
+    }
+    
+    #message{
+        width: 100%;
+        background: white;
+        color: black;
+        margin: auto;
+        display: none;
+    }
+    #message h1{
+        color: blue;
+        font-size: 7vw;
+        text-align: center;
+        margin: 2px 2px 5px 2px;
+    }
+    #message p{
+        font-size: 6vw;
+        text-align: center;
+    }
+    
+    button{
+        padding: 7px;
+        border: none;
+        background: black;
+        color: white;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 4.5vw;
+    }
+    
+    button:hover{
+        background: linear-gradient(blue, rgb(2, 0, 0));
+    }
+    
+    
+    #formulaire{
+        display: none;
+        width: 100%;
+        margin: auto;
+        background-color: aliceblue;
+        padding: 10px;
+    }
+    
+    form{
+        width: 98%;
+        margin: auto;
+    }
+    
+    form .formTitle{
+        background-color: black;
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+    }
+    #close{
+        background: white;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        color: black;
+        cursor: pointer;
+    }
+    form .input{
+        overflow: hidden;
+        background-color: white;
+        margin: 5px 0px 5px 0px;
+    }
+    form .inputFlex{
+        display: flex;
+    }
+    form input{
+        padding: 10px;
+        width: 100%;
+        border: none;
+    }
+    
+    form select{
+        padding: 10px;
+        width: 100px;
+        margin: 5px;
+        border: none;
+    }
+    form input:focus{
+        outline: none;
+        border: none;
+    }
+    
+    form button{
+        width: 100%;
+    }
+    
+    .btn{
+        width: 100%;
+        display: flex;
+        margin:10px auto;
+    }
+    .btn button{
+        width: 100%;
+    }
+    .btn #btnlist{
+        width: max-content;
+        padding: 5px 20px 5px 20px;
+    }
+    
+    #list ul{
+     padding: 2px;
+     margin: 2px;
+    }
+    
+    #list h4{
+        font-size: 28px;
+        color: lime;
+    }
+    #list hr{
+        width: 30%;
+    }
+    #list li{
+        padding: 2px;
+        margin: 2px;
+        list-style: none;
+       }
+    
+   }
+
+
+
