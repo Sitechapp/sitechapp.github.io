@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="download.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Application Sitech Info</h1><hr>
+            <div class="home">
+                <div class="image"><img src="/images/logo.png" alt=""></div>
+                <div class="texte">
+                    <h1>Sitech Infos</h1>
+                    <h2>Suivre des formations informatique Gratuite</h2>
+                    <form autocomplete="off" method="post" name="google-sheet" id="form">
+                        <div onclick="closeForm()" id="close">x</div>
+                        <h1 class="h1">Terminez votre téléchargement</h1><hr>
+                        <div>
+                            <span>
+                                <label for="Code pays">Code pays</label>
+                                <select name="Code" id="code" onChange="update()" required>
+                                    <option></option>
+                                    <option value="+229">Benin (+229)</option>
+                                    <option value="+257">Burundi (+257)</option>
+                                    <option value="+226">Burkina Faso (+226)</option>
+                                    <option value="+237">Cameroon (+237)</option>
+                                    <option value="+1">Canada (+1)</option>
+                                    <option value="+238">Cape Verde (+238)</option>
+                                    <option value="+236">Central African Republic (+236)</option>
+                                    <option value="+242">Congo (+242)</option>
+                                    <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+                                    <option value="+225">Cote D'Ivoire (+225)</option>
+                                    <option value="+1809">Dominican Republic (+1809)</option>
+                                    <option value="+298">Faroe Islands (+298)</option>
+                                    <option value="+594">French Guiana (+594)</option>
+                                    <option value="+509">Haiti (+509)</option>
+                                    <option value="+352">Luxembourg (+352)</option>
+                                    <option value="+853">Macao (+853)</option>
+                                    <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+                                    <option value="+261">Madagascar (+261)</option>
+                                    <option value="+223">Mali (+223)</option>
+                                    <option value="+377">Monaco (+377)</option>
+                                    <option value="+227">Niger (+227)</option>
+                                    <option value="+234">Nigeria (+234)</option>
+                                    <option value="+262">Reunion (+262)</option>
+                                    <option value="+250">Rwanda (+250)</option>
+                                    <option value="+268">Swaziland (+268)</option>
+                                    <option value="+228">Togo (+228)</option>
+                                    <option value="+690">Tokelau (+690)</option>
+                                    <option value="+676">Tonga (+676)</option>
+                                    <option value="+260">Zambia (+260)</option>
+                                    <option value="+263">Zimbabwe (+263)</option>
+                                  </select>
+                            </span>
+                            <span>
+                                <label for="Reference">Reference</label>
+                                <select name="Ref" id="" required>
+                                    <option value="W">Whatsapp</option>
+                                    <option value="F">Facebook</option>
+                                    <option value="T">Twitter</option>
+                                    <option value="I">Intagram</option>
+                                    <option value="A">Autres</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <label for="Entre Votre Numéro">Entre Votre Numéro</label>
+                            <input type="text" placeholder="Votre Numero Whatsapp" required id="phone" name="Phone">
+                            </span>
+                        </div>
+                        <center style="margin:auto;"><button type="submit"  id="insbtn">Télécharger</button></center>
+                    </form>
+                    
+                    <center><button  onclick="downlaod()">Télécharger</button></center>
+                </div>
+            </div>
+            <div>
+                <ul class="liste">
+                    <li><i class="fa fa-font-"></i>Vers <span>1.5 M</span></li>  <span class="v"></span>
+                    <li><i class="fa fa-download"></i> <span>100</span></li>  <span class="v"></span>
+                    <li><i class="fa fa-tag"></i> <span>Gratuit</span></li>
+                </ul>
+            </div>
+            <div class="details">
+                <h1>Details sur l'application</h1><hr>
+                <p>
+                    Grace a cette application vous pour apprendre l'informatique
+                    en tant que debutant et devenir professionnelle.
+                </p>
+
+                <p>
+                    Sur cette application les cours sont divisé par module , chaque module
+                    contient une video, un audi et un document en pdf pour mobile
+                </p>
+                <div class="imageFlex">
+                    <div><img src="/images/WhatsApp Image 2022-11-06 at 9.46.45 PM.jpeg" alt=""></div>
+                    <div><img src="/images/WhatsApp Image 2022-11-06 at 9.46.44 PM.jpeg" alt=""></div>
+                    <div><img src="/images/WhatsApp Image 2022-11-06 at 9.46.43 PM.jpeg" alt=""></div>
+                    <div><img src="" alt=""></div>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </section>
+        <a href="https://drive.google.com/uc?export=download&id=1--CZCK4Ome70z3p3_i6LKt7h7s8AMZ-z" id="lien" download="sitechInfo"></a>
+    </main>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxCm0YeooHVhYpRP7jS2M47X9RyFaeU7AY7gSBEOt5byPmT8Z2YH6Mijhw3yX2EKGQ/exec'
+        const form = document.forms['google-sheet']
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => window.location = document.getElementById('lien'))
+            .then(response => document.getElementById('phone').value = '')
+            .then(response => document.getElementById('form').style.display = 'none')
+            .catch(error => console.error('Error!', error.message))
+        });
+    </script>
+
+    <script>
+        function downlaod(){
+            document.getElementById('form').style.display = 'block';
+        }
+
+        function closeForm(){
+            document.getElementById('form').style.display = 'none';
+        }
+    </script>
+
+<script type="text/javascript">
+    function update() {
+        var select = document.getElementById('code');
+        var option = select.options[select.selectedIndex];
+        document.getElementById('phone').value = option.value;
+    }
+
+    update();
+</script>
+
+
+</body>
+</html>

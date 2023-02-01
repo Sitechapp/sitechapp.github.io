@@ -1,0 +1,191 @@
+body{
+    display: none;
+    background-color: white;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;  
+}
+img{
+    width: 100%;
+}
+main, section{
+    width: 100%;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+ul li{
+    list-style: none;
+}
+@media (max-width: 800px){
+    body{
+        display: block;
+        font-weight: bold;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    section h1{
+        color: #00B0F0;
+    }
+    .home{
+        width: 100%;
+        display: flex;
+    }
+   
+    .image{
+        max-width: 35%;
+    }
+    .texte{
+        width: 100%;
+    }
+    .texte h1{
+        font-size: 6.5vw;
+        color:#00B0F0;
+        margin: 1px;
+        padding: 1px 5px 1px 5px;
+    }
+    .texte h2{
+        font-size: 5vw;
+        color: #F84710;
+        margin: 1px;
+        padding: 1px 5px 1px 5px;
+    }
+    .texte button{
+        background-color: #00b0f0;
+        border: none;
+        padding: 3px;
+        width: 100%;
+        color: white;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 5vw;
+    }
+    .texte button:hover{
+        background-color: #F84710;
+    }
+    .liste{
+        display: flex;
+        margin: 10px auto;
+        border: 1px solid;
+
+    }
+    .liste li{
+        margin: 4px;
+        font-size: 5.5vw;
+        font-weight: bold;
+    }
+    .liste li i{
+        color: #F84710;
+        margin-right: 10px;
+    }
+
+    .liste .v{
+        margin-right: 8px;
+        width: 2px;
+        max-height: 20%;
+        background: black;
+    }
+    form{
+        width: 300px;
+        min-width: 60%;
+        position: fixed;
+        display: none;
+        top: 50%;
+        left: 50%;
+        padding: 5px;
+        transform: translate(-50%, -50%);
+        background: white;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    }
+    form .h1{
+        font-size: 5vw;
+        text-align: center;
+        width: 100%;
+        margin-left: 20px;
+    }
+    form input{
+        width: 100%;
+        padding:10px;
+        border: none;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    }
+    form input:focus{
+        outline: none;
+    }
+    form span{
+        margin: 3px;
+        width: 100%;
+        text-align: left;
+        justify-content: space-between;
+    }
+    form select{
+        padding: 10px;
+        width: 100%;
+        border: none;
+        background-color: #f84710;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        color: white;
+    }
+
+   
+    form div{
+        display: flex;
+        margin: 10px;
+    }
+    form button{
+        padding: 3px;
+        max-width: 89%;
+        color: white;
+        margin: auto;
+        cursor: pointer;
+    }
+    form #close{
+        position: absolute;
+        left: 0;
+        box-shadow: 0px 0px 5px 1px #00B0F0;
+        padding: 5px;
+        color: #00B0F0;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    form #close:hover{
+        color: red;
+        box-shadow: 0px 0px 5px 1px #f84710;
+    }
+
+    .details h1{
+        font-size: 6vw;
+        color: #00B0F0;
+        font-weight: bold;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .details p{
+        font-size: 4.5vw;
+        text-align: justify;
+        padding: 3px;
+    }
+    .imageFlex{
+        display: flex;
+    }
+    .imageFlex img{
+        width: 100%;
+        transition: transform .2s; /* Animation */
+    }
+    .imageFlex img:hover{
+        width: 100%;
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    .imageFlex div{
+        margin: 3px;
+    }
+}
